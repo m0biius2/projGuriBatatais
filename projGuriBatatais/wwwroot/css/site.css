@@ -1,0 +1,146 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.alerta {
+    margin-top: 110px;
+}
+
+.destaqueLogin:link {
+    color: #d232ff;
+}
+
+.destaqueLogin:visited {
+    color: #d232ff;
+}
+
+.destaqueLogin:hover {
+    color: #e599fa;
+}
+
+.destaqueLogin:active {
+    color: #d232ff;
+}
+
+.destaqueCadastro:link {
+    color: #6e87ff;
+}
+
+.destaqueCadastro:visited {
+    color: #6e87ff;
+}
+
+.destaqueCadastro:hover {
+    color: #8b9df7;
+}
+
+.destaqueCadastro:active {
+    color: #6e87ff;
+}
+
+.comunicadosTop {
+    padding-top: 20px;
+}
+
+.cardLaranja {
+    background-color: #ffb696;
+}
+
+.cardVerde {
+    background-color: #99efdd;
+}
+
+.cardAzul {
+    background-color: #c5cfff;
+}
+
+.cardRoxo {
+    background-color: #edadff;
+}
+
+.cardAmarelo {
+    background-color: #fff6c5;
+}
+
+.espacamentoCard {
+    padding-top: 20px;
+}
+
+.cardStyle:link, .cardStyle:hover, .cardStyle:visited, .cardStyle:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu {
+    font-size: 25px;
+    margin-right: 20px;
+    color: #99efdd;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}

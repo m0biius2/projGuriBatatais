@@ -1,0 +1,7 @@
+// string de conexao com o banco de dados
+{
+  "ConnectionStrings": {
+    // banco de dados desejado GuriBatatais no SQL Server - acesso ao banco
+    "StringConexaoSQLServer": "Data Source=Nitro5-Jordana\\SQLEXPRESS; Database=GuriBatatais; User ID=sa; Password=sa"
+  }
+}

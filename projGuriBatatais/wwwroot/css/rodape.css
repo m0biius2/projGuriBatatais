@@ -1,0 +1,110 @@
+﻿.colorRow {
+    background-color: #d2d2d2;
+}
+
+.spaceTitle { /*borda da row */
+    margin-top: 70px;
+}
+
+.spaceTitleXL {
+    margin-top: 70px;
+}
+
+.spaceTitleXS {
+    margin-top: 50px;
+}
+
+.spaceText {
+    padding-right: 900px;
+}
+
+.colorIconCalendar {
+    color: #6e87ff;
+}
+
+.colorIconLocalization {
+    color: #d232ff;
+}
+
+.colorIconMusic {
+    color: #ff5f19;
+}
+
+.spaceIcon {
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+
+.colorRowCarousel {
+    background-color: black;
+}
+
+.spaceCarousel {
+    margin: 50px;
+}
+
+.spaceCarouselLG {
+    margin: 50px;
+    margin-left: 250px;
+}
+
+.spaceCarouselMD {
+    margin: 50px;
+    margin-left: 200px;
+}
+
+.spaceCarouselSM {
+    margin: 50px;
+    margin-left: 160px;
+}
+
+.spaceCarouselXS {
+    margin: 50px;
+    margin-left: 50px;
+}
+
+.textDecorationNoneIcon {
+    padding-left: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+    .textDecorationNoneIcon:hover {
+        padding-left: 5px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+.TextMatricula {
+    padding-top: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.TextMatriculaLG {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.TextMatriculaMD {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.spaceTextMatricula {
+    padding-top: 30px;
+}
+
+.spaceTextMatriculaLG {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.spaceTextMatriculaXS {
+    padding-right: 20px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

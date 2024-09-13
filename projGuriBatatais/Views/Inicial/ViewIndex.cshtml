@@ -1,0 +1,522 @@
+﻿@using System.Data
+
+@{
+    ViewData["Title"] = "Início";
+    Layout = "~/Views/Shared/_LayoutGuriBatatais.cshtml";
+
+    var hoje = DateTime.Now.Date;
+}
+
+<img src="img/bannerPaginaInicial.png" class="img-fluid d-none d-sm-block" alt="">
+
+<img src="img/bannerPaginaInicialMobile.png" class="img-fluid d-block d-sm-none" alt="">
+
+<div class="container-fluid">
+
+    <!-- tela XXL ////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="div d-none d-xxl-block">
+
+        <div class="row colorRow">
+            <h1 class="text-center spaceTitle">Fique por dentro da nossa programação!</h1>
+        </div>
+        <div class="row colorRow">
+            <!-- icone calendario -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="agenda.html"><i class="far fa-calendar-alt colorIconCalendar"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="agenda.html">Agenda</a></p>
+            </div>
+            <!-- icone localizacao -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="informacoes.html"><i class="fas fa-map-marked-alt colorIconLocalization"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="informacoes.html">Informações</a></p>
+            </div>
+
+            <!-- icone music -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="cursos.html"><i class="fas fa-music colorIconMusic"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="cursos.html">Cursos</a></p>
+            </div>
+        </div>
+
+        <!-- div carousel  -->
+        <div class="row colorRowCarousel">
+            <div class="offset-1 col-4 spaceCarousel">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- div matricula -->
+            <div class="col-6 TextMatricula text-justify">
+                <h1>Matrícula</h1>
+                <p class="spaceTextMatricula">
+                    Para participar do programa, não é preciso ter conhecimento musical, nem possuir instrumento musical. O Guri oferece cursos regulares de iniciação musical (6 a 9 anos) e curso sequencial (10 a 18 anos), modalidade que oferece a oportunidade de aprender a cantar ou a tocar um instrumento de forma fundamentada e consistente. Nesta modalidade, as alunas e alunos podem optar por cordas Agudas, cordas graves, percussão, metais, madeiras e coral.
+                    Para realizar a matrícula, é necessário comparecer diretamente no polo em que deseja estudar, acompanhado pelo(a) responsável, portando os seguintes documentos: certidão de nascimento ou RG (original e cópia); comprovante de matrícula escolar e/ou declaração de frequência escolar; RG do responsável (original e cópia), uma foto 3×4 recente e comprovante de endereço para consulta.
+                <p>
+            </div>
+        </div>
+
+        <!-- rodape XXL -->
+        <div class="row colorRodape">
+            <!-- div rodape -->
+            <div class="col-4 spaceRodape text-center">
+                <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
+                <p><a href="agenda" class="textDecorationNone">Agenda</a></p>
+                <p><a href="informacoes" class="textDecorationNone">Informações</a></p>
+                <p><a href="cursos" class="textDecorationNone">Cursos</a></p>
+            </div>
+            <div class="col-4 text-center">
+                <a href="index.html"><img src="img/logoGuri.png" class="spaceRodapeImage tamanhoImage img-fluid" alt=""></a>
+            </div>
+            <div class="col-4 text-center">
+                <p class="colorTextRodape spaceRodapeText">Entre em contato conosco</p>
+                <p>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram colorIconRodape"></i></a>
+                    <a href="https://wa.me/5516991682555"><i class="fab fa-whatsapp textDecorationNone"></i></a>
+                    <a href="https://br.linkedin.com/"><i class="fab fa-linkedin textDecorationNone"></i></a>
+                </p>
+            </div>
+        </div>
+        <!-- rodape XXL -->
+        <!-- logo XXL -->
+        <div class="row colorBackgroundLogo">
+            <div class="col-12 text-center">
+                <p class="colorTextRodape text-center spaceLogo">Feito por   <img class="tamanhoImageLogo" src="img/logoGrowthPreta.png" alt=""></p>
+            </div>
+        </div>
+        <!-- logo XXL -->
+    </div>
+    <!-- FIM XXL  ////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- tela XL  ////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="div d-none d-xl-block d-xxl-none">
+
+        <div class="row colorRow">
+            <h1 class="text-center spaceTitleXL">Fique por dentro da nossa programação!</h1>
+        </div>
+        <div class="row colorRow">
+            <!-- icone calendario -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="agenda.html"><i class="far fa-calendar-alt colorIconCalendar"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="agenda.html">Agenda</a></p>
+            </div>
+            <!-- icone localizacao -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="informacoes.html"><i class="fas fa-map-marked-alt colorIconLocalization"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="informacoes.html">Informações</a></p>
+            </div>
+
+            <!-- icone music -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="cursos.html"><i class="fas fa-music colorIconMusic"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="cursos.html">Cursos</a></p>
+            </div>
+        </div>
+
+        <!-- div carousel  -->
+        <div class="row colorRowCarousel">
+            <div class="offset-1 col-4 spaceCarousel">
+                <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="xl">
+                        <div class="carousel-item active">
+                            <img src="img/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- div matricula -->
+            <div class="col-6 TextMatricula text-justify">
+                <h1>Matrícula</h1>
+                <p class="spaceTextMatricula">
+                    Para participar do programa, não é preciso ter conhecimento musical, nem possuir instrumento musical. O Guri oferece cursos regulares de iniciação musical (6 a 9 anos) e curso sequencial (10 a 18 anos), modalidade que oferece a oportunidade de aprender a cantar ou a tocar um instrumento de forma fundamentada e consistente. Nesta modalidade, as alunas e alunos podem optar por cordas Agudas, cordas graves, percussão, metais, madeiras e coral.
+                    Para realizar a matrícula, é necessário comparecer diretamente no polo em que deseja estudar, acompanhado pelo(a) responsável, portando os seguintes documentos: certidão de nascimento ou RG (original e cópia); comprovante de matrícula escolar e/ou declaração de frequência escolar; RG do responsável (original e cópia), uma foto 3×4 recente e comprovante de endereço para consulta.
+                <p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIMMMMMMMMMMMMMMMMMMMMMM XL  ////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- tela LG  //////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="div d-none d-lg-block d-xl-none">
+
+        <div class="row colorRow">
+            <h2 class="text-center spaceTitleXL">Fique por dentro da nossa programação!</h2>
+        </div>
+        <div class="row colorRow">
+            <!-- icone calendario -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="agenda.html"><i class="far fa-calendar-alt colorIconCalendar"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="agenda.html">Agenda</a></p>
+            </div>
+            <!-- icone localizacao -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="informacoes.html"><i class="fas fa-map-marked-alt colorIconLocalization"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="informacoes.html">Informações</a></p>
+            </div>
+
+            <!-- icone music -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="cursos.html"><i class="fas fa-music colorIconMusic"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="cursos.html">Cursos</a></p>
+            </div>
+        </div>
+
+        <!-- div carousel  -->
+        <div class="row colorRowCarousel">
+            <div class="col-6 spaceCarouselLG">
+                <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="lg">
+                        <div class="carousel-item active">
+                            <img src="img/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <!-- div matricula -->
+                <div class="col-12 TextMatriculaLG">
+                    <h1 class="text-center">Matrícula</h1>
+                    <div class="text-justify">
+                        <p class="spaceTextMatriculaLG ">
+                            Para participar do programa, não é preciso ter conhecimento musical, nem possuir instrumento musical. O Guri oferece cursos regulares de iniciação musical (6 a 9 anos) e curso sequencial (10 a 18 anos), modalidade que oferece a oportunidade de aprender a cantar ou a tocar um instrumento de forma fundamentada e consistente. Nesta modalidade, as alunas e alunos podem optar por cordas Agudas, cordas graves, percussão, metais, madeiras e coral.
+                            Para realizar a matrícula, é necessário comparecer diretamente no polo em que deseja estudar, acompanhado pelo(a) responsável, portando os seguintes documentos: certidão de nascimento ou RG (original e cópia); comprovante de matrícula escolar e/ou declaração de frequência escolar; RG do responsável (original e cópia), uma foto 3×4 recente e comprovante de endereço para consulta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- FIMMMMMMMMMMMMMMMMMMMMMM LG  //////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- tela MD ////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="div d-none d-md-block d-lg-none">
+
+        <div class="row colorRow">
+            <h2 class="text-center spaceTitleXL">Fique por dentro da nossa programação!</h2>
+        </div>
+        <div class="row colorRow">
+            <!-- icone calendario -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="agenda.html"><i class="far fa-calendar-alt colorIconCalendar"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="agenda.html">Agenda</a></p>
+            </div>
+            <!-- icone localizacao -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="informacoes.html"><i class="fas fa-map-marked-alt colorIconLocalization"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="informacoes.html">Informações</a></p>
+            </div>
+
+            <!-- icone music -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="cursos.html"><i class="fas fa-music colorIconMusic"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="cursos.html">Cursos</a></p>
+            </div>
+        </div>
+
+        <!-- div carousel  -->
+        <div class="row colorRowCarousel">
+            <div class="col-6 spaceCarouselMD">
+                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="lg">
+                        <div class="carousel-item active">
+                            <img src="img/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- div matricula -->
+                <div class="col-12 TextMatriculaLG">
+                    <h1 class="text-center">Matrícula </h1>
+                    <div class="text-justify">
+                        <p class="spaceTextMatriculaLG ">
+                            Para participar do programa, não é preciso ter conhecimento musical, nem possuir instrumento musical. O Guri oferece cursos regulares de iniciação musical (6 a 9 anos) e curso sequencial (10 a 18 anos), modalidade que oferece a oportunidade de aprender a cantar ou a tocar um instrumento de forma fundamentada e consistente. Nesta modalidade, as alunas e alunos podem optar por cordas Agudas, cordas graves, percussão, metais, madeiras e coral.
+                            Para realizar a matrícula, é necessário comparecer diretamente no polo em que deseja estudar, acompanhado pelo(a) responsável, portando os seguintes documentos: certidão de nascimento ou RG (original e cópia); comprovante de matrícula escolar e/ou declaração de frequência escolar; RG do responsável (original e cópia), uma foto 3×4 recente e comprovante de endereço para consulta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIMMMMMMMMMMMMMMMMMMMMMM MD  //////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- tela SM  ////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="div d-none d-sm-block d-md-none">
+
+        <div class="row colorRow">
+            <h2 class="text-center spaceTitleXL">Fique por dentro da nossa programação!</h2>
+        </div>
+        <div class="row colorRow">
+            <!-- icone calendario -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="agenda.html"><i class="far fa-calendar-alt colorIconCalendar"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="agenda.html">Agenda</a></p>
+            </div>
+            <!-- icone localizacao -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="informacoes.html"><i class="fas fa-map-marked-alt colorIconLocalization"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="informacoes.html">Informações</a></p>
+            </div>
+
+            <!-- icone music -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="cursos.html"><i class="fas fa-music colorIconMusic"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="cursos.html">Cursos</a></p>
+            </div>
+        </div>
+
+        <!-- div carousel  -->
+        <div class="row colorRowCarousel">
+            <div class="col-6 spaceCarouselSM">
+                <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="lg">
+                        <div class="carousel-item active">
+                            <img src="img/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- div matricula -->
+                <div class="col-12 TextMatriculaMD">
+                    <h1 class="text-center">Matrícula </h1>
+                    <div class="text-justify">
+                        <p class="spaceTextMatriculaLG ">
+                            Para participar do programa, não é preciso ter conhecimento musical, nem possuir instrumento musical. O Guri oferece cursos regulares de iniciação musical (6 a 9 anos) e curso sequencial (10 a 18 anos), modalidade que oferece a oportunidade de aprender a cantar ou a tocar um instrumento de forma fundamentada e consistente. Nesta modalidade, as alunas e alunos podem optar por cordas Agudas, cordas graves, percussão, metais, madeiras e coral.
+                            Para realizar a matrícula, é necessário comparecer diretamente no polo em que deseja estudar, acompanhado pelo(a) responsável, portando os seguintes documentos: certidão de nascimento ou RG (original e cópia); comprovante de matrícula escolar e/ou declaração de frequência escolar; RG do responsável (original e cópia), uma foto 3×4 recente e comprovante de endereço para consulta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIMMMMMMMMMMMMMMMMMMMMMM SM  //////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- tela XS  ////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="div d-block d-sm-none">
+
+        <div class="row colorRow">
+            <h2 class="text-center spaceTitleXS">Fique por dentro da nossa programação!</h2>
+        </div>
+        <div class="row colorRow">
+            <!-- icone calendario -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="agenda.html"><i class="far fa-calendar-alt colorIconCalendar"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="agenda.html">Agenda</a></p>
+            </div>
+            <!-- icone localizacao -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="informacoes.html"><i class="fas fa-map-marked-alt colorIconLocalization"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="informacoes.html">Informações</a></p>
+            </div>
+
+            <!-- icone music -->
+            <div class="col-4 spaceIcon text-center">
+                <h1>
+                    <a href="cursos.html"><i class="fas fa-music colorIconMusic"></i></a>
+                </h1>
+                <p><a class="textDecorationNoneIcon text-center" href="cursos.html">Cursos</a></p>
+            </div>
+        </div>
+
+        <!-- div carousel  -->
+        <div class="row colorRowCarousel">
+            <div class="col-9 spaceCarouselXS">
+                <div id="carouselExampleControls5" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="lg">
+                        <div class="carousel-item active">
+                            <img src="img/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls5" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls5" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- div matricula -->
+                <div class="col-12 TextMatriculaLG">
+                    <h1 class="spaceTextMatriculaXS text-justify">Matrícula</h1>
+                    <div class="text-justify">
+                        <p class="spaceTextMatriculaXS">
+                            Nesta modalidade, as alunas e alunos podem optar por cordas agudas, cordas graves, percussão, metais, madeiras e coral.
+                            Para realizar a matrícula, é necessário comparecer diretamente no polo em que deseja estudar, acompanhado pelo(a) responsável, portando os seguintes documentos: certidão de nascimento ou RG (original e cópia); comprovante de matrícula escolar e/ou declaração de frequência escolar; RG do responsável (original e cópia), uma foto 3×4 recente e comprovante de endereço para consulta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- div logo -->
+            <div class="row colorBackgroundLogo">
+                <div class="col-12 text-center">
+                    <p class="colorTextRodape text-center spaceLogo">Feito por   <img class="tamanhoImageLogo" src="img/logoGrowthPreta.png" alt=""></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- FIMMMMMMMMMMMMMMMMMMMMMM XS  //////////////////////////////////////////////////////////////////////////////////////-->
+</div>
