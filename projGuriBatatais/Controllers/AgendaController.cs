@@ -52,7 +52,7 @@ namespace projGuriBatatais.Controllers
             // preenche os atributos do banco com os dados inseridos
             o_Agenda.titulo = o_AgendaViewModel.Titulo;
             o_Agenda.comunicado = o_AgendaViewModel.Comunicado;
-            o_Agenda.idProfessor = o_AgendaViewModel.IdProfessor.ToString();
+            o_Agenda.idUsuario = o_AgendaViewModel.IdUsuario.ToString();
             o_Agenda.data = o_AgendaViewModel.Data;
             o_Agenda.idCorComunicado = o_AgendaViewModel.IdCorComunicado;
 
@@ -85,7 +85,7 @@ namespace projGuriBatatais.Controllers
             o_AgendaViewModel.IdAgenda = int.Parse(dtBusca.Rows[0]["IdAgenda"].ToString());
             o_AgendaViewModel.Titulo = dtBusca.Rows[0]["Titulo"].ToString();
             o_AgendaViewModel.Comunicado = dtBusca.Rows[0]["Comunicado"].ToString();
-            o_AgendaViewModel.IdProfessor = int.Parse(dtBusca.Rows[0]["IdProfessor"].ToString());
+            o_AgendaViewModel.IdUsuario = int.Parse(dtBusca.Rows[0]["IdUsuario"].ToString());
             o_AgendaViewModel.Data = DateTime.Parse(dtBusca.Rows[0]["Data"].ToString());
             o_AgendaViewModel.IdCorComunicado = int.Parse(dtBusca.Rows[0]["IdCorComunicado"].ToString());
 

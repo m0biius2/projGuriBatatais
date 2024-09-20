@@ -14,7 +14,7 @@ namespace projGuriBatatais.Models
 
         public string Comunicado { get; set; }
 
-        public int IdProfessor { get; set; }
+        public int IdUsuario { get; set; }
 
         public DateTime Data { get; set; }
 

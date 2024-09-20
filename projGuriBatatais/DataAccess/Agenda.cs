@@ -16,7 +16,7 @@ namespace projGuriBatatais.DataAccess
         public int idAgenda;
         public string titulo;
         public string comunicado;
-        public string idProfessor;
+        public string idUsuario;
         public DateTime data;
         public int idCorComunicado;
 
@@ -54,8 +54,8 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a serem inseridos na tabela
-                string cmdSQL = $"Insert Into Agenda(Titulo, Comunicado, IdProfessor, Data, IdCorComunicado) " +
-                                $"Values(@Titulo, @Comunicado, @IdProfessor, @Data, @IdCorComunicado)";
+                string cmdSQL = $"Insert Into Agenda(Titulo, Comunicado, IdUsuario, Data, IdCorComunicado) " +
+                                $"Values(@Titulo, @Comunicado, @IdUsuario, @Data, @IdCorComunicado)";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
@@ -63,14 +63,14 @@ namespace projGuriBatatais.DataAccess
                 // cria parametros dos valores das colunas
                 cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
                 cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
-                cmd.Parameters.Add("@IdProfessor", SqlDbType.Int);
+                cmd.Parameters.Add("@IdUsuario", SqlDbType.Int);
                 cmd.Parameters.Add("@Data", SqlDbType.DateTime);
                 cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
 
                 // transforma os parametros em variaveis
                 cmd.Parameters["@Titulo"].Value = titulo;
                 cmd.Parameters["@Comunicado"].Value = comunicado;
-                cmd.Parameters["@IdProfessor"].Value = idProfessor;
+                cmd.Parameters["@IdUsuario"].Value = idUsuario;
                 cmd.Parameters["@Data"].Value = data;
                 cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
 
@@ -98,7 +98,7 @@ namespace projGuriBatatais.DataAccess
             {
                 // dados a seres alterados
                 string cmdSQL = $"Update Agenda Set Titulo = @Titulo, Comunicado = @Comunicado, " +
-                                $"IdProfessor = @IdProfessor, Data = @Data, IdCorComunicado = @IdCorComunicado " +
+                                $"IdUsuario = @IdUsuario, Data = @Data, IdCorComunicado = @IdCorComunicado " +
                                 $"Where IdAgenda = @IdAgenda";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
@@ -108,7 +108,7 @@ namespace projGuriBatatais.DataAccess
                 cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
                 cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
                 cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
-                cmd.Parameters.Add("@IdProfessor", SqlDbType.Int);
+                cmd.Parameters.Add("@IdUsuario", SqlDbType.Int);
                 cmd.Parameters.Add("@Data", SqlDbType.DateTime);
                 cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
 
@@ -116,7 +116,7 @@ namespace projGuriBatatais.DataAccess
                 cmd.Parameters["@IdAgenda"].Value = idAgenda;
                 cmd.Parameters["@Titulo"].Value = titulo;
                 cmd.Parameters["@Comunicado"].Value = comunicado;
-                cmd.Parameters["@IdProfessor"].Value = idProfessor;
+                cmd.Parameters["@IdUsuario"].Value = idUsuario;
                 cmd.Parameters["@Data"].Value = data;
                 cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
 
@@ -178,11 +178,11 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a serem selecionados
-                string cmdSQL = "SELECT IdAgenda, Titulo, Comunicado, Prof.NomeCompleto as Professor, Data, " +
+                string cmdSQL = "SELECT IdAgenda, Titulo, Comunicado, Usuario.NomeUsuario as Gestor, Data, " +
                                 "Cor.NomeCor as Cor " +
                                 "FROM Agenda Ag " +
-                                "Join Professor Prof " +
-                                "on Ag.IdProfessor = Prof.IdProfessor " +
+                                "Join Usuario " +
+                                "on Ag.IdUsuario = Usuario.IdUsuario " +
                                 "Join CorComunicado Cor " +
                                 "on Ag.IdCorComunicado = Cor.IdCorComunicado";
 

@@ -19,6 +19,10 @@ app.UseAuthorization();
 // rota
 app.MapControllerRoute(
     name: "default",
+    pattern: "{controller=Usuario}/{action=Cadastrar}");
+
+app.MapControllerRoute(
+    name: "default",
     pattern: "{controller=Inicial}/{action=Index}");
 
 app.MapControllerRoute(

@@ -96,42 +96,58 @@ body {
     color: #99efdd;
 }
 
-/* The side navigation menu */
+/* Sidebar */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background-color: #000; /* Cor preta para o restante da sidenav */
+    overflow-x: hidden;
+    padding-top: 0; /* Removido padding-top porque já temos a seção topSidenav */
+    transition: 0.5s;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
+/* Seção superior com fundo roxo */
+.topSidenav {
+    background-color: #d232ff; /* Cor roxa */
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    color: white;
+    border-top-left-radius: 20px;
+}
 
-        /* When you mouse over the navigation links, change their color */
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
+/* Botão de fechar */
+.closebtn {
+    color: white !important;
+    font-size: 30px;
+    text-align: right;
+    display: block;
+}
 
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
+/* O texto */
+h6, p {
+    margin: 0;
+}
+
+/* Ajustes para os links e hover */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+    .sidenav a:hover {
+        color: #f1f1f1;
     }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -144,3 +160,12 @@ body {
             font-size: 18px;
         }
 }
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+    .navbar .estiloNav img {
+        transition: transform 0.5s ease;
+    }

@@ -1,32 +1,22 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using System.Xml;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace projGuriBatatais.DataAccess
 {
-    // classe de acesso a tabela Professor do banco
-    public class Professor
+    public class Usuario
     {
-        // atributos
-        // privados
-        private SqlConnection con; // conexao com o banco
+        private SqlConnection con;
 
-        // publicos
-        // atributos das colunas da tabela do banco
-        public int idProfessor;
+        public int idUsuario;
         public string nomeCompleto;
         public string nomeUsuario;
         public string senha;
-        public bool cGraves;
-        public bool cAgudas;
-        public bool metais;
-        public bool madeiras;
-        public bool percussao;
-        public bool coral;
+        public string curso;
+        public string tipo;
 
-        // metodos
-        // metodo construtor
-        public Professor()
+        public Usuario()
         {
             try
             {
@@ -52,16 +42,13 @@ namespace projGuriBatatais.DataAccess
             }
         }
 
-        // metodo inserir que insere os dados na tabela
         public bool Inserir()
         {
             try
             {
                 // dados a serem inseridos na tabela
-                string cmdSQL = $"Insert Into Professor(NomeCompleto, NomeUsuario, Senha, " +
-                                $"CGraves, CAgudas, Metais, Madeiras, Percussao, Coral) " +
-                                $"Values(@NomeCompleto, @NomeUsuario, @Senha" +
-                                $"@CGraves, @CAgudas, @Metais, @Madeiras, @Percussao, @Coral)";
+                string cmdSQL = $"Insert Into Usuario(NomeCompleto, NomeUsuario, Senha, Curso, Tipo) " +
+                                $"Values(@NomeCompleto, @NomeUsuario, @Senha, @Curso, @Tipo)";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
@@ -70,23 +57,15 @@ namespace projGuriBatatais.DataAccess
                 cmd.Parameters.Add("@NomeCompleto", SqlDbType.VarChar);
                 cmd.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
                 cmd.Parameters.Add("@Senha", SqlDbType.VarChar);
-                cmd.Parameters.Add("@CGraves", SqlDbType.Int);
-                cmd.Parameters.Add("@CAgudas", SqlDbType.Int);
-                cmd.Parameters.Add("@Metais", SqlDbType.Int);
-                cmd.Parameters.Add("@Madeiras", SqlDbType.Int);
-                cmd.Parameters.Add("@Percussao", SqlDbType.Int);
-                cmd.Parameters.Add("@Coral", SqlDbType.Int);
+                cmd.Parameters.Add("@Curso", SqlDbType.VarChar);
+                cmd.Parameters.Add("@Tipo", SqlDbType.VarChar);
 
                 // transforma os parametros em variaveis
                 cmd.Parameters["@NomeCompleto"].Value = nomeCompleto;
                 cmd.Parameters["@NomeUsuario"].Value = nomeUsuario;
                 cmd.Parameters["@Senha"].Value = senha;
-                cmd.Parameters["@CGraves"].Value = cGraves;
-                cmd.Parameters["@CAgudas"].Value = cAgudas;
-                cmd.Parameters["@Metais"].Value = metais;
-                cmd.Parameters["@Madeiras"].Value = madeiras;
-                cmd.Parameters["@Percussao"].Value = percussao;
-                cmd.Parameters["@Coral"].Value = coral;
+                cmd.Parameters["@Curso"].Value = curso;
+                cmd.Parameters["@Tipo"].Value = tipo;
 
                 // abre conexao com o banco
                 con.Open();
@@ -111,35 +90,24 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a seres alterados
-                string cmdSQL = $"Update Professor Set NomeCompleto = @NomeCompleto, NomeUsuario = @NomeUsuario, Senha = @Senha, " +
-                                $"CGraves = @CGraves, CAgudas = @CAgudas, Metais = @Metais, Madeiras = @Madeiras, Percussao = @Percussao, Coral = @Coral " +
-                                $"Where IdProfessor = @IdProfessor";
+                string cmdSQL = $"Update Usuario Set NomeCompleto = @NomeCompleto, NomeUsuario = @NomeUsuario, " +
+                                $"Curso = @Curso " +
+                                $"Where IdUsuario = @IdUsuario";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
 
                 // cria parametros dos valores das colunas
-                cmd.Parameters.Add("@IdProfessor", SqlDbType.Int);
+                cmd.Parameters.Add("@IdUsuario", SqlDbType.VarChar);
                 cmd.Parameters.Add("@NomeCompleto", SqlDbType.VarChar);
-                cmd.Parameters.Add("@Senha", SqlDbType.VarChar);
-                cmd.Parameters.Add("@CGraves", SqlDbType.Int);
-                cmd.Parameters.Add("@CAgudas", SqlDbType.Int);
-                cmd.Parameters.Add("@Metais", SqlDbType.Int);
-                cmd.Parameters.Add("@Madeiras", SqlDbType.Int);
-                cmd.Parameters.Add("@Percussao", SqlDbType.Int);
-                cmd.Parameters.Add("@Coral", SqlDbType.Int);
+                cmd.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
+                cmd.Parameters.Add("@Curso", SqlDbType.VarChar);
 
                 // transforma os parametros em variaveis
-                cmd.Parameters["@IdProfessor"].Value = idProfessor;
+                cmd.Parameters["@IdUsuario"].Value = idUsuario;
                 cmd.Parameters["@NomeCompleto"].Value = nomeCompleto;
                 cmd.Parameters["@NomeUsuario"].Value = nomeUsuario;
-                cmd.Parameters["@Senha"].Value = senha;
-                cmd.Parameters["@CGraves"].Value = cGraves;
-                cmd.Parameters["@CAgudas"].Value = cAgudas;
-                cmd.Parameters["@Metais"].Value = metais;
-                cmd.Parameters["@Madeiras"].Value = madeiras;
-                cmd.Parameters["@Percussao"].Value = percussao;
-                cmd.Parameters["@Coral"].Value = coral;
+                cmd.Parameters["@Curso"].Value = curso;
 
                 // abre conexao com o banco
                 con.Open();
@@ -164,17 +132,17 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a seres deletados
-                string cmdSQL = $"Delete From Professor " +
-                                $"Where IdProfessor In (@IdProfessor)";
+                string cmdSQL = $"Delete From User " +
+                                $"Where IdUsuario In (@IdUsuario)";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
 
                 // cria parametros dos valores das colunas
-                cmd.Parameters.Add("@IdProfessor", SqlDbType.Int);
+                cmd.Parameters.Add("@IdUsuario", SqlDbType.Int);
 
                 // transforma os parametros em variaveis
-                cmd.Parameters["@IdProfessor"].Value = idProfessor;
+                cmd.Parameters["@IdUsuario"].Value = idUsuario;
 
                 // abre conexao com o banco
                 con.Open();
@@ -199,8 +167,7 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a serem selecionados
-                string cmdSQL = "SELECT IdProfessor, NomeCompleto, NomeUsuario, Senha, " +
-                                "CGraves, CAgudas, Metais, Madeiras, Percussao, Coral";
+                string cmdSQL = "SELECT * From Usuario";
 
                 // busca dados do banco
                 SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);
@@ -209,16 +176,16 @@ namespace projGuriBatatais.DataAccess
                 con.Open();
 
                 // cria uma tabela para exibicao dos dados
-                DataTable dtProfessor = new DataTable();
+                DataTable dtUser = new DataTable();
 
                 // preenche a tabela para exibicao dos dados com dados do banco
-                int qtdLinhasAfetadas = daPesquisa.Fill(dtProfessor);
+                int qtdLinhasAfetadas = daPesquisa.Fill(dtUser);
 
                 // fecha conexao com o banco
                 con.Close();
 
                 // retorna a tabela de exibicao
-                return dtProfessor;
+                return dtUser;
             }
             catch (Exception ex)
             {
@@ -232,34 +199,34 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a serem selecionados
-                string cmdSQL = "Select * From Professor " +
-                                "Where IdProfessor = @IdProfessor " +
-                                "Order By IdProfessor";
+                string cmdSQL = "Select * From Usuario " +
+                                "Where IdUsuario = @IdUsuario " +
+                                "Order By IdUsuario";
 
                 // busca dados do banco
                 SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);
 
 
                 // cria parametros dos valores das colunas
-                daPesquisa.SelectCommand.Parameters.Add("@IdProfessor", SqlDbType.Int);
+                daPesquisa.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.Int);
 
                 // transforma os parametros em variaveis
-                daPesquisa.SelectCommand.Parameters["@IdProfessor"].Value = idProfessor;
+                daPesquisa.SelectCommand.Parameters["@IdUsuario"].Value = idUsuario;
 
                 // abre conexao com o banco
                 con.Open();
 
                 // cria uma tabela para exibicao dos dados
-                DataTable dtProfessor = new DataTable();
+                DataTable dtUser = new DataTable();
 
                 // preenche a tabela para exibicao dos dados com dados do banco
-                int qtdLinhasAfetadas = daPesquisa.Fill(dtProfessor);
+                int qtdLinhasAfetadas = daPesquisa.Fill(dtUser);
 
                 // fecha conexao com o banco
                 con.Close();
 
                 // retorna a tabela de exibicao
-                return dtProfessor;
+                return dtUser;
             }
             catch (Exception ex)
             {

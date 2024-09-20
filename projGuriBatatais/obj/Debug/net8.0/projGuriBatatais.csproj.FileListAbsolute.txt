@@ -257,3 +257,4 @@ C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutGuriBatatais.cshtml.rz.scp.css
+C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\projGuriBatatais.sourcelink.json
