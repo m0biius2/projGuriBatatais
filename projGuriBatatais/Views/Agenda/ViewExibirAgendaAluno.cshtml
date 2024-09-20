@@ -9,81 +9,8 @@
 }
 
 @* conteudo *@
-<div class="container-fluid">
-    <div class="alert alert-secondary alerta" role="alert">
-        Entre com <a href="index.html" class="destaqueLogin">login</a> ou <a href="index.html" class="destaqueCadastro">cadastre-se</a> para mais informações.
-    </div>
-
-    <div class="row offset-4 col-4">
-        @* botao do modal teste *@
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalInsert">
-            Adicionar recado
-        </button>
-
-        @* modal teste *@
-        <div class="modal fade" id="modalInsert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    @* titulo do modal *@
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Adicionar recado</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    @* conteudo do modal *@
-                    <form asp-controller="Agenda" asp-action="InserirProcessar" method="post">
-                        <div class="modal-body">
-                            <div class="row">
-                                @* titulo *@
-                                <div class="offset-2 col-8">
-                                    <label for="titulo" class="form-label">Título:</label>
-                                    <input type="text" class="form-control" id="titulo"
-                                           placeholder="Digite o título..." asp-for="Titulo">
-                                </div>
-                            </div>
-                            <div class="row">
-                                @* data *@
-                                <div class="offset-2 col-4">
-                                    <label for="Data" class="form-label">Data:</label>
-                                    <input type="date" value="@hoje" class="form-control" id="Data"
-                                           placeholder="Digite a data..." asp-for="Data">
-                                </div>
-
-                                @* cor *@
-                                <div class="col-4">
-                                    <label for="idCorComunicado" class="form-label padTop20">Cor:</label>
-                                    <select class="form-select" id="idCorComunicado" asp-for="IdCorComunicado" asp-items="Model.Cores">
-                                        <option selected>Selecione a cor...</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                @* professor *@
-                                <div class="offset-2 col-8">
-                                    <label for="gestor" class="form-label">Gestor:</label>
-                                    <input type="text" class="form-control" id="gestor"
-                                           placeholder="Digite o nome do gestor..." asp-for="IdUsuario">
-                                </div>
-                            </div>
-                            <div class="row">
-                                @* conteudo *@
-                                <div class="offset-2 col-8">
-                                    <label for="comunicado" class="form-label">Comunicado:</label>
-                                    <input type="text" class="form-control" id="comunicado"
-                                           placeholder="Digite o conteúdo..." asp-for="Comunicado">
-                                </div>
-                            </div>
-                        </div>
-                        @* rodape do modal *@
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
-                            <button type="submit" class="btn btn-primary">Inserir</button> @* botao de inserir dados no banco *@
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="comunicadosTop">
+<div class="container-fluid espacoNavbar">
+    <div class="">
         @if (Model != null)
         {
             @foreach (DataRow row in Model.tabSelect.Rows)
@@ -96,7 +23,7 @@
                         <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
                            asp-route-IdAgenda="@row["IdAgenda"]"
                            asp-controller="Agenda"
-                           asp-action="ExibirComunicado">
+                           asp-action="ExibirComunicadoAluno">
                             <div class="row espacamentoCard">
                                 <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
                                     <div class="card cardLaranja">
@@ -143,7 +70,7 @@
                         <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
                            asp-route-IdAgenda="@row["IdAgenda"]"
                            asp-controller="Agenda"
-                           asp-action="ExibirComunicado">
+                           asp-action="ExibirComunicadoAluno">
                             <div class="row espacamentoCard">
                                 <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
                                     <div class="card cardVerde">
@@ -190,7 +117,7 @@
                         <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
                            asp-route-IdAgenda="@row["IdAgenda"]"
                            asp-controller="Agenda"
-                           asp-action="ExibirComunicado">
+                           asp-action="ExibirComunicadoAluno">
                             <div class="row espacamentoCard">
                                 <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
                                     <div class="card cardAzul">
@@ -237,7 +164,7 @@
                         <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
                            asp-route-IdAgenda="@row["IdAgenda"]"
                            asp-controller="Agenda"
-                           asp-action="ExibirComunicado">
+                           asp-action="ExibirComunicadoAluno">
                             <div class="row espacamentoCard">
                                 <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
                                     <div class="card cardRoxo">
@@ -284,7 +211,7 @@
                         <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
                            asp-route-IdAgenda="@row["IdAgenda"]"
                            asp-controller="Agenda"
-                           asp-action="ExibirComunicado">
+                           asp-action="ExibirComunicadoAluno">
                             <div class="row espacamentoCard">
                                 <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
                                     <div class="card cardAmarelo">

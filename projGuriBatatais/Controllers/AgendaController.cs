@@ -8,29 +8,18 @@ namespace projGuriBatatais.Controllers
 {
     public class AgendaController : Controller
     {
-        // metodos de acao
-        // metodo Selecionar que seleciona os dados do banco e exibe na tabela da view
-        public IActionResult TesteProfessor()
+        public IActionResult ExibirAgendaAdm()
         {
-            // objetos
-            // objeto da class Agenda
             Agenda o_Agenda = new Agenda();
-
-            // chama a datatable para coletar os dados
-            //DataTable dtAgenda;
 
             AgendaViewModel o_AgendaVM = new AgendaViewModel();
 
-            // executa o metodo SelecionarTodos que seleciona os dados do banco e coloca na datatable
             o_AgendaVM.tabSelect = o_Agenda.SelecionarTodos();
 
-            // objeto da class CorComunicado
             CorComunicado o_CorComunicado = new CorComunicado();
 
-            // datatable com os dados vindos do banco pelo metodo SelecionarTodos
             DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
 
-            // preenche a list do model com as informacoes do banco
             o_AgendaVM.Cores = (from DataRow dr in tabCorComunicado.Rows
                                        select new SelectListItem()
                                        {
@@ -38,50 +27,79 @@ namespace projGuriBatatais.Controllers
                                            Text = dr["NomeCor"].ToString(),
                                        }).ToList();
 
-            // retorna a view e manda a datatable com os dados para a view
-            return View("ViewTesteProfessor", o_AgendaVM);
+            return View("ViewExibirAgendaAdm", o_AgendaVM);
         }
 
-        // metodo inserirprocessar que processa os dados do metodo acima e envia para o banco
-        public IActionResult InserirProcessar(AgendaViewModel o_AgendaViewModel)
+        public IActionResult ExibirAgendaAluno()
         {
-            // objetos
-            // objeto da class colaborador
             Agenda o_Agenda = new Agenda();
 
-            // preenche os atributos do banco com os dados inseridos
+            AgendaViewModel o_AgendaVM = new AgendaViewModel();
+
+            o_AgendaVM.tabSelect = o_Agenda.SelecionarTodos();
+
+            CorComunicado o_CorComunicado = new CorComunicado();
+
+            DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
+
+            o_AgendaVM.Cores = (from DataRow dr in tabCorComunicado.Rows
+                                select new SelectListItem()
+                                {
+                                    Value = dr["IdCorComunicado"].ToString(),
+                                    Text = dr["NomeCor"].ToString(),
+                                }).ToList();
+
+            return View("ViewExibirAgendaAluno", o_AgendaVM);
+        }
+
+        public IActionResult ExibirAgendaPublico()
+        {
+            Agenda o_Agenda = new Agenda();
+
+            AgendaViewModel o_AgendaVM = new AgendaViewModel();
+
+            o_AgendaVM.tabSelect = o_Agenda.SelecionarTodos();
+
+            CorComunicado o_CorComunicado = new CorComunicado();
+
+            DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
+
+            o_AgendaVM.Cores = (from DataRow dr in tabCorComunicado.Rows
+                                select new SelectListItem()
+                                {
+                                    Value = dr["IdCorComunicado"].ToString(),
+                                    Text = dr["NomeCor"].ToString(),
+                                }).ToList();
+
+            return View("ViewExibirAgendaPublico", o_AgendaVM);
+        }
+
+        public IActionResult InserirProcessar(AgendaViewModel o_AgendaViewModel)
+        {
+            Agenda o_Agenda = new Agenda();
+
             o_Agenda.titulo = o_AgendaViewModel.Titulo;
             o_Agenda.comunicado = o_AgendaViewModel.Comunicado;
             o_Agenda.idUsuario = o_AgendaViewModel.IdUsuario.ToString();
             o_Agenda.data = o_AgendaViewModel.Data;
             o_Agenda.idCorComunicado = o_AgendaViewModel.IdCorComunicado;
 
-            // executa o metodo inserir
             o_Agenda.Inserir();
 
-            // redireciona os dados para o metodo selecionar
-            return RedirectToAction("TesteProfessor");
+            return RedirectToAction("ExibirAgendaAdm");
         }
 
-        // metodo ExibirComunicado que exibe os dados do banco de dados de acordo com o id selecionado
-        public IActionResult ExibirComunicado(int IdAgenda)
+        public IActionResult ExibirComunicadoAdm(int IdAgenda)
         {
-            // objetos
-            // objeto da model Agenda
             AgendaViewModel o_AgendaViewModel = new AgendaViewModel();
 
-            // objeto da class Agenda
             Agenda o_Agenda = new Agenda();
 
-            // chama a datatable dtBusca
             DataTable dtBusca;
 
-            // declara que o id do objeto o_Agenda vem do parametro
             o_Agenda.idAgenda = IdAgenda;
-            // executa a partir de dtBusca o metodo SelecionarPorId do objeto o_Agenda com o id passado anteriormente
             dtBusca = o_Agenda.SelecionarPorId();
 
-            // preenche as propriedades da model colaborador a partir do objeto o_AgendaViewModel com as linhas de dtBusca
             o_AgendaViewModel.IdAgenda = int.Parse(dtBusca.Rows[0]["IdAgenda"].ToString());
             o_AgendaViewModel.Titulo = dtBusca.Rows[0]["Titulo"].ToString();
             o_AgendaViewModel.Comunicado = dtBusca.Rows[0]["Comunicado"].ToString();
@@ -89,13 +107,10 @@ namespace projGuriBatatais.Controllers
             o_AgendaViewModel.Data = DateTime.Parse(dtBusca.Rows[0]["Data"].ToString());
             o_AgendaViewModel.IdCorComunicado = int.Parse(dtBusca.Rows[0]["IdCorComunicado"].ToString());
 
-            // objeto da class CorComunicado
             CorComunicado o_CorComunicado = new CorComunicado();
 
-            // datatable com os dados vindos do banco pelo metodo SelecionarTodos
             DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
 
-            // preenche a list do model com as informacoes do banco
             o_AgendaViewModel.Cores = (from DataRow dr in tabCorComunicado.Rows
                                                     select new SelectListItem()
                                                     {
@@ -103,8 +118,71 @@ namespace projGuriBatatais.Controllers
                                                         Text = dr["NomeCor"].ToString(),
                                                     }).ToList();
 
-            // retorna a view TesteProfessor que vai estar preenchida com os dados da model Agenda para serem alterados
-            return View("ViewTesteProfessor", o_AgendaViewModel);
+            return View("ViewExibirAgendaAdm", o_AgendaViewModel);
+        }
+
+        public IActionResult ExibirComunicadoAluno(int IdAgenda)
+        {
+            AgendaViewModel o_AgendaViewModel = new AgendaViewModel();
+
+            Agenda o_Agenda = new Agenda();
+
+            DataTable dtBusca;
+
+            o_Agenda.idAgenda = IdAgenda;
+            dtBusca = o_Agenda.SelecionarPorId();
+
+            o_AgendaViewModel.IdAgenda = int.Parse(dtBusca.Rows[0]["IdAgenda"].ToString());
+            o_AgendaViewModel.Titulo = dtBusca.Rows[0]["Titulo"].ToString();
+            o_AgendaViewModel.Comunicado = dtBusca.Rows[0]["Comunicado"].ToString();
+            o_AgendaViewModel.IdUsuario = int.Parse(dtBusca.Rows[0]["IdUsuario"].ToString());
+            o_AgendaViewModel.Data = DateTime.Parse(dtBusca.Rows[0]["Data"].ToString());
+            o_AgendaViewModel.IdCorComunicado = int.Parse(dtBusca.Rows[0]["IdCorComunicado"].ToString());
+
+            CorComunicado o_CorComunicado = new CorComunicado();
+
+            DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
+
+            o_AgendaViewModel.Cores = (from DataRow dr in tabCorComunicado.Rows
+                                       select new SelectListItem()
+                                       {
+                                           Value = dr["IdCorComunicado"].ToString(),
+                                           Text = dr["NomeCor"].ToString(),
+                                       }).ToList();
+
+            return View("ViewExibirAgendaAluno", o_AgendaViewModel);
+        }
+
+        public IActionResult ExibirComunicadoPublico(int IdAgenda)
+        {
+            AgendaViewModel o_AgendaViewModel = new AgendaViewModel();
+
+            Agenda o_Agenda = new Agenda();
+
+            DataTable dtBusca;
+
+            o_Agenda.idAgenda = IdAgenda;
+            dtBusca = o_Agenda.SelecionarPorId();
+
+            o_AgendaViewModel.IdAgenda = int.Parse(dtBusca.Rows[0]["IdAgenda"].ToString());
+            o_AgendaViewModel.Titulo = dtBusca.Rows[0]["Titulo"].ToString();
+            o_AgendaViewModel.Comunicado = dtBusca.Rows[0]["Comunicado"].ToString();
+            o_AgendaViewModel.IdUsuario = int.Parse(dtBusca.Rows[0]["IdUsuario"].ToString());
+            o_AgendaViewModel.Data = DateTime.Parse(dtBusca.Rows[0]["Data"].ToString());
+            o_AgendaViewModel.IdCorComunicado = int.Parse(dtBusca.Rows[0]["IdCorComunicado"].ToString());
+
+            CorComunicado o_CorComunicado = new CorComunicado();
+
+            DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
+
+            o_AgendaViewModel.Cores = (from DataRow dr in tabCorComunicado.Rows
+                                       select new SelectListItem()
+                                       {
+                                           Value = dr["IdCorComunicado"].ToString(),
+                                           Text = dr["NomeCor"].ToString(),
+                                       }).ToList();
+
+            return View("ViewExibirAgendaPublico", o_AgendaViewModel);
         }
     }
 }

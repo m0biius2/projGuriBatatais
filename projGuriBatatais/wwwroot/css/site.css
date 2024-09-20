@@ -17,10 +17,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 .alerta {
     margin-top: 110px;
 }
@@ -168,4 +164,8 @@ h6, p {
 
     .navbar .estiloNav img {
         transition: transform 0.5s ease;
+    }
+
+    .espacoNavbar{
+        margin-top: 100px;
     }

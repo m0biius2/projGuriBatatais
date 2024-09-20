@@ -1,0 +1,83 @@
+﻿@model UsuarioViewModel
+
+@{
+    ViewData["Title"] = "ViewAlterar";
+}
+
+<h1>ViewAlterar</h1>
+
+@* formulario para cadastrar usuarios *@
+<form asp-controller="Usuario" asp-action="AlterarProcessar" method="post">
+    <div>
+        <input type="hidden" id="idUsuario" asp-for="IdUsuario">
+    </div>
+
+    <div class="row">
+        @* nome completo *@
+        <div class="offset-2 col-4">
+            <label for="nomeCompleto" class="form-label padTop20">Nome Completo:</label>
+            <input type="text" class="form-control" id="nomeCompleto"
+                   placeholder="Digite o nome completo..." asp-for="NomeCompleto">
+        </div>
+
+        <div class="col-4">
+            <label for="nomeUsuario" class="form-label padTop20">Nome de Usuario:</label>
+            <input type="text" class="form-control" id="nomeUsuario"
+                   placeholder="Digite o nome de usuario..." asp-for="NomeUsuario">
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        @* cursos *@
+        <div class="offset-2 col-4">
+            <label for="curso" class="form-label">Curso:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="CAgudas" id="cAgudas" name="Cursos" @(Model.Curso.Contains("CAgudas") ? "checked" : "")>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Cordas Agudas
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="CGraves" id="cGraves" name="Cursos" @(Model.Curso.Contains("CGraves") ? "checked" : "")>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Cordas Graves
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Metais" id="metais" name="Cursos" @(Model.Curso.Contains("Metais") ? "checked" : "")>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Metais
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Madeiras" id="madeiras" name="Cursos" @(Model.Curso.Contains("Madeiras") ? "checked" : "")>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Madeiras
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Percussao" id="percussao" name="Cursos" @(Model.Curso.Contains("Percussao") ? "checked" : "")>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Percussão
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Coral" id="coral" name="Cursos" @(Model.Curso.Contains("Coral") ? "checked" : "")>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Coral
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="offset-2 col-8 text-center">
+            <button type="submit" class="btn btn-dark btn-alterar">Alterar</button> @* botao de inserir dados no banco *@
+            <a class="btn btn-secondary" role="button" asp-controller="Usuario" asp-action="Cadastrar">Voltar</a> @* botao de voltar a pagina inicial *@
+        </div>
+    </div>
+</form>

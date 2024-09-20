@@ -1,0 +1,262 @@
+﻿@using System.Data
+@model AgendaViewModel
+
+@{
+    ViewData["Title"] = "Agenda";
+    Layout = "~/Views/Shared/_LayoutGuriBatatais.cshtml";
+
+    var hoje = DateTime.Now.Date;
+}
+
+@* conteudo *@
+<div class="container-fluid espacoNavbar">
+    <div class="alert alert-secondary alerta" role="alert">
+        Entre com <a href="index.html" class="destaqueLogin">login</a> ou <a href="index.html" class="destaqueCadastro">cadastre-se</a> para mais informações.
+    </div>
+
+    <div class="">
+        @if (Model != null)
+        {
+            @foreach (DataRow row in Model.tabSelect.Rows)
+            { @* exibe um card para cada linha da datatable da model *@
+                @switch (row["Cor"])
+                {
+                    case "Laranja":
+                        var modalId = "modalLaranja" + row["IdAgenda"].ToString();
+
+                        <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
+                           asp-route-IdAgenda="@row["IdAgenda"]"
+                           asp-controller="Agenda"
+                           asp-action="ExibirComunicadoPublico">
+                            <div class="row espacamentoCard">
+                                <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+                                    <div class="card cardLaranja">
+                                        <div class="card-body">
+                                            <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <p class="card-text">(clique para mais informações)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        @* modal laranja *@
+                        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo *@
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    @* conteudo *@
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <p>@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                        </div>
+                                        <div class="row">
+                                            <p>@row["Comunicado"]</p>
+                                        </div>
+                                    </div>
+                                    @* rodape do modal *@
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        break;
+
+                    case "Verde":
+                        modalId = "modalVerde" + row["IdAgenda"].ToString();
+
+                        <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
+                           asp-route-IdAgenda="@row["IdAgenda"]"
+                           asp-controller="Agenda"
+                           asp-action="ExibirComunicadoPublico">
+                            <div class="row espacamentoCard">
+                                <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+                                    <div class="card cardVerde">
+                                        <div class="card-body">
+                                            <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <p class="card-text">(clique para mais informações)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        @* modal verde *@
+                        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo *@
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    @* conteudo *@
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <p>@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                        </div>
+                                        <div class="row">
+                                            <p>@row["Comunicado"]</p>
+                                        </div>
+                                    </div>
+                                    @* rodape do modal *@
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        break;
+
+                    case "Azul":
+                        modalId = "modalAzul" + row["IdAgenda"].ToString();
+
+                        <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
+                           asp-route-IdAgenda="@row["IdAgenda"]"
+                           asp-controller="Agenda"
+                           asp-action="ExibirComunicadoPublico">
+                            <div class="row espacamentoCard">
+                                <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+                                    <div class="card cardAzul">
+                                        <div class="card-body">
+                                            <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <p class="card-text">(clique para mais informações)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        @* modal azul *@
+                        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo *@
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    @* conteudo *@
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <p>@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                        </div>
+                                        <div class="row">
+                                            <p>@row["Comunicado"]</p>
+                                        </div>
+                                    </div>
+                                    @* rodape do modal *@
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        break;
+
+                    case "Roxo":
+                        modalId = "modalRoxo" + row["IdAgenda"].ToString();
+
+                        <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
+                           asp-route-IdAgenda="@row["IdAgenda"]"
+                           asp-controller="Agenda"
+                           asp-action="ExibirComunicadoPublico">
+                            <div class="row espacamentoCard">
+                                <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+                                    <div class="card cardRoxo">
+                                        <div class="card-body">
+                                            <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <p class="card-text">(clique para mais informações)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        @* modal roxo *@
+                        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo *@
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    @* conteudo *@
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <p>@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                        </div>
+                                        <div class="row">
+                                            <p>@row["Comunicado"]</p>
+                                        </div>
+                                    </div>
+                                    @* rodape do modal *@
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        break;
+
+                    case "Amarelo":
+                        modalId = "modalAmarelo" + row["IdAgenda"].ToString();
+
+                        <a class="cardStyle" data-bs-toggle="modal" data-bs-target="@("#" + modalId)"
+                           asp-route-IdAgenda="@row["IdAgenda"]"
+                           asp-controller="Agenda"
+                           asp-action="ExibirComunicadoPublico">
+                            <div class="row espacamentoCard">
+                                <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+                                    <div class="card cardAmarelo">
+                                        <div class="card-body">
+                                            <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <p class="card-text">(clique para mais informações)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        @* modal amarelo *@
+                        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo *@
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    @* conteudo *@
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <p>@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
+                                        </div>
+                                        <div class="row">
+                                            <p>@row["Comunicado"]</p>
+                                        </div>
+                                    </div>
+                                    @* rodape do modal *@
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        break;
+                }
+            }
+        }
+    </div>
+</div>

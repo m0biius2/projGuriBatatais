@@ -33,6 +33,13 @@ $(document).ready(function () {
     });
 
     $(".btn-cadastro").click(function () {
+        event.preventDefault();
+
+        // Pegando os dados do formulário
+        var nomeCompleto = $("#nomeCompleto").val();
+        var nomeUsuario = $("#nomeUsuario").val();
+        var senha = $("#senha").val();
+        var tipoUsuario = $("input[type=radio][name='Tipo']:checked").val(); // Para os radio buttons
 
         var cursosSelecionados = [];
 
@@ -49,13 +56,59 @@ $(document).ready(function () {
             url: "/Usuario/CadastrarProcessar",
             type: "POST",
             data: {
-                Cursos: cursosFormatados,
-                // Adicione outros dados do formulário aqui
+                NomeCompleto: nomeCompleto,
+                NomeUsuario: nomeUsuario,
+                Senha: senha,
+                Cursos: cursosFormatados,   // String formatada dos cursos
+                Tipo: tipoUsuario  // Radio button (Aluno/Professor/Coordenação)
             },
             success: function (response) {
                 console.log("Dados enviados com sucesso!");
             }
         });
     });
-})
 
+    $(".btn-alterar").click(function () {
+        event.preventDefault();
+
+        // Pegando os dados do formulário
+        var idUsuario = $("#idUsuario").val();
+        var nomeCompleto = $("#nomeCompleto").val();
+        var nomeUsuario = $("#nomeUsuario").val();
+
+        var cursosSelecionados = [];
+
+        // Captura os valores dos checkboxes selecionados
+        $("input[type=checkbox]:checked").each(function () {
+            cursosSelecionados.push($(this).val());
+        });
+
+        // Converte o array em uma string, separando por vírgula
+        var cursosFormatados = cursosSelecionados.join(", ");
+
+        // Agora você pode enviar essa string formatada para o controller
+        $.ajax({
+            url: "/Usuario/AlterarProcessar",
+            type: "POST",
+            data: {
+                IdUsuario: idUsuario,
+                NomeCompleto: nomeCompleto,
+                NomeUsuario: nomeUsuario,
+                Cursos: cursosFormatados,   // String formatada dos cursos
+            },
+            success: function (response) {
+                console.log("Dados enviados com sucesso!");
+            }
+        });
+    });
+
+    $(".link-login").click(function () {
+        $(".cadastro").addClass("d-none");
+        $(".login").removeClass("d-none");
+    });
+
+    $(".link-cadastro").click(function () {
+        $(".login").addClass("d-none");
+        $(".cadastro").removeClass("d-none");
+    });
+})

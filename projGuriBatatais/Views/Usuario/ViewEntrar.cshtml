@@ -1,0 +1,157 @@
+﻿@model UsuarioViewModel
+
+@{
+    ViewData["Title"] = "Cadastro";
+    Layout = "~/Views/Shared/_LayoutGuriBatatais.cshtml";
+}
+
+<div class="container-fluid cadastro">
+    <h1 class="espacoNavbar">ViewEntrar</h1>
+
+    @* formulario para cadastrar usuarios *@
+    <form asp-controller="Usuario" asp-action="CadastrarProcessar" method="post">
+        <div class="row">
+            @* nome completo *@
+            <div class="offset-2 col-4">
+                <label for="nomeCompleto" class="form-label padTop20">Nome Completo:</label>
+                <input type="text" class="form-control" id="nomeCompleto"
+                       placeholder="Digite o nome completo..." asp-for="NomeCompleto">
+            </div>
+
+            <div class="col-4">
+                <label for="nomeUsuario" class="form-label padTop20">Nome de Usuario:</label>
+                <input type="text" class="form-control" id="nomeUsuario"
+                       placeholder="Digite o nome de usuario..." asp-for="NomeUsuario">
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="offset-2 col-4">
+                <label for="senha" class="form-label padTop20">Senha:</label>
+                <input type="password" class="form-control" id="senha"
+                       placeholder="Digite a senha..." asp-for="Senha">
+            </div>
+
+            @* cursos *@
+            <div class="col-4">
+                <label for="curso" class="form-label">Curso:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="CAgudas" id="cAgudas" name="Cursos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Cordas Agudas
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="CGraves" id="cGraves" name="Cursos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Cordas Graves
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Metais" id="metais" name="Cursos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Metais
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Madeiras" id="madeiras" name="Cursos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Madeiras
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Percussao" id="percussao" name="Cursos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Percussão
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Coral" id="coral" name="Cursos">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Coral
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="offset-2 col-4">
+                <label for="tipo" class="form-label">Usuário:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Aluno" asp-for="Tipo" id="aluno">
+                    <label class="form-check-label" for="aluno">
+                        Sou Aluno
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Professor" asp-for="Tipo" id="professor">
+                    <label class="form-check-label" for="professor">
+                        Sou Professor
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Coordenacao" asp-for="Tipo" id="coordenacao">
+                    <label class="form-check-label" for="coordenacao">
+                        Sou da Coordenação
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-2 col-4">
+                <a href="#" class="h6 link-login">Já possui cadastro? Entre com o login!</a>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="offset-2 col-8 text-center">
+                <button type="submit" class="btn btn-dark btn-cadastro">Cadastrar-se</button> @* botao de inserir dados no banco *@
+                <a class="btn btn-secondary" role="button" asp-controller="Usuario" asp-action="Cadastrar">Voltar</a> @* botao de voltar a pagina inicial *@
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container-fluid login d-none">
+    <h1 class="espacoNavbar">ViewEntrar</h1>
+
+    <form asp-controller="Usuario" asp-action="LoginProcessar" method="post">
+        <div class="row">
+            <div class="offset-2 col-4">
+                <label for="nomeUsuario" class="form-label padTop20">Nome de Usuario:</label>
+                <input type="text" class="form-control" id="nomeUsuario"
+                       placeholder="Digite o nome de usuario..." asp-for="NomeUsuario">
+            </div>
+
+            <div class="col-4">
+                <label for="senha" class="form-label padTop20">Senha:</label>
+                <input type="password" class="form-control" id="senha"
+                       placeholder="Digite a senha..." asp-for="Senha">
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="offset-2 col-4">
+                <a href="#" class="h6 link-cadastro">Não possui login? Faça já o cadastro.</a>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="offset-2 col-8 text-center">
+                <button type="submit" class="btn btn-dark btn-login">Entrar</button> @* botao de inserir dados no banco *@
+                <a class="btn btn-secondary" role="button" asp-controller="Usuario" asp-action="Cadastrar">Voltar</a> @* botao de voltar a pagina inicial *@
+            </div>
+        </div>
+    </form>
+</div>
