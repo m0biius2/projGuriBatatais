@@ -32,22 +32,21 @@ namespace projGuriBatatais.Controllers
             return RedirectToAction("Cadastrar");
         }
 
-        public async Task<IActionResult> LoginProcessar(UsuarioViewModel o_UsuariolVM)
+        public async Task<IActionResult> LoginProcessar(UsuarioViewModel o_UsuarioVM)
         {
             Usuario o_Usuario = new Usuario();
 
             DataTable dtPesquisa;
 
-            o_Usuario.nomeUsuario = o_UsuariolVM.NomeUsuario;
-            o_Usuario.senha = o_UsuariolVM.Senha;
-            //dtPesquisa = o_Usuario.ValidarLogin();
+            o_Usuario.nomeUsuario = o_UsuarioVM.NomeUsuario;
+            o_Usuario.senha = o_UsuarioVM.Senha;
+            dtPesquisa = o_Usuario.ValidarLogin();
 
-            //// Verifica as credenciais
-            //if (dtPesquisa != null)
+            //if(dtPesquisa != null)
             //{
             //    int idUsuario = int.Parse(dtPesquisa.Rows[0]["IdUsuario"].ToString());
-            //    string nome = dtPesquisa.Rows[0]["Nome"].ToString();
-            //    string permissao = dtPesquisa.Rows[0]["Permissao"].ToString();
+            //    string nomeCompleto = dtPesquisa.Rows[0]["NomeCompleto"].ToString();
+            //    string chaveAcesso = dtPesquisa.Rows[0]["ChaveAcesso"].ToString();
 
             //    //-------------------------------------------------
             //    //          Declarações ::  Claim
@@ -73,22 +72,10 @@ namespace projGuriBatatais.Controllers
             //    //        CRIA O CONTEXTO DE SEGURANÇA
             //    //-------------------------------------------------
             //    await HttpContext.SignInAsync(o_Principal);
-
-            //    if (permissao == "ADM")
-            //    {
-            //        // Redireciona para a página Index
-            //        return RedirectToRoute(new { controller = "AreaAdministrativa", action = "IndexAdministrativo" });
-            //    }
-            //    else
-            //    {
-            //        // Redireciona para a página Index
-            //        return RedirectToRoute(new { controller = "AreaPrivada", action = "IndexPrivado" });
-            //    }
             //}
             //else
             //{
-            //    // Redireciona para a página Index
-            //    return Redirect("LoginExibir");
+            //    Redirect("LoginExibir");
             //}
 
             return Redirect("LoginExibir");
@@ -132,6 +119,15 @@ namespace projGuriBatatais.Controllers
             o_Usuario.Alterar();
 
             return RedirectToAction("Alterar");
+        }
+
+        public JsonResult ValidarNomeUsuario(string nomeUsuario)
+        {
+            Usuario o_Usuario = new Usuario();
+
+            var usuarioExiste = o_Usuario.ValidarNomeUsuario(nomeUsuario);
+
+            return Json(new { usuarioExiste = usuarioExiste != null });
         }
     }
 }

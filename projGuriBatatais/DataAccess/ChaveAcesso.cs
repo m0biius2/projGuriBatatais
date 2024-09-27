@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Xml;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using projGuriBatatais.Models;
 
 namespace projGuriBatatais.DataAccess
 {
@@ -42,71 +43,32 @@ namespace projGuriBatatais.DataAccess
         }
 
         // metodo que seleciona os dados da tabela
-        public DataTable SelecionarTodos()
+        public List<ChaveAcessoViewModel> SelecionarTodos()
         {
             try
             {
-                // dados a serem selecionados
                 string cmdSQL = "SELECT * From ChaveAcesso";
-
-                // busca dados do banco
                 SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);
-
-                // abre conexao com o banco
-                con.Open();
-
-                // cria uma tabela para exibicao dos dados
                 DataTable dtChave = new DataTable();
 
-                // preenche a tabela para exibicao dos dados com dados do banco
-                int qtdLinhasAfetadas = daPesquisa.Fill(dtChave);
-
-                // fecha conexao com o banco
-                con.Close();
-
-                // retorna a tabela de exibicao
-                return dtChave;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        // metodo que seleciona os dados da tabela por id
-        public DataTable SelecionarPorId()
-        {
-            try
-            {
-                // dados a serem selecionados
-                string cmdSQL = "Select * From ChaveAcesso " +
-                                "Where IdChaveAcesso = @IdChaveAcesso " +
-                                "Order By IdChaveAcesso";
-
-                // busca dados do banco
-                SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);
-
-
-                // cria parametros dos valores das colunas
-                daPesquisa.SelectCommand.Parameters.Add("@IdChaveAcesso", SqlDbType.Int);
-
-                // transforma os parametros em variaveis
-                daPesquisa.SelectCommand.Parameters["@IdChaveAcesso"].Value = idChaveAcesso;
-
-                // abre conexao com o banco
                 con.Open();
-
-                // cria uma tabela para exibicao dos dados
-                DataTable dtChave = new DataTable();
-
-                // preenche a tabela para exibicao dos dados com dados do banco
-                int qtdLinhasAfetadas = daPesquisa.Fill(dtChave);
-
-                // fecha conexao com o banco
+                daPesquisa.Fill(dtChave);
                 con.Close();
 
-                // retorna a tabela de exibicao
-                return dtChave;
+                // Converter DataTable para List<ChaveAcessoModel>
+                List<ChaveAcessoViewModel> listaChaves = new List<ChaveAcessoViewModel>();
+                foreach (DataRow row in dtChave.Rows)
+                {
+                    listaChaves.Add(new ChaveAcessoViewModel
+                    {
+                        IdChaveAcesso = (int)row["IdChaveAcesso"],
+                        ChaveCoordenacao = row["ChaveCoordenacao"].ToString(),
+                        ChaveProfessor = row["ChaveProfessor"].ToString(),
+                        ChaveAluno = row["ChaveAluno"].ToString()
+                    });
+                }
+
+                return listaChaves;
             }
             catch (Exception ex)
             {

@@ -169,3 +169,9 @@ h6, p {
     .espacoNavbar{
         margin-top: 100px;
     }
+
+.alert{
+    margin-top: 5px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}

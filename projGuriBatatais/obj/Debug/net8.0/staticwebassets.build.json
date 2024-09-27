@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D3DzdtJyrBkteL2W+dKfndYwH1bogOOQ6eKRi+t4I6U=",
+  "Hash": "fj+NSfTfSRB5EKi/FuBzVyfOvbJlnwpL3M7pkXZ8khA=",
   "Source": "projGuriBatatais",
   "BasePath": "_content/projGuriBatatais",
   "Mode": "Default",
@@ -319,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logoGuri.png"
+    },
+    {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\entrar.js",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "js/entrar.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\entrar.js"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\site.js",

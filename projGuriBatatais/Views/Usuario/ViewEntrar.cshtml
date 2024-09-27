@@ -16,12 +16,14 @@
                 <label for="nomeCompleto" class="form-label padTop20">Nome Completo:</label>
                 <input type="text" class="form-control" id="nomeCompleto"
                        placeholder="Digite o nome completo..." asp-for="NomeCompleto">
+                <div class="invalid-feedback">Insira seu nome completo.</div>
             </div>
 
             <div class="col-4">
-                <label for="nomeUsuario" class="form-label padTop20">Nome de Usuario:</label>
+                <label for="nomeUsuario" class="form-label padTop20">Nome de Usuário:</label>
                 <input type="text" class="form-control" id="nomeUsuario"
-                       placeholder="Digite o nome de usuario..." asp-for="NomeUsuario">
+                       placeholder="Digite o nome de usuário..." asp-for="NomeUsuario">
+                <div class="invalid-feedback">Insira o nome de usuário.</div>
             </div>
         </div>
 
@@ -32,6 +34,7 @@
                 <label for="senha" class="form-label padTop20">Senha:</label>
                 <input type="password" class="form-control" id="senha"
                        placeholder="Digite a senha..." asp-for="Senha">
+                <div class="invalid-feedback">Insira a senha.</div>
             </div>
 
             @* cursos *@
@@ -100,6 +103,13 @@
                     </label>
                 </div>
             </div>
+
+            <div class="col-4">
+                <label for="chaveAcesso" class="form-label padTop20">Chave de Acesso:</label>
+                <input type="password" class="form-control" id="chaveAcesso"
+                       placeholder="Digite a chave de acesso..." >
+                <div class="invalid-feedback">Insira a chave de acesso.</div>
+            </div>
         </div>
 
         <div class="row">
@@ -138,7 +148,7 @@
         </div>
 
         <br />
-
+        
         <div class="row">
             <div class="offset-2 col-4">
                 <a href="#" class="h6 link-cadastro">Não possui login? Faça já o cadastro.</a>
