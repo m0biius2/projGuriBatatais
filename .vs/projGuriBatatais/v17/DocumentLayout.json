@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\wwwroot\\js\\entrar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\wwwroot\\js\\entrar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\acessonegado\\viewacessonegado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\acessonegado\\viewacessonegado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\acessonegadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\acessonegadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\shared\\_layoutaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\shared\\_layoutaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\shared\\_layoutguribatatais.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\shared\\_layoutguribatatais.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\usuario\\viewentrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\usuario\\viewentrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\chaveacessocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\chaveacessocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\dataaccess\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\dataaccess\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LayoutGuriBatatais.cshtml",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
-              "RelativeToolTip": "projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T17:29:35.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChaveAcessoController.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\ChaveAcessoController.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\ChaveAcessoController.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\ChaveAcessoController.cs",
-              "RelativeToolTip": "projGuriBatatais\\Controllers\\ChaveAcessoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T17:20:24.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "projGuriBatatais\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAiwHsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T16:35:54.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\DataAccess\\Usuario.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\DataAccess\\Usuario.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\DataAccess\\Usuario.cs",
-              "RelativeToolTip": "projGuriBatatais\\DataAccess\\Usuario.cs",
-              "ViewState": "AQIAADsBAAAAAAAAAAAuwHMBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T16:34:13.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "entrar.js",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\entrar.js",
-              "RelativeDocumentMoniker": "projGuriBatatais\\wwwroot\\js\\entrar.js",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\entrar.js",
-              "RelativeToolTip": "projGuriBatatais\\wwwroot\\js\\entrar.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGMAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-27T13:51:43.13Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Program.cs",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Program.cs",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Program.cs",
+              "RelativeToolTip": "projGuriBatatais\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T18:56:44.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewAcessoNegado.cshtml",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\AcessoNegado\\ViewAcessoNegado.cshtml",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\AcessoNegado\\ViewAcessoNegado.cshtml",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\AcessoNegado\\ViewAcessoNegado.cshtml",
+              "RelativeToolTip": "projGuriBatatais\\Views\\AcessoNegado\\ViewAcessoNegado.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T18:56:33.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ViewEntrar.cshtml",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Usuario\\ViewEntrar.cshtml",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Usuario\\ViewEntrar.cshtml",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Usuario\\ViewEntrar.cshtml",
-              "RelativeToolTip": "projGuriBatatais\\Views\\Usuario\\ViewEntrar.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAADwvx4AAAAAAAAA",
+              "Title": "AcessoNegadoController.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\AcessoNegadoController.cs",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\AcessoNegadoController.cs",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\AcessoNegadoController.cs",
+              "RelativeToolTip": "projGuriBatatais\\Controllers\\AcessoNegadoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T18:55:32.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "projGuriBatatais\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T18:55:09.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutAluno.cshtml",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutAluno.cshtml",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Shared\\_LayoutAluno.cshtml",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutAluno.cshtml",
+              "RelativeToolTip": "projGuriBatatais\\Views\\Shared\\_LayoutAluno.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T10:53:03.216Z",
+              "WhenOpened": "2024-10-04T18:53:45.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_LayoutGuriBatatais.cshtml",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
+              "RelativeToolTip": "projGuriBatatais\\Views\\Shared\\_LayoutGuriBatatais.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T18:53:29.641Z",
               "EditorCaption": ""
             }
           ]

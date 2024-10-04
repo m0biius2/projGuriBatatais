@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/AcessoNegado/ViewAcessoNegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvTmVnYWRvXFZpZXdBY2Vzc29OZWdhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Agenda/ViewExibirAgendaAdm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXFZpZXdFeGliaXJBZ2VuZGFBZG0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -77,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e83yx4cgjx
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_LayoutAluno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBbHVuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-fz1l959gb5
 
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_LayoutGuriBatatais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRHdXJpQmF0YXRhaXMuY3NodG1s

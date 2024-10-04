@@ -35,50 +35,69 @@ namespace projGuriBatatais.Controllers
         public async Task<IActionResult> LoginProcessar(UsuarioViewModel o_UsuarioVM)
         {
             Usuario o_Usuario = new Usuario();
-
             DataTable dtPesquisa;
 
+            // Atribuindo os valores
+            o_Usuario.idUsuario = o_UsuarioVM.IdUsuario;
             o_Usuario.nomeUsuario = o_UsuarioVM.NomeUsuario;
             o_Usuario.senha = o_UsuarioVM.Senha;
+
+            // Validar login no banco de dados
             dtPesquisa = o_Usuario.ValidarLogin();
 
-            //if(dtPesquisa != null)
-            //{
-            //    int idUsuario = int.Parse(dtPesquisa.Rows[0]["IdUsuario"].ToString());
-            //    string nomeCompleto = dtPesquisa.Rows[0]["NomeCompleto"].ToString();
-            //    string chaveAcesso = dtPesquisa.Rows[0]["ChaveAcesso"].ToString();
+            if (dtPesquisa != null)
+            {
+                // Login bem-sucedido
+                int idUsuario = int.Parse(dtPesquisa.Rows[0]["IdUsuario"].ToString());
+                string nomeUsuario = dtPesquisa.Rows[0]["NomeUsuario"].ToString();
+                string senha = dtPesquisa.Rows[0]["Senha"].ToString();
+                string tipo = dtPesquisa.Rows[0]["Tipo"].ToString();
 
-            //    //-------------------------------------------------
-            //    //          Declarações ::  Claim
-            //    //-------------------------------------------------
-            //    List<Claim> usuarioDeclaracoes = new List<Claim>{
-            //                new Claim("IdUsuario", idUsuario.ToString()),
-            //                new Claim("Nome", nome),
-            //                new Claim("Permissao", permissao)
-            //            };
+                //-------------------------------------------------
+                //          Declarações ::  Claim
+                //-------------------------------------------------
+                List<Claim> usuarioDeclaracoes = new List<Claim>{
+                            new Claim("IdUsuario", idUsuario.ToString()),
+                            new Claim("NomeUsuario", nomeUsuario),
+                            new Claim("Senha", senha),
+                            new Claim("Tipo", tipo)
+                        };
 
-            //    //-------------------------------------------------
-            //    //               I D E N T I T Y
-            //    //-------------------------------------------------
-            //    ClaimsIdentity o_Identidade = new ClaimsIdentity(usuarioDeclaracoes,
-            //                                                     "CookieAuntenticacao");
+                //-------------------------------------------------
+                //               I D E N T I T Y
+                //-------------------------------------------------
+                ClaimsIdentity o_Identidade = new ClaimsIdentity(usuarioDeclaracoes,
+                                                                 "CookieAuntenticacao");
 
-            //    //-------------------------------------------------
-            //    //               P R I N C I P A L
-            //    //-------------------------------------------------
-            //    ClaimsPrincipal o_Principal = new ClaimsPrincipal(o_Identidade);
+                //-------------------------------------------------
+                //               P R I N C I P A L
+                //-------------------------------------------------
+                ClaimsPrincipal o_Principal = new ClaimsPrincipal(o_Identidade);
 
-            //    //-------------------------------------------------
-            //    //        CRIA O CONTEXTO DE SEGURANÇA
-            //    //-------------------------------------------------
-            //    await HttpContext.SignInAsync(o_Principal);
-            //}
-            //else
-            //{
-            //    Redirect("LoginExibir");
-            //}
+                //-------------------------------------------------
+                //        CRIA O CONTEXTO DE SEGURANÇA
+                //-------------------------------------------------
+                await HttpContext.SignInAsync(o_Principal);
 
-            return Redirect("LoginExibir");
+                // Redirecionar o usuário com base no tipo
+                string redirectUrl;
+                if (tipo == "Aluno")
+                {
+                    redirectUrl = Url.Action("ExibirAgendaAluno", "Agenda");
+                }
+                else
+                {
+                    redirectUrl = Url.Action("ExibirAgendaAdm", "Agenda");
+                }
+
+                // Retornando um objeto JSON de sucesso
+                return Json(new { success = true, redirectUrl });
+            }
+            else
+            {
+                // Retornando um objeto JSON de falha
+                return Json(new { success = false, message = "Nome de usuário ou senha incorretos" });
+            }
         }
 
         public IActionResult Alterar (int IdUsuario)

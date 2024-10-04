@@ -176,7 +176,7 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a seres deletados
-                string cmdSQL = $"Delete From User " +
+                string cmdSQL = $"Delete From Usuario " +
                                 $"Where IdUsuario In (@IdUsuario)";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
@@ -292,10 +292,12 @@ namespace projGuriBatatais.DataAccess
 
 
                 // cria parametros dos valores das colunas
-                daPesquisa.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.Int);
+                daPesquisa.SelectCommand.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
+                daPesquisa.SelectCommand.Parameters.Add("@Senha", SqlDbType.VarChar);
 
                 // transforma os parametros em variaveis
-                daPesquisa.SelectCommand.Parameters["@IdUsuario"].Value = idUsuario;
+                daPesquisa.SelectCommand.Parameters["@NomeUsuario"].Value = nomeUsuario;
+                daPesquisa.SelectCommand.Parameters["@Senha"].Value = senha;
 
                 // abre conexao com o banco
                 con.Open();

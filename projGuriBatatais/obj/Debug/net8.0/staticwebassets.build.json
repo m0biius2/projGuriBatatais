@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fj+NSfTfSRB5EKi/FuBzVyfOvbJlnwpL3M7pkXZ8khA=",
+  "Hash": "G4lG4+E0uR5vX3zom9fL2qGhVZgkPo17C8JlL4vITqw=",
   "Source": "projGuriBatatais",
   "BasePath": "_content/projGuriBatatais",
   "Mode": "Default",
@@ -243,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\5.png"
+    },
+    {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerAgenda.png",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "img/bannerAgenda.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bannerAgenda.png"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicial.png",

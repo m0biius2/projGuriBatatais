@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using projGuriBatatais.DataAccess;
 using projGuriBatatais.Models;
@@ -8,6 +9,9 @@ namespace projGuriBatatais.Controllers
 {
     public class AgendaController : Controller
     {
+        // Anotação
+        [Authorize]
+        [Authorize(Policy = "AcessoAdm")]
         public IActionResult ExibirAgendaAdm()
         {
             Agenda o_Agenda = new Agenda();
@@ -30,6 +34,8 @@ namespace projGuriBatatais.Controllers
             return View("ViewExibirAgendaAdm", o_AgendaVM);
         }
 
+        [Authorize]
+        [Authorize(Policy = "AcessoAluno")]
         public IActionResult ExibirAgendaAluno()
         {
             Agenda o_Agenda = new Agenda();

@@ -32,7 +32,7 @@
         <div class="row">
             <div class="offset-2 col-4">
                 <label for="senha" class="form-label padTop20">Senha:</label>
-                <input type="password" class="form-control" id="senha"
+                <input type="password" maxlength="8" class="form-control" id="senha"
                        placeholder="Digite a senha..." asp-for="Senha">
                 <div class="invalid-feedback">Insira a senha.</div>
             </div>
@@ -135,14 +135,14 @@
     <form asp-controller="Usuario" asp-action="LoginProcessar" method="post">
         <div class="row">
             <div class="offset-2 col-4">
-                <label for="nomeUsuario" class="form-label padTop20">Nome de Usuario:</label>
-                <input type="text" class="form-control" id="nomeUsuario"
+                <label for="nomeUsuarioLogin" class="form-label padTop20">Nome de Usuario:</label>
+                <input type="text" class="form-control" id="nomeUsuarioLogin"
                        placeholder="Digite o nome de usuario..." asp-for="NomeUsuario">
             </div>
 
             <div class="col-4">
-                <label for="senha" class="form-label padTop20">Senha:</label>
-                <input type="password" class="form-control" id="senha"
+                <label for="senhaLogin" class="form-label padTop20">Senha:</label>
+                <input type="password" maxlength="8" class="form-control" id="senhaLogin"
                        placeholder="Digite a senha..." asp-for="Senha">
             </div>
         </div>
