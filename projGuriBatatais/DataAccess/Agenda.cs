@@ -53,7 +53,7 @@ namespace projGuriBatatais.DataAccess
         {
             try
             {
-                // dados a serem inseridos na tabela
+                // comando sql
                 string cmdSQL = $"Insert Into Agenda(Titulo, Comunicado, IdUsuario, Data, IdCorComunicado) " +
                                 $"Values(@Titulo, @Comunicado, @IdUsuario, @Data, @IdCorComunicado)";
 

@@ -5,6 +5,50 @@
       "PackagePath": "staticwebassets\\projGuriBatatais.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\100-IMG_5051.JPG",
+      "PackagePath": "staticwebassets\\Arquivos\\100-IMG_5051.JPG"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\100-IMG_5077.JPG",
+      "PackagePath": "staticwebassets\\Arquivos\\100-IMG_5077.JPG"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\100-IMG_5079.JPG",
+      "PackagePath": "staticwebassets\\Arquivos\\100-IMG_5079.JPG"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-20241006175825.png",
+      "PackagePath": "staticwebassets\\Arquivos\\61-20241006175825.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-Captura de tela 2024-08-29 145610.png",
+      "PackagePath": "staticwebassets\\Arquivos\\61-Captura de tela 2024-08-29 145610.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-DSWeHRIILZ4.mp3",
+      "PackagePath": "staticwebassets\\Arquivos\\61-DSWeHRIILZ4.mp3"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\Arquivos\\61-Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-IMG_5079.JPG",
+      "PackagePath": "staticwebassets\\Arquivos\\61-IMG_5079.JPG"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-Menina triste.pdf",
+      "PackagePath": "staticwebassets\\Arquivos\\61-Menina triste.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-victor.png",
+      "PackagePath": "staticwebassets\\Arquivos\\61-victor.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\navbar.css",
       "PackagePath": "staticwebassets\\css\\navbar.css"
     },
@@ -57,6 +101,14 @@
       "PackagePath": "staticwebassets\\img\\bannerPaginaInicialMobile.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\cAgudas (1).png",
+      "PackagePath": "staticwebassets\\img\\cAgudas (1).png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\cAgudas.png",
+      "PackagePath": "staticwebassets\\img\\cAgudas.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\logoGrowthPreta.png",
       "PackagePath": "staticwebassets\\img\\logoGrowthPreta.png"
     },
@@ -67,6 +119,18 @@
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\entrar.js",
       "PackagePath": "staticwebassets\\js\\entrar.js"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\jquery.magnific-popup.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.js"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\jquery.magnific-popup2.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup2.js"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\pdf.js",
+      "PackagePath": "staticwebassets\\js\\pdf.js"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\site.js",

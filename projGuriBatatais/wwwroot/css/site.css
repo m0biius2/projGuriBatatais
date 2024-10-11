@@ -17,6 +17,10 @@ html {
   min-height: 100%;
 }
 
+body{
+    background-color: #e9e9e9;
+}
+
 .alerta {
     margin-top: 110px;
 }
@@ -174,4 +178,8 @@ h6, p {
     margin-top: 5px;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+}
+
+.pad30{
+    padding-top: 30px;
 }

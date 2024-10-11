@@ -116,7 +116,6 @@ C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
-C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\ar\Humanizer.resources.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -259,3 +258,6 @@ C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutGuriBatatais.cshtml.rz.scp.css
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\projGuriBatatais.sourcelink.json
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutAluno.cshtml.rz.scp.css
+C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Formats.Asn1.dll

@@ -3,9 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//-------------------------------------------------------------------
-// Habilita o serviço de AUTENTICAÇÃO para COOKIE
-//-------------------------------------------------------------------
+// habilita autenticação por cookie
 builder.Services.AddAuthentication("CookieAuntenticacao").AddCookie("CookieAuntenticacao",
                                                options =>
                                                {
@@ -15,10 +13,7 @@ builder.Services.AddAuthentication("CookieAuntenticacao").AddCookie("CookieAunte
                                                    options.AccessDeniedPath = "/AcessoNegado/AcessoNegado";
                                                });
 
-//-------------------------------------------------------------------
-// Habilita o serviço de AUTORIZAÇÃO para COOKIE
-// Cria POLÍTICAS de acesso
-//-------------------------------------------------------------------
+// cria politicas de acesso
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AcessoAluno",
@@ -40,7 +35,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-// rota
+// rotas
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Cursos}/{action=ArquivoUploadExibir}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Inicial}/{action=Index}");

@@ -13,10 +13,13 @@
         <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/pagInicial.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/rodape.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
         @* animate *@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         @* icons *@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        @* magnific popup *@
+        <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     </head>
     <body>
         <header>
@@ -107,10 +110,19 @@
         @* nosso jquery *@
         <script src="~/js/site.js" asp-append-version="true"></script>
         <script src="~/js/entrar.js" asp-append-version="true"></script>
+        <script src="~/js/magnific-popup.js" asp-append-version="true"></script>
+        <script src="~/js/pdf.js" asp-append-version="true"></script>
         @* plugin jquery mask *@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.4/jquery.mask.min.js"></script>
         @* plugin sweetalert *@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        @* plugin magnific popup *@
+        <script src="~/magnific-popup/jquery.magnific-popup.js"></script>
+        <script src="~/js/jquery.magnific-popup.js"></script>
+        <script src="~/js/jquery.magnific-popup2.js"></script>
+        @* plugin pdf *@
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>
