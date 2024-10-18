@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kwOnXCfc3+W5sdRQ/Qv7w4sNPacbdQZWaBw06mRs+OI=",
+  "Hash": "KIT104e7/J66t1rFDU0Es29Xnnqupq6O9avP+0/dHk4=",
   "Source": "projGuriBatatais",
   "BasePath": "_content/projGuriBatatais",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Arquivos\\100-IMG_5079.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\60-Captura de tela 2024-08-29 145610.png",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "Arquivos/60-Captura de tela 2024-08-29 145610.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Arquivos\\60-Captura de tela 2024-08-29 145610.png"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-20241006175825.png",
@@ -492,12 +511,12 @@
       "OriginalItemSpec": "wwwroot\\img\\bannerPaginaInicial.png"
     },
     {
-      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicialMobile.png",
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicialMobile1.png",
       "SourceId": "projGuriBatatais",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
       "BasePath": "_content/projGuriBatatais",
-      "RelativePath": "img/bannerPaginaInicialMobile.png",
+      "RelativePath": "img/bannerPaginaInicialMobile1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -508,7 +527,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\bannerPaginaInicialMobile.png"
+      "OriginalItemSpec": "wwwroot\\img\\bannerPaginaInicialMobile1.png"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\cAgudas (1).png",
@@ -587,6 +606,25 @@
       "OriginalItemSpec": "wwwroot\\img\\logoGuri.png"
     },
     {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\testinho.jpeg",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "img/testinho.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\testinho.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\entrar.js",
       "SourceId": "projGuriBatatais",
       "SourceType": "Discovered",
@@ -604,6 +642,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\entrar.js"
+    },
+    {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\jogo.js",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "js/jogo.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jogo.js"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\jquery.magnific-popup.js",

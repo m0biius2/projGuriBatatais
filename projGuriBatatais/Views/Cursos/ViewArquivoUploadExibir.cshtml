@@ -1,0 +1,143 @@
+﻿@using System.Data
+@model ArquivoViewModel
+
+@{
+    ViewData["Title"] = "Cordas Agudas";
+    Layout = "~/Views/Shared/_LayoutGuriBatatais.cshtml";
+
+    var hoje = DateTime.Now.Date;
+}
+
+<img class="img-fluid" src="~/img/cAgudas.png"/>
+
+<div class="container-fluid">
+    <h1 class="pad30">Materiais de Aula</h1>
+
+    <br />
+
+    <div class="row">
+        <form asp-controller="Cursos" asp-action="ArquivoUploadProcessar" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="offset-4 col-4">
+                    Selecione o arquivo
+                    <input asp-for="File" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="offset-4 col-4">
+                    <label for="Data" class="form-label">Data:</label>
+                    <input type="date" value="@hoje" class="form-control" id="Data"
+                           placeholder="Digite a data..." asp-for="Data">
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-success">Upload Arquivo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <h2>PDFs</h2>
+    </div>
+
+    @if (Model.tabSelect != null)
+    {
+        <div class="row text-center">
+            @foreach (DataRow row in Model.tabSelect.Rows)
+            {
+                string caminhoArquivo = row["Caminho"].ToString();
+                string[] extensoesValidas = { ".pdf" };
+
+                if (extensoesValidas.Any(ext => caminhoArquivo.EndsWith(ext, StringComparison.OrdinalIgnoreCase)))
+                {
+                    <div class="col-3">
+                        <div style="position: relative; width: 220px; height: 100px; border: 1px solid #ccc; padding: 10px; border-radius: 8px; background-color: #f9f9f9;">
+                            <!-- Ícone de PDF -->
+                            <div style="display: flex; align-items: center;">
+                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
+
+                                <!-- Nome do arquivo PDF -->
+                                <div style="flex-grow: 1;">
+                                    <span style="font-weight: bold; font-size: 14px;">@caminhoArquivo</span>
+                                </div>
+                            </div>
+
+                            <!-- Botão de download sobreposto ao canto inferior direito -->
+                            <a href="@Url.Content(caminhoArquivo)" download
+                               class=""
+                               style="position: absolute; bottom: 10px; right: 10px; font-size: 12px; padding: 5px 10px;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <div class="row"><p class="font-italic">Não há imagens disponíveis no momento.</p></div>
+    }
+
+    <div class="row">
+        <h2>Imagens</h2>
+    </div>
+
+    @if (Model.tabSelect != null)
+    {
+        <div class="row text-center">
+            @foreach (DataRow row in Model.tabSelect.Rows)
+            {
+                string caminhoArquivo = row["Caminho"].ToString();
+                string[] extensoesValidas = { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+
+                if (extensoesValidas.Any(ext => caminhoArquivo.EndsWith(ext, StringComparison.OrdinalIgnoreCase)))
+                {
+                    <div class="col-3">
+                        <a class="image-popup-no-margins image-link img-fluid" href="@caminhoArquivo">
+                            <img src="@caminhoArquivo" alt="Imagem carregada" class="img-fluid" style="width: 200px;" />
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <div class="row"><p class="font-italic">Não há imagens disponíveis no momento.</p></div>
+    }
+
+    <div class="row">
+        <h2>Imagens</h2>
+    </div>
+
+    @if (Model.tabSelect != null)
+    {
+        <div class="row text-center">
+            @foreach (DataRow row in Model.tabSelect.Rows)
+            {
+                string caminhoArquivo = row["Caminho"].ToString();
+                string[] extensoesValidas = { ".mp4" };
+
+                if (extensoesValidas.Any(ext => caminhoArquivo.EndsWith(ext, StringComparison.OrdinalIgnoreCase)))
+                {
+                    <div class="col-3">
+                        <a class="image-popup-no-margins image-link img-fluid" href="@caminhoArquivo">
+                            <img src="@caminhoArquivo" alt="Imagem carregada" class="img-fluid" style="width: 200px;" />
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <div class="row"><p class="font-italic">Não há imagens disponíveis no momento.</p></div>
+    }
+</div>

@@ -58,7 +58,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item active entrar">
-                                    <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Cadastrar">Entrar</a>
+                                    <partial name="_LoginEstadoPartial" />
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor"><i class="fas fa-music"></i></a>
@@ -94,10 +94,10 @@
                             <h6>Entre para registrar uma conta!</h6>
                         </div>
                         <div class="col-12">
-                            <p>Faça seu <a asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">cadastro</a> ou <a asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">login</a>...</p>
+                            <p>Faça seu <a asp-area="" asp-controller="Agenda" asp-action="TesteProfessor" class="linkCad">cadastro</a> ou <a asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">login</a>...</p>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </header>
         @* conteudo *@

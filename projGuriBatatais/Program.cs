@@ -38,11 +38,15 @@ app.UseAuthorization();
 // rotas
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Cursos}/{action=ArquivoUploadExibir}");
+    pattern: "{controller=Agenda}/{action=ExibirAgendaAdm}");
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Inicial}/{action=Index}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Jogo}/{action=Jogar}");
 
 app.MapControllerRoute(
     name: "default",

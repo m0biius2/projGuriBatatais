@@ -1,0 +1,8 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <a class="nav-link" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor"><i class="fas fa-user-circle"></i></a>
+}
+else
+{
+    <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Cadastrar">Entrar</a>
+}

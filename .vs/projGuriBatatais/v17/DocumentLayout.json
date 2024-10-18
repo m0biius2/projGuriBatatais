@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\models\\arquivoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\models\\arquivoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\cursos\\viewarquivouploadexibir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\cursos\\viewarquivouploadexibir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\dataaccess\\arquivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\dataaccess\\arquivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\agenda\\viewexibiragendaadm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\agenda\\viewexibiragendaadm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "projGuriBatatais\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "projGuriBatatais\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-11T17:53:54.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Arquivo.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\DataAccess\\Arquivo.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\DataAccess\\Arquivo.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\DataAccess\\Arquivo.cs",
-              "RelativeToolTip": "projGuriBatatais\\DataAccess\\Arquivo.cs",
-              "ViewState": "AQIAALQAAAAAAAAAAIAwwMoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:30:13.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CursosController.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\CursosController.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\CursosController.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\CursosController.cs",
-              "RelativeToolTip": "projGuriBatatais\\Controllers\\CursosController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAA1wCAAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:29:56.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArquivoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Models\\ArquivoViewModel.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Models\\ArquivoViewModel.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Models\\ArquivoViewModel.cs",
-              "RelativeToolTip": "projGuriBatatais\\Models\\ArquivoViewModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:29:37.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ViewArquivoUploadExibir.cshtml",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Cursos\\ViewArquivoUploadExibir.cshtml",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Cursos\\ViewArquivoUploadExibir.cshtml",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Cursos\\ViewArquivoUploadExibir.cshtml",
-              "RelativeToolTip": "projGuriBatatais\\Views\\Cursos\\ViewArquivoUploadExibir.cshtml",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAhwI8AAAAAAAAA",
+              "Title": "ViewExibirAgendaAdm.cshtml",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
+              "RelativeToolTip": "projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T17:03:28.618Z",
+              "WhenOpened": "2024-10-18T18:11:29.202Z",
               "EditorCaption": ""
             }
           ]

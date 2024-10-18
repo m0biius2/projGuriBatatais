@@ -148,5 +148,17 @@ namespace projGuriBatatais.Controllers
 
             return Json(new { usuarioExiste = usuarioExiste != null });
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            //int idUsuario = int.Parse(User.FindFirst("IdUsuario").Value);
+            //string nome = User.FindFirst("Nome").Value;
+            //string permissao = User.FindFirst("Permissao").Value;
+
+            await HttpContext.SignOutAsync("CookieAuntenticacao");
+
+            // Redireciona para a página Index
+            return RedirectToRoute(new { controller = "Inicial", action = "Index" });
+        }
     }
 }
