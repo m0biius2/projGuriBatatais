@@ -42,8 +42,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXFZpZXdFeGliaXJBZ2VuZGFQdWJsaWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Cursos/ViewArquivoUploadExibir.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29zXFZpZXdBcnF1aXZvVXBsb2FkRXhpYmlyLmNzaHRtbA==
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Cursos/ViewArquivoUploadExibirCAgudas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29zXFZpZXdBcnF1aXZvVXBsb2FkRXhpYmlyQ0FndWRhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Home/Index.cshtml]
@@ -54,8 +54,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Inicial/ViewIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhbFxWaWV3SW5kZXguY3NodG1s
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Informacoes/ViewInformacoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYWNvZXNcVmlld0luZm9ybWFjb2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Inicial/ViewIndexAdm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhbFxWaWV3SW5kZXhBZG0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Inicial/ViewIndexAluno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhbFxWaWV3SW5kZXhBbHVuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Inicial/ViewIndexPublico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhbFxWaWV3SW5kZXhQdWJsaWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Jogo/ViewJogar.cshtml]
@@ -64,6 +76,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_AgendaEstadoPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZ2VuZGFFc3RhZG9QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_IndexEstadoPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JbmRleEVzdGFkb1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_LoginEstadoPartial.cshtml]
@@ -82,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaWV3RW50cmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Usuario/ViewExibirPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaWV3RXhpYmlyUGVyZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -97,6 +121,10 @@ build_metadata.AdditionalFiles.CssScope = b-e83yx4cgjx
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_LayoutAluno.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBbHVuby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-fz1l959gb5
+
+[C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_LayoutEntrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRFbnRyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4ypi49bcwr
 
 [C:/Users/jorda/OneDrive/Desktop/tcc/projGuriBatatais/projGuriBatatais/Views/Shared/_LayoutGuriBatatais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRHdXJpQmF0YXRhaXMuY3NodG1s

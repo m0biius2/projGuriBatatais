@@ -261,3 +261,4 @@ C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutEntrar.cshtml.rz.scp.css

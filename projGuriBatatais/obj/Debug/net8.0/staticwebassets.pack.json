@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\Arquivos\\60-Captura de tela 2024-08-29 145610.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\60-Captura de tela 2024-09-10 212021.png",
+      "PackagePath": "staticwebassets\\Arquivos\\60-Captura de tela 2024-09-10 212021.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-20241006175825.png",
       "PackagePath": "staticwebassets\\Arquivos\\61-20241006175825.png"
     },
@@ -47,6 +51,42 @@
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Arquivos\\61-victor.png",
       "PackagePath": "staticwebassets\\Arquivos\\61-victor.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\0-Captura de tela 2024-08-29 145610.png",
+      "PackagePath": "staticwebassets\\CAgudas\\0-Captura de tela 2024-08-29 145610.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\0-Captura de tela 2024-09-26 113857.png",
+      "PackagePath": "staticwebassets\\CAgudas\\0-Captura de tela 2024-09-26 113857.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\0-Captura de tela 2024-09-26 113938.png",
+      "PackagePath": "staticwebassets\\CAgudas\\0-Captura de tela 2024-09-26 113938.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\0-Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\CAgudas\\0-Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\0-Menina triste.pdf",
+      "PackagePath": "staticwebassets\\CAgudas\\0-Menina triste.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\0-Captura de tela 2024-09-10 212021.png",
+      "PackagePath": "staticwebassets\\CGraves\\0-Captura de tela 2024-09-10 212021.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\informacoes.css",
+      "PackagePath": "staticwebassets\\css\\informacoes.css"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\magnific-popup.css",
@@ -93,16 +133,48 @@
       "PackagePath": "staticwebassets\\img\\5.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\Banner.png",
+      "PackagePath": "staticwebassets\\img\\Banner.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\BannerInfo.png",
+      "PackagePath": "staticwebassets\\img\\BannerInfo.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerAgenda.png",
       "PackagePath": "staticwebassets\\img\\bannerAgenda.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerJogo.png",
+      "PackagePath": "staticwebassets\\img\\bannerJogo.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerMobileIndex.png",
+      "PackagePath": "staticwebassets\\img\\bannerMobileIndex.png"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicial.png",
       "PackagePath": "staticwebassets\\img\\bannerPaginaInicial.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicialMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerPaginaInicialMobile.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicialMobile1.png",
       "PackagePath": "staticwebassets\\img\\bannerPaginaInicialMobile1.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPerfil.png",
+      "PackagePath": "staticwebassets\\img\\bannerPerfil.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPerfilMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerPerfilMobile.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\briela.jfif",
+      "PackagePath": "staticwebassets\\img\\briela.jfif"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\cAgudas (1).png",
@@ -113,6 +185,18 @@
       "PackagePath": "staticwebassets\\img\\cAgudas.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\fundologin3.png",
+      "PackagePath": "staticwebassets\\img\\fundologin3.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\guri.png",
+      "PackagePath": "staticwebassets\\img\\guri.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\info.png",
+      "PackagePath": "staticwebassets\\img\\info.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\logoGrowthPreta.png",
       "PackagePath": "staticwebassets\\img\\logoGrowthPreta.png"
     },
@@ -121,12 +205,36 @@
       "PackagePath": "staticwebassets\\img\\logoGuri.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\logoGuriNav.png",
+      "PackagePath": "staticwebassets\\img\\logoGuriNav.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\logoGuriSM.png",
+      "PackagePath": "staticwebassets\\img\\logoGuriSM.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\mini teteu.jpeg",
+      "PackagePath": "staticwebassets\\img\\mini teteu.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\ricardinho.jpg",
+      "PackagePath": "staticwebassets\\img\\ricardinho.jpg"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\testinho.jpeg",
       "PackagePath": "staticwebassets\\img\\testinho.jpeg"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\agenda.js",
+      "PackagePath": "staticwebassets\\js\\agenda.js"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\entrar.js",
       "PackagePath": "staticwebassets\\js\\entrar.js"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\jogo.js",
@@ -141,8 +249,16 @@
       "PackagePath": "staticwebassets\\js\\jquery.magnific-popup2.js"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\pdf.js",
       "PackagePath": "staticwebassets\\js\\pdf.js"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\perfil.js",
+      "PackagePath": "staticwebassets\\js\\perfil.js"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\site.js",

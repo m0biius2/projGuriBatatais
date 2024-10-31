@@ -11,7 +11,6 @@ $(document).ready(function () {
         var chaveA;
         var chaveP;
         var chaveC;
-        var texto = encode_utf8("usuário");
 
         var cursosSelecionados = [];
 
@@ -23,28 +22,18 @@ $(document).ready(function () {
         // separando por vírgula
         var cursosFormatados = cursosSelecionados.join(", ");
 
-        function encode_utf8(s) {
-            return unescape(encodeURIComponent(s));
-        }
-
-        function decode_utf8(s) {
-            return decodeURIComponent(escape(s));
-        }
-
         if (nomeCompleto) {
             if (nomeUsuario) {
                 validarNomeUsuarioServidor(nomeUsuario);
             } else {
                 Swal.fire({
                     icon: "error",
-                    title: "Nome de usu&aacute;rio em branco!",
-                    text: "Insira o nome de usuário.",
-                    confirmButtonColor: "#00D7AA",
+                    title: "Username em branco!",
+                    text: "Insira um username.",
+                    confirmButtonColor: "#f17272",
                 }).then((result) => {
                     $("#nomeUsuario").addClass("is-invalid");
                     $("#nomeCompleto").removeClass("is-invalid");
-                    $("#senha").removeClass("is-invalid");
-                    $("#chaveAcesso").removeClass("is-invalid");
                 })
             }
         } else {
@@ -56,8 +45,6 @@ $(document).ready(function () {
             }).then((result) => {
                 $("#nomeCompleto").addClass("is-invalid");
                 $("#nomeUsuario").removeClass("is-invalid");
-                $("#senha").removeClass("is-invalid");
-                $("#chaveAcesso").removeClass("is-invalid");
             });
         }
 
@@ -69,10 +56,10 @@ $(document).ready(function () {
                 success: function (response) {
                     if (response.usuarioExiste) {
                         Swal.fire({
-                            icon: "error",
-                            title: "Nome de usu&aacute;rio j&aacute; existente!",
-                            text: "Escolha outro nome de usu&aacute;rio.",
-                            confirmButtonColor: "#00D7AA",
+                            icon: "warning",
+                            title: "Username j&aacute existente!",
+                            text: "Escolha outro username.",
+                            confirmButtonColor: "#F2BC8D",
                         }).then((result) => {
                             $("#nomeUsuario").addClass("is-invalid");
                         });
@@ -80,14 +67,12 @@ $(document).ready(function () {
                         if (senha) {
                             if (senha.length < 8) {
                                 Swal.fire({
-                                    icon: "error",
-                                    title: "Senha inválida!",
+                                    icon: "warning",
+                                    title: "Senha inv&aacutelida!",
                                     text: "A senha precisa possuir 8 caracteres.",
-                                    confirmButtonColor: "#00D7AA",
+                                    confirmButtonColor: "#F2BC8D",
                                 }).then((result) => {
-                                    $("#senha").addClass("is-invalid");
                                     $("#nomeUsuario").removeClass("is-invalid");
-                                    $("#chaveAcesso").removeClass("is-invalid");
                                     $("#nomeCompleto").removeClass("is-invalid");
                                 })
                             } else {
@@ -95,26 +80,22 @@ $(document).ready(function () {
                                     chaveAcesso ?
                                         validarChaveAcesso(chaveAcesso)
                                         : Swal.fire({
-                                            icon: "error",
+                                            icon: "warning",
                                             title: "Chave de acesso em branco!",
                                             text: "Insira a chave de acesso.",
-                                            confirmButtonColor: "#00D7AA",
+                                            confirmButtonColor: "#F2BC8D",
                                         }).then((result) => {
-                                            $("#chaveAcesso").addClass("is-invalid");
                                             $("#nomeUsuario").removeClass("is-invalid");
-                                            $("#senha").removeClass("is-invalid");
                                             $("#nomeCompleto").removeClass("is-invalid");
                                         })
                                     : Swal.fire({
                                         icon: "error",
-                                        title: "Usu&aacute;rio não selecionado!",
-                                        text: "Escolha o tipo de usu&aacute;rio.",
-                                        confirmButtonColor: "#00D7AA",
+                                        title: "User n&atildeo selecionado!",
+                                        text: "Escolha o tipo de user.",
+                                        confirmButtonColor: "#f17272",
                                     }).then((result) => {
                                         $("#nomeCompleto").removeClass("is-invalid");
                                         $("#nomeUsuario").removeClass("is-invalid");
-                                        $("#senha").removeClass("is-invalid");
-                                        $("#chaveAcesso").removeClass("is-invalid");
                                     })
                             }
                         } else {
@@ -122,12 +103,10 @@ $(document).ready(function () {
                                 icon: "error",
                                 title: "Senha em branco!",
                                 text: "Insira a senha.",
-                                confirmButtonColor: "#00D7AA",
+                                confirmButtonColor: "#f17272",
                             }).then((result) => {
-                                $("#senha").addClass("is-invalid");
                                 $("#nomeUsuario").removeClass("is-invalid");
                                 $("#nomeCompleto").removeClass("is-invalid");
-                                $("#chaveAcesso").removeClass("is-invalid");
                             })
                         }
                     }
@@ -135,7 +114,7 @@ $(document).ready(function () {
                 error: function (xhr, status, error) {
                     Swal.fire({
                         icon: "error",
-                        title: "Erro ao validar nome de usu&aacute;rio!",
+                        title: "Erro ao validar username!",
                         text: "Tente novamente mais tarde.",
                         confirmButtonColor: "#f17272",
                     });
@@ -176,8 +155,10 @@ $(document).ready(function () {
                                     icon: "success",
                                     title: "Cadastro realizado!",
                                     text: "Dados enviados com sucesso.",
-                                    confirmButtonColor: "#f17272",
+                                    confirmButtonColor: "#AAD989",
                                 });
+                                $(".cadastro").addClass("d-none");
+                                $(".login").removeClass("d-none");
                             },
                         });
                     } else {
@@ -213,7 +194,7 @@ $(document).ready(function () {
                 icon: "warning",
                 title: "Campos vazios",
                 text: "Por favor, preencha todos os campos.",
-                confirmButtonColor: "#f17272",
+                confirmButtonColor: "#F2BC8D",
             });
             return; // Se os campos estão vazios, não prosseguir com o envio
         }
@@ -235,12 +216,11 @@ $(document).ready(function () {
                     Swal.fire({
                         icon: "error",
                         title: "Erro",
-                        text: "Nome de usuário ou senha incorretos.",
+                        text: "Username ou senha incorretos.",
                         confirmButtonColor: "#f17272",
                     }).then((result) => {
                         // Adiciona classes de erro nos campos
                         $("#nomeUsuarioLogin").addClass("is-invalid");
-                        $("#senhaLogin").addClass("is-invalid");
                     });
                 }
             },

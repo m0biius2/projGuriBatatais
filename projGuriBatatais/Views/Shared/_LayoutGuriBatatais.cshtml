@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="~/css/pagInicial.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/rodape.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/informacoes.css" asp-append-version="true">
         @* animate *@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         @* icons *@
@@ -29,18 +31,18 @@
                     <div class="container-fluid">
                         @* icone logo *@
                         <a class="navbar-brand" asp-area="" asp-controller="Inicial" asp-action="Index">
-                            <img src="~/img/logoGuri.png" alt="Logo Guri." />
+                            <img src="~/img/logoGuriNav.png" alt="Logo Guri." />
                         </a>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Inicial" asp-action="Index"><i class="fas fa-home"></i></a> @* inicio *@
+                                    <partial name="_IndexEstadoPartial" />
                                 </li>
                                 <li class="nav-item active1">
-                                    <a class="nav-link" asp-area="" asp-controller="Agenda" asp-action="ExibirAgendaPublico">Agenda</a> @* agenda *@
+                                    <partial name="_AgendaEstadoPartial" />
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">Informações</a> @* informacoes *@
+                                    <a class="nav-link" asp-area="" asp-controller="Informacoes" asp-action="ExibirInformacoes">Informações</a> @* informacoes *@
                                 </li>
                             </ul>
                             <ul class="navbar-nav ms-auto">
@@ -49,7 +51,7 @@
                                         Cursos
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Cordas Agudas</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCAgudas">Cordas Agudas</a></li>
                                         <li><a class="dropdown-item" href="#">Cordas Graves</a></li>
                                         <li><a class="dropdown-item" href="#">Metais</a></li>
                                         <li><a class="dropdown-item" href="#">Madeiras</a></li>
@@ -75,7 +77,7 @@
                     <div class="container-fluid">
                         @* icone logo *@
                         <a class="navbar-brand" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">
-                            <img src="~/img/logoGuri.png" alt="Logo Guri." />
+                            <img src="~/img/logoGuriNav.png" alt="Logo Guri." />
                         </a>
                         <div class="ms-auto">
                             <ul class="navbar-nav">
@@ -94,7 +96,7 @@
                             <h6>Entre para registrar uma conta!</h6>
                         </div>
                         <div class="col-12">
-                            <p>Faça seu <a asp-area="" asp-controller="Agenda" asp-action="TesteProfessor" class="linkCad">cadastro</a> ou <a asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">login</a>...</p>
+                            <a href="#" style="color: white; font-size: 15px; padding: 0px;"><p>Faça cadastro ou login...</p></a>
                         </div>
                     </div>
                 </div> 
@@ -112,6 +114,9 @@
         <script src="~/js/entrar.js" asp-append-version="true"></script>
         <script src="~/js/magnific-popup.js" asp-append-version="true"></script>
         <script src="~/js/pdf.js" asp-append-version="true"></script>
+        <script src="~/js/agenda.js" asp-append-version="true"></script>
+        <script src="~/js/perfil.js"></script>
+        <script src="~/js/index.js"></script>
         @* plugin jquery mask *@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.4/jquery.mask.min.js"></script>
         @* plugin sweetalert *@

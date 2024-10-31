@@ -166,20 +166,16 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a serem selecionados
-                string cmdSQL = "SELECT IdArquivo, Caminho, Usuario.IdUsuario as Professor, Data " +
-                                "FROM Arquivo Arq " +
-                                "Join Usuario " +
-                                "on Arq.IdUsuario = Usuario.IdUsuario " +
-                                "WHERE Usuario.IdUsuario = @IdUsuario";
+                string cmdSQL = "SELECT * FROM Arquivo";
 
                 // busca dados do banco
                 SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);
 
-                // cria parametros dos valores das colunas
-                daPesquisa.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.Int);
+                //// cria parametros dos valores das colunas
+                //daPesquisa.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.Int);
 
-                // transforma os parametros em variaveis
-                daPesquisa.SelectCommand.Parameters["@IdUsuario"].Value = idUsuario;
+                //// transforma os parametros em variaveis
+                //daPesquisa.SelectCommand.Parameters["@IdUsuario"].Value = idUsuario;
 
                 // abre conexao com o banco
                 con.Open();

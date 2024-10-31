@@ -9,20 +9,18 @@ namespace projGuriBatatais.Controllers
 {
     public class CursosController : Controller
     {
-        public IActionResult ArquivoUploadExibir()
+        public IActionResult ArquivoUploadExibirCAgudas()
         {
             ArquivoViewModel o_ArquivoVM = new ArquivoViewModel();
 
             Arquivo o_Arquivo = new Arquivo();
 
-            o_Arquivo.idUsuario = 60;
-
             o_ArquivoVM.tabSelect = o_Arquivo.SelecionarTodos();
 
-            return View("ViewArquivoUploadExibir", o_ArquivoVM);
+            return View("ViewArquivoUploadExibirCAgudas", o_ArquivoVM);
         }
 
-        public IActionResult ArquivoUploadProcessar(ArquivoViewModel o_ArquivoVM)
+        public IActionResult ArquivoUploadProcessarCAgudas(ArquivoViewModel o_ArquivoVM)
         {
             //UsuarioViewModel o_UsuarioVM = new UsuarioViewModel();
 
@@ -30,9 +28,9 @@ namespace projGuriBatatais.Controllers
 
             Arquivo o_Arquivo = new Arquivo();
 
-            int idUsuario = 60;
+            int idUsuario = o_ArquivoVM.IdUsuario;
 
-            string diretorio = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Arquivos");
+            string diretorio = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/CAgudas");
 
             // se a pasta não estiver criada ele a criará
             if (!Directory.Exists(diretorio))
@@ -44,7 +42,7 @@ namespace projGuriBatatais.Controllers
             string nomeArq = idUsuario.ToString() + "-" + o_FileInfo;
 
             // gravar foto no banco
-            string arquivoBD = $"Arquivos/{nomeArq}";
+            string arquivoBD = $"CAgudas/{nomeArq}";
 
             string arquivo = Path.Combine(diretorio, nomeArq);
 
@@ -59,7 +57,23 @@ namespace projGuriBatatais.Controllers
 
             o_Arquivo.Inserir();
 
-            return RedirectToAction("ArquivoUploadExibir");
+            return RedirectToAction("ArquivoUploadExibirCAgudas");
+        }
+
+        public IActionResult ExcluirProcessar(ArquivoViewModel o_ArquivoVM)
+        {
+            // objetos
+            // objeto da class colaborador
+            Arquivo o_Arquivo = new Arquivo();
+
+            // preenche os atributos do banco com os dados inseridos
+            o_Arquivo.idArquivo = o_ArquivoVM.IdArquivo;
+
+            // executa o metodo deletar
+            o_Arquivo.Deletar();
+
+            // redireciona os dados para o metodo selecionar
+            return RedirectToAction("ArquivoUploadExibirCAgudas");
         }
     }
 }

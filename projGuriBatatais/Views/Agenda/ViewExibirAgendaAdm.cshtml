@@ -14,26 +14,20 @@
 
 <div class="container-fluid espacoNavbar">
     <div class="row">
-        <div class="offset-xl-2 col-xl-4 col-6">
+        <div class="col-xl-10 col-12 text-end">
             @* botao do modal teste *@
             <button type="button" class="btn addCom" data-bs-toggle="modal" data-bs-target="#modalInsert">
                 <h4><i class="fas fa-plus"></i></h4>
             </button>
         </div>
-
-        <div class="col-xl-4 col-6 text-end">
-            <button type="button" class="btn addCom" data-bs-toggle="modal" data-bs-target="#modalInsert">
-                <h4><i class="fas fa-trash"></i></h4>
-            </button>
-        </div>
     </div>
-    @* modal teste *@
-    <div class="modal fade" id="modalInsert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    @* modal insert *@
+    <div class="modal fade modalInsert" id="modalInsert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 @* titulo do modal *@
                 <div class="modal-header cardVerde">
-                    <h5 class="modal-title" id="exampleModalLabel">Adicionar comunicado</h5>
+                    <h5 class="modal-title fonteEspecial" id="exampleModalLabel">Adicionar comunicado</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 @* conteudo do modal *@
@@ -47,45 +41,66 @@
                                        placeholder="Digite o título..." asp-for="Titulo">
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row espacoFormAdd">
                             @* data *@
                             <div class="offset-2 col-4">
-                                <label for="Data" class="form-label">Data:</label>
-                                <input type="date" value="@hoje" class="form-control" id="Data"
-                                       placeholder="Digite a data..." asp-for="Data">
+                                <label for="data" class="form-label">Data:</label>
+                                <input type="date" value="@hoje" class="form-control" id="data"
+                                       placeholder="Insira a data..." asp-for="Data">
                             </div>
 
                             @* cor *@
                             <div class="col-4">
                                 <label for="idCorComunicado" class="form-label padTop20">Cor:</label>
                                 <select class="form-select" id="idCorComunicado" asp-for="IdCorComunicado" asp-items="Model.Cores">
-                                    <option selected>Selecione a cor...</option>
+                                    <option selected>...</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row espacoFormAdd">
                             @* professor *@
                             <div class="offset-2 col-8">
                                 <label for="gestor" class="form-label">Gestor:</label>
                                 <input type="text" class="form-control" id="gestor"
-                                       placeholder="Digite o nome do gestor..." asp-for="IdUsuario">
+                                       value="@User.FindFirst("NomeUsuario").Value" readonly>
+
+                                <input type="hidden" class="idUsuario" asp-for="IdUsuario" value="@User.FindFirst("IdUsuario").Value" />
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row espacoFormAdd">
                             @* conteudo *@
                             <div class="offset-2 col-8">
                                 <label for="comunicado" class="form-label">Comunicado:</label>
-                                <input type="text" class="form-control" id="comunicado"
-                                       placeholder="Digite o conteúdo..." asp-for="Comunicado">
+                                <textarea type="text" class="form-control" id="comunicado" rows="3"
+                                          placeholder="Digite o conteúdo..." asp-for="Comunicado"></textarea>
                             </div>
                         </div>
                     </div>
                     @* rodape do modal *@
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> @* botao de fechar o modal *@
-                        <button type="submit" class="btn btn-primary">Inserir</button> @* botao de inserir dados no banco *@
+                        <button type="button" class="btn btn-secondary btn-preVisu" data-bs-toggle="modal" data-bs-target="#modalVisualize">Pré-visualização</button>
+                        <button type="submit" class="btn enviarCom"><i class="fas fa-paper-plane"></i></button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalVisualize" tabindex="-1" aria-labelledby="modalVisualize" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modalVisu">
+                    <h5 class="modal-title fonteEspecial" id="tituloVisu"></h5>
+                    <button type="button" class="btn-close fecharVisu" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <p><span class="dataVisu"></span> - <span class="gestorVisu"></span></p>
+                    </div>
+                    <div class="row conteudoComunicado">
+                        <p class="comunicadoVisu"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -110,7 +125,7 @@
                                     <div class="card cardLaranja">
                                         <div class="card-body">
                                             <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
-                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <h5 class="card-title fonteEspecial">@row["Titulo"]</h5>
                                             <p class="card-text cardInfo">(clique para mais informações)</p>
                                         </div>
                                     </div>
@@ -119,13 +134,13 @@
                         </div>
                         
                         @* modal laranja *@
-                        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
+                        <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo *@
                                     <div class="modal-header fundoLaranja">
-                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <h5 class="modal-title fonteEspecial" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <button type="button" class="btn-close btn-close2" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     @* conteudo *@
                                     <div class="modal-body">
@@ -136,6 +151,80 @@
                                             <p>@row["Comunicado"]</p>
                                         </div>
                                     </div>
+                                    @* rodapé *@
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalUpdate"
+                                                asp-route-IdAgenda="@row["IdAgenda"]"
+                                                asp-controller="Agenda"
+                                                asp-action="AlterarExibir">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalUpdate"
+                                                asp-route-IdAgenda="@row["IdAgenda"]"
+                                                asp-controller="Agenda"
+                                                asp-action="AlterarExibir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @* modal update *@
+                        <div class="modal fade modalInsert" id="modalUpdate" tabindex="-1" aria-labelledby="modalUpdate" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo do modal *@
+                                    <div class="modal-header fundoLaranja">
+                                        <h5 class="modal-title fonteEspecial" id="modalUpdate">Alterar comunicado</h5>
+                                        <button type="button" class="btn-close btn-close1" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    @* conteudo do modal *@
+                                    <form asp-controller="Agenda" asp-action="AlterarProcessar" method="post">
+                                        <div>
+                                            <input type="hidden" asp-for="IdAgenda">
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                @* titulo *@
+                                                <div class="offset-2 col-8">
+                                                    <label for="titulo" class="form-label">Título:</label>
+                                                    <input type="text" class="form-control" id="titulo"
+                                                           placeholder="Digite o título..." asp-for="Titulo">
+                                                </div>
+                                            </div>
+                                            <div class="row espacoFormAdd">
+                                                @* data *@
+                                                <div class="offset-2 col-4">
+                                                    <label for="data" class="form-label">Data:</label>
+                                                    <input type="date" value="@hoje" class="form-control" id="data"
+                                                           placeholder="Insira a data..." asp-for="Data">
+                                                </div>
+
+                                                @* cor *@
+                                                <div class="col-4">
+                                                    <label for="idCorComunicado" class="form-label padTop20">Cor:</label>
+                                                    <select class="form-select" id="idCorComunicado" asp-for="IdCorComunicado" asp-items="Model.Cores">
+                                                        <option selected>...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row espacoFormAdd">
+                                                @* conteudo *@
+                                                <div class="offset-2 col-8">
+                                                    <label for="comunicado" class="form-label">Comunicado:</label>
+                                                    <textarea type="text" class="form-control" id="comunicado" rows="3"
+                                                              placeholder="Digite o conteúdo..." asp-for="Comunicado"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @* rodape do modal *@
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary btn-preVisu" data-bs-toggle="modal" data-bs-target="#modalVisualize">Pré-visualização</button>
+                                            <button type="submit" class="btn btn-dark alterarCom"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +242,7 @@
                                     <div class="card cardVerde">
                                         <div class="card-body">
                                             <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
-                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <h5 class="card-title fonteEspecial">@row["Titulo"]</h5>
                                             <p class="card-text cardInfo">(clique para mais informações)</p>
                                         </div>
                                     </div>
@@ -167,7 +256,7 @@
                                 <div class="modal-content">
                                     @* titulo *@
                                     <div class="modal-header fundoVerde">
-                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <h5 class="modal-title fonteEspecial" id="modalLabel@modalId">@row["Titulo"]</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     @* conteudo *@
@@ -196,7 +285,7 @@
                                     <div class="card cardAzul">
                                         <div class="card-body">
                                             <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
-                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <h5 class="card-title fonteEspecial">@row["Titulo"]</h5>
                                             <p class="card-text cardInfo">(clique para mais informações)</p>
                                         </div>
                                     </div>
@@ -210,7 +299,7 @@
                                 <div class="modal-content">
                                     @* titulo *@
                                     <div class="modal-header fundoAzul">
-                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <h5 class="modal-title fonteEspecial" id="modalLabel@modalId">@row["Titulo"]</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     @* conteudo *@
@@ -239,7 +328,7 @@
                                     <div class="card cardRoxo">
                                         <div class="card-body">
                                             <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
-                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <h5 class="card-title fonteEspecial">@row["Titulo"]</h5>
                                             <p class="card-text cardInfo">(clique para mais informações)</p>
                                         </div>
                                     </div>
@@ -253,7 +342,7 @@
                                 <div class="modal-content">
                                     @* titulo *@
                                     <div class="modal-header fundoRoxo">
-                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <h5 class="modal-title fonteEspecial" id="modalLabel@modalId">@row["Titulo"]</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     @* conteudo *@
@@ -282,7 +371,7 @@
                                     <div class="card cardAmarelo">
                                         <div class="card-body">
                                             <p class="card-text">@Convert.ToDateTime(@row["Data"]).ToString("dd/MM/yyyy") - @row["Gestor"]</p>
-                                            <h5 class="card-title">@row["Titulo"]</h5>
+                                            <h5 class="card-title fonteEspecial">@row["Titulo"]</h5>
                                             <p class="card-text cardInfo">(clique para mais informações)</p>
                                         </div>
                                     </div>
@@ -296,7 +385,7 @@
                                 <div class="modal-content">
                                     @* titulo *@
                                     <div class="modal-header fundoAmarelo">
-                                        <h5 class="modal-title" id="modalLabel@modalId">@row["Titulo"]</h5>
+                                        <h5 class="modal-title fonteEspecial" id="modalLabel@modalId">@row["Titulo"]</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     @* conteudo *@
@@ -316,4 +405,73 @@
             }
         }
     </div>
+</div>
+
+<div class="container-fluid">
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- div rodape XS-->
+    <div class="d-block d-sm-none">
+        <div class="row colorRodape spaceRodapeTextXS text-center">
+            <div class="col-12">
+                <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
+                <p><a href="agenda.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Agenda</a></p>
+                <p><a href="informacoes.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
+                <p><a href="perfil.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+            </div>
+
+            <div class="col-12 colorRodape text-center">
+                <a href="index.html"><img src="~/img/logoGuri.png" class="spaceRodapeImageXS tamanhoImageXS img-fluid" alt=""></a>
+            </div>
+
+            <div class="col-12 colorRodape spaceRodapeBot text-center">
+                <p class="colorTextRodape">Entre em contato conosco</p>
+                <p>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
+                    <a href="https://wa.me/5516991682555" target="_blank"><i class="fab fa-whatsapp textDecorationNone"></i></a>
+                    <a href="https://br.linkedin.com/" target="_blank"><i class="fab fa-linkedin textDecorationNone"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <!-- div logo -->
+        <div class="row colorBackgroundLogo">
+            <div class="col-12 text-center">
+                <p class="colorTextRodape text-center spaceLogo">Feito por <img class="tamanhoImageLogo" src="~/img/logoGrowthPreta.png" alt=""></p>
+            </div>
+        </div>
+    </div>
+    <!-- fim rodape XS -->
+    <!-- RODAPE geral -->
+    <div class="d-none d-xxl-block">
+        <!-- rodape -->
+        <div class="row colorRodape tilted-rowR" style="margin-top:30px;">
+            <div class="col-4 spaceRodape text-center">
+                <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
+                <p><a href="agenda.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Agenda</a></p>
+                <p><a href="informacoes.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
+                <p><a href="perfil.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+            </div>
+            <div class="col-4 text-center">
+                <a href="index.html"><img src="~/img/logoGuri.png" class="spaceRodapeImage tamanhoImage img-fluid" alt=""></a>
+            </div>
+            <div class="col-4 text-center">
+                <p class="colorTextRodape spaceRodapeText">Entre em contato conosco</p>
+                <p>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
+                    <a href="https://wa.me/5516991682555" target="_blank"><i class="fab fa-whatsapp textDecorationNone"></i></a>
+                    <a href="https://br.linkedin.com/" target="_blank"><i class="fab fa-linkedin textDecorationNone"></i></a>
+                </p>
+            </div>
+        </div>
+        <!-- rodape -->
+        <!-- div LOGO  -->
+        <div class="row colorBackgroundLogo">
+            <div class="col-12 text-center">
+                <p class="colorTextRodape text-center spaceLogo">Feito por <img class="tamanhoImageLogo" src="~/img/logoGrowthPreta.png" alt=""></p>
+            </div>
+        </div>
+        <!-- div LOGO  -->
+    </div>
+    <!-- RODAPE geral -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </div>

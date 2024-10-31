@@ -16,7 +16,13 @@
 
   <ItemGroup>
     <Folder Include="Configurations\" />
-    <Folder Include="wwwroot\Arquivos\" />
+    <Folder Include="wwwroot\Arquivos\NovaPasta\" />
+    <Folder Include="wwwroot\CAgudas\" />
+    <Folder Include="wwwroot\CGraves\" />
+    <Folder Include="wwwroot\Metais\" />
+    <Folder Include="wwwroot\Madeiras\" />
+    <Folder Include="wwwroot\Coral\" />
+    <Folder Include="wwwroot\Percussao\" />
   </ItemGroup>
 
   <ItemGroup>

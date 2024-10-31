@@ -16,6 +16,8 @@ namespace projGuriBatatais.DataAccess
         public int idAgenda;
         public string titulo;
         public string comunicado;
+        public string links;
+        public string imagens;
         public string idUsuario;
         public DateTime data;
         public int idCorComunicado;
@@ -98,7 +100,7 @@ namespace projGuriBatatais.DataAccess
             {
                 // dados a seres alterados
                 string cmdSQL = $"Update Agenda Set Titulo = @Titulo, Comunicado = @Comunicado, " +
-                                $"IdUsuario = @IdUsuario, Data = @Data, IdCorComunicado = @IdCorComunicado " +
+                                $"Data = @Data, IdCorComunicado = @IdCorComunicado " +
                                 $"Where IdAgenda = @IdAgenda";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
@@ -108,7 +110,6 @@ namespace projGuriBatatais.DataAccess
                 cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
                 cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
                 cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
-                cmd.Parameters.Add("@IdUsuario", SqlDbType.Int);
                 cmd.Parameters.Add("@Data", SqlDbType.DateTime);
                 cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
 
@@ -116,7 +117,6 @@ namespace projGuriBatatais.DataAccess
                 cmd.Parameters["@IdAgenda"].Value = idAgenda;
                 cmd.Parameters["@Titulo"].Value = titulo;
                 cmd.Parameters["@Comunicado"].Value = comunicado;
-                cmd.Parameters["@IdUsuario"].Value = idUsuario;
                 cmd.Parameters["@Data"].Value = data;
                 cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
 

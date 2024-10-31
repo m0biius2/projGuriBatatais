@@ -14,6 +14,12 @@ namespace projGuriBatatais.Models
 
         public string Comunicado { get; set; }
 
+        public string Links { get; set; }
+
+        public string Imagens { get; set; }
+
+        public IFormFile Imagem { get; set; }
+
         public int IdUsuario { get; set; }
 
         public DateTime Data { get; set; }

@@ -158,7 +158,12 @@ namespace projGuriBatatais.Controllers
             await HttpContext.SignOutAsync("CookieAuntenticacao");
 
             // Redireciona para a página Index
-            return RedirectToRoute(new { controller = "Inicial", action = "Index" });
+            return RedirectToRoute(new { controller = "Inicial", action = "IndexPublico" });
+        }
+
+        public IActionResult ExibirPerfil()
+        {
+            return View("ViewExibirPerfil");
         }
     }
 }

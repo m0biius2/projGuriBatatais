@@ -31,4 +31,23 @@ $(document).ready(function () {
         }
         lastScrollTop = scrollTop;
     });
+
+    $(".btn-excluirArq").click(function () {
+        var idArquivo = $(this).data('id');
+
+        $.ajax({
+            url: "/Cursos/ExcluirProcessar",
+            type: "POST",
+            data: {
+                IdArquivo: idArquivo,
+            },
+            success: function (response) {
+                $('#modalExcluirArquivo').modal('hide');
+            },
+        });
+    });
+
+    $(".btn-cancelaExclusao").click(function () {
+        $('#modalExcluirArquivo').modal('hide');
+    });
 });
