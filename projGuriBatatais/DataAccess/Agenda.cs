@@ -179,12 +179,13 @@ namespace projGuriBatatais.DataAccess
             {
                 // dados a serem selecionados
                 string cmdSQL = "SELECT IdAgenda, Titulo, Comunicado, Usuario.NomeUsuario as Gestor, Data, " +
-                                "Cor.NomeCor as Cor " +
+                                "Cor.NomeCor as Cor, Ag.IdCorComunicado as IdCor " +
                                 "FROM Agenda Ag " +
                                 "Join Usuario " +
                                 "on Ag.IdUsuario = Usuario.IdUsuario " +
                                 "Join CorComunicado Cor " +
-                                "on Ag.IdCorComunicado = Cor.IdCorComunicado";
+                                "on Ag.IdCorComunicado = Cor.IdCorComunicado " +
+                                "ORDER BY IdAgenda DESC";
 
                 // busca dados do banco
                 SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);

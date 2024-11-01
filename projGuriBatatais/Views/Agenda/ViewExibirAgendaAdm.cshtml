@@ -45,7 +45,7 @@
                             @* data *@
                             <div class="offset-2 col-4">
                                 <label for="data" class="form-label">Data:</label>
-                                <input type="date" value="@hoje" class="form-control" id="data"
+                                <input type="date" value="@Convert.ToDateTime(hoje).ToString("yyyy-MM-dd")" class="form-control" id="data"
                                        placeholder="Insira a data..." asp-for="Data">
                             </div>
 
@@ -71,7 +71,7 @@
                             @* conteudo *@
                             <div class="offset-2 col-8">
                                 <label for="comunicado" class="form-label">Comunicado:</label>
-                                <textarea type="text" class="form-control" id="comunicado" rows="3"
+                                <textarea type="text" class="form-control" id="comunicado" rows="8"
                                           placeholder="Digite o conteúdo..." asp-for="Comunicado"></textarea>
                             </div>
                         </div>
@@ -183,29 +183,36 @@
                                     @* conteudo do modal *@
                                     <form asp-controller="Agenda" asp-action="AlterarProcessar" method="post">
                                         <div>
+                                            @{
+                                                Model.IdAgenda = int.Parse(row["IdAgenda"].ToString());
+                                            }
                                             <input type="hidden" asp-for="IdAgenda">
                                         </div>
                                         <div class="modal-body">
                                             <div class="row">
                                                 @* titulo *@
                                                 <div class="offset-2 col-8">
-                                                    <label for="titulo" class="form-label">Título:</label>
-                                                    <input type="text" class="form-control" id="titulo"
+                                                    <label for="tituloUp" class="form-label">Título:</label>
+                                                    <input type="text" class="form-control" id="tituloUp" value="@row["Titulo"]"
                                                            placeholder="Digite o título..." asp-for="Titulo">
                                                 </div>
                                             </div>
                                             <div class="row espacoFormAdd">
                                                 @* data *@
                                                 <div class="offset-2 col-4">
-                                                    <label for="data" class="form-label">Data:</label>
-                                                    <input type="date" value="@hoje" class="form-control" id="data"
+                                                    <label for="dataUp" class="form-label">Data:</label>
+                                                    <input type="date" class="form-control" id="dataUp" value="@Convert.ToDateTime(row["Data"]).ToString("yyyy-MM-dd")"
                                                            placeholder="Insira a data..." asp-for="Data">
+
                                                 </div>
 
                                                 @* cor *@
                                                 <div class="col-4">
-                                                    <label for="idCorComunicado" class="form-label padTop20">Cor:</label>
-                                                    <select class="form-select" id="idCorComunicado" asp-for="IdCorComunicado" asp-items="Model.Cores">
+                                                    <label for="idCorComunicadoUp" class="form-label padTop20">Cor:</label>
+                                                    @{
+                                                        Model.IdCorComunicado = int.Parse(row["IdCor"].ToString());
+                                                    }
+                                                    <select class="form-select" id="idCorComunicadoUp" asp-for="IdCorComunicado" asp-items="Model.Cores">
                                                         <option selected>...</option>
                                                     </select>
                                                 </div>
@@ -213,9 +220,11 @@
                                             <div class="row espacoFormAdd">
                                                 @* conteudo *@
                                                 <div class="offset-2 col-8">
-                                                    <label for="comunicado" class="form-label">Comunicado:</label>
-                                                    <textarea type="text" class="form-control" id="comunicado" rows="3"
-                                                              placeholder="Digite o conteúdo..." asp-for="Comunicado"></textarea>
+                                                    @{
+                                                        Model.Comunicado = row["Comunicado"].ToString();
+                                                    }
+                                                    <textarea class="form-control" id="comunicadoUp" rows="8" asp-for="Comunicado"
+                                                              placeholder="Digite o conteúdo..."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -405,73 +414,4 @@
             }
         }
     </div>
-</div>
-
-<div class="container-fluid">
-    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!-- div rodape XS-->
-    <div class="d-block d-sm-none">
-        <div class="row colorRodape spaceRodapeTextXS text-center">
-            <div class="col-12">
-                <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
-                <p><a href="agenda.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Agenda</a></p>
-                <p><a href="informacoes.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
-                <p><a href="perfil.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
-            </div>
-
-            <div class="col-12 colorRodape text-center">
-                <a href="index.html"><img src="~/img/logoGuri.png" class="spaceRodapeImageXS tamanhoImageXS img-fluid" alt=""></a>
-            </div>
-
-            <div class="col-12 colorRodape spaceRodapeBot text-center">
-                <p class="colorTextRodape">Entre em contato conosco</p>
-                <p>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
-                    <a href="https://wa.me/5516991682555" target="_blank"><i class="fab fa-whatsapp textDecorationNone"></i></a>
-                    <a href="https://br.linkedin.com/" target="_blank"><i class="fab fa-linkedin textDecorationNone"></i></a>
-                </p>
-            </div>
-        </div>
-
-        <!-- div logo -->
-        <div class="row colorBackgroundLogo">
-            <div class="col-12 text-center">
-                <p class="colorTextRodape text-center spaceLogo">Feito por <img class="tamanhoImageLogo" src="~/img/logoGrowthPreta.png" alt=""></p>
-            </div>
-        </div>
-    </div>
-    <!-- fim rodape XS -->
-    <!-- RODAPE geral -->
-    <div class="d-none d-xxl-block">
-        <!-- rodape -->
-        <div class="row colorRodape tilted-rowR" style="margin-top:30px;">
-            <div class="col-4 spaceRodape text-center">
-                <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
-                <p><a href="agenda.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Agenda</a></p>
-                <p><a href="informacoes.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
-                <p><a href="perfil.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
-            </div>
-            <div class="col-4 text-center">
-                <a href="index.html"><img src="~/img/logoGuri.png" class="spaceRodapeImage tamanhoImage img-fluid" alt=""></a>
-            </div>
-            <div class="col-4 text-center">
-                <p class="colorTextRodape spaceRodapeText">Entre em contato conosco</p>
-                <p>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
-                    <a href="https://wa.me/5516991682555" target="_blank"><i class="fab fa-whatsapp textDecorationNone"></i></a>
-                    <a href="https://br.linkedin.com/" target="_blank"><i class="fab fa-linkedin textDecorationNone"></i></a>
-                </p>
-            </div>
-        </div>
-        <!-- rodape -->
-        <!-- div LOGO  -->
-        <div class="row colorBackgroundLogo">
-            <div class="col-12 text-center">
-                <p class="colorTextRodape text-center spaceLogo">Feito por <img class="tamanhoImageLogo" src="~/img/logoGrowthPreta.png" alt=""></p>
-            </div>
-        </div>
-        <!-- div LOGO  -->
-    </div>
-    <!-- RODAPE geral -->
-    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </div>

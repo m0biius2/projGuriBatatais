@@ -261,3 +261,15 @@ h6, p {
 .fonteEspecial {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.tamanhoBotaoUpload {
+    width: 100%;
+}
+
+.tamanhoBotao {
+    width: 200px;
+}
+
+.marg10{
+    margin-top: 10px;
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projGuriBatatais")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77a606f6c3ed62e8a7d98fc1bf6b94ad021b95f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+065a49936870fdf93ba8cca206aaaeb4606d4d89")]
 [assembly: System.Reflection.AssemblyProductAttribute("projGuriBatatais")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projGuriBatatais")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

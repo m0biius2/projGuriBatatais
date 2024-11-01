@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DwgOjLFT+M2Mz3x8nIQNL2IJExqnl/HBncfRtUodKWA=",
+  "Hash": "jq6ftktN2yHsGNpQfDVkbQgvjVGbp+XGitLs2GrltfU=",
   "Source": "projGuriBatatais",
   "BasePath": "_content/projGuriBatatais",
   "Mode": "Default",
@@ -376,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CAgudas\\0-Menina triste.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\0-Yellow.jpeg",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "CAgudas/0-Yellow.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CAgudas\\0-Yellow.jpeg"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\0-Captura de tela 2024-09-10 212021.png",
