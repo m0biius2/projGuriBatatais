@@ -98,27 +98,108 @@ namespace projGuriBatatais.DataAccess
         {
             try
             {
+                string cmdSQL;
+
                 // dados a seres alterados
-                string cmdSQL = $"Update Agenda Set Titulo = @Titulo, Comunicado = @Comunicado, " +
-                                $"Data = @Data, IdCorComunicado = @IdCorComunicado " +
-                                $"Where IdAgenda = @IdAgenda";
+                if (titulo == null && comunicado != null && data != null && idCorComunicado != 0)
+                {
+                    cmdSQL = $"Update Agenda Set Comunicado = @Comunicado, " +
+                             $"Data = @Data, IdCorComunicado = @IdCorComunicado " +
+                             $"Where IdAgenda = @IdAgenda";
+                } else if(comunicado == null && titulo != null && data != null && idCorComunicado != 0)
+                {
+                    cmdSQL = $"Update Agenda Set Titulo = @Titulo, " +
+                             $"Data = @Data, IdCorComunicado = @IdCorComunicado " +
+                             $"Where IdAgenda = @IdAgenda";
+                } else if (data == null && titulo != null && comunicado != null && idCorComunicado != 0)
+                {
+                    cmdSQL = $"Update Agenda Set Titulo = @Titulo, " +
+                             $"Comunicado = @Comunicado, IdCorComunicado = @IdCorComunicado " +
+                             $"Where IdAgenda = @IdAgenda";
+                } else if (idCorComunicado == 0 && titulo != null && comunicado != null && data != null)
+                {
+                    cmdSQL = $"Update Agenda Set Titulo = @Titulo, " +
+                             $"Comunicado = @Comunicado, Data = @Data " +
+                             $"Where IdAgenda = @IdAgenda";
+                }
+                else
+                {
+                    cmdSQL = $"Update Agenda Set Titulo = @Titulo, Comunicado = @Comunicado, " +
+                             $"Data = @Data, IdCorComunicado = @IdCorComunicado " +
+                             $"Where IdAgenda = @IdAgenda";
+                }
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
 
                 // cria parametros dos valores das colunas
-                cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
-                cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
-                cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
-                cmd.Parameters.Add("@Data", SqlDbType.DateTime);
-                cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
+                if (titulo == null && comunicado != null && data != null && idCorComunicado != 0)
+                {
+                    cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
+                    cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Data", SqlDbType.DateTime);
+                    cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
 
-                // transforma os parametros em variaveis
-                cmd.Parameters["@IdAgenda"].Value = idAgenda;
-                cmd.Parameters["@Titulo"].Value = titulo;
-                cmd.Parameters["@Comunicado"].Value = comunicado;
-                cmd.Parameters["@Data"].Value = data;
-                cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
+                    // transforma os parametros em variaveis
+                    cmd.Parameters["@IdAgenda"].Value = idAgenda;
+                    cmd.Parameters["@Comunicado"].Value = comunicado;
+                    cmd.Parameters["@Data"].Value = data;
+                    cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
+                }
+                else if (comunicado == null && titulo != null && data != null && idCorComunicado != 0)
+                {
+                    cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
+                    cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Data", SqlDbType.DateTime);
+                    cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
+
+                    // transforma os parametros em variaveis
+                    cmd.Parameters["@IdAgenda"].Value = idAgenda;
+                    cmd.Parameters["@Titulo"].Value = titulo;
+                    cmd.Parameters["@Data"].Value = data;
+                    cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
+                }
+                else if (data == null && titulo != null && comunicado != null && idCorComunicado != 0)
+                {
+                    cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
+                    cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
+
+                    // transforma os parametros em variaveis
+                    cmd.Parameters["@IdAgenda"].Value = idAgenda;
+                    cmd.Parameters["@Titulo"].Value = titulo;
+                    cmd.Parameters["@Comunicado"].Value = comunicado;
+                    cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
+                }
+                else if (idCorComunicado == 0 && titulo != null && comunicado != null && data != null)
+                {
+                    cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
+                    cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Data", SqlDbType.DateTime);
+
+                    // transforma os parametros em variaveis
+                    cmd.Parameters["@IdAgenda"].Value = idAgenda;
+                    cmd.Parameters["@Titulo"].Value = titulo;
+                    cmd.Parameters["@Comunicado"].Value = comunicado;
+                    cmd.Parameters["@Data"].Value = data;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@IdAgenda", SqlDbType.Int);
+                    cmd.Parameters.Add("@Titulo", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Comunicado", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@Data", SqlDbType.DateTime);
+                    cmd.Parameters.Add("@IdCorComunicado", SqlDbType.Int);
+
+                    // transforma os parametros em variaveis
+                    cmd.Parameters["@IdAgenda"].Value = idAgenda;
+                    cmd.Parameters["@Titulo"].Value = titulo;
+                    cmd.Parameters["@Comunicado"].Value = comunicado;
+                    cmd.Parameters["@Data"].Value = data;
+                    cmd.Parameters["@IdCorComunicado"].Value = idCorComunicado;
+                }
 
                 // abre conexao com o banco
                 con.Open();

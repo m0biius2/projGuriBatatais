@@ -21,7 +21,67 @@ body{
     background-color: #e9e9e9;
 }
 
-.pad15{
+.pad100{
+    padding-top: 100px;
+}
+
+.acessoNegadoLink:active, .acessoNegadoLink:link, .acessoNegadoLink:visited{
+    color: darkred;
+}
+
+.acessoNegadoLink:hover{
+    color: red;
+}
+
+.btnCAgudas {
+    background-color: #ff5f19;
+}
+
+.btnCAgudas:hover{
+    background-color: #f55007;
+}
+
+.btnCGraves {
+    background-color: #e587ff;
+}
+
+.btnCGraves:hover {
+    background-color: #d853fc;
+}
+
+.btnMetais {
+    background-color: #b1befb;
+}
+
+.btnMetais:hover {
+    background-color: #7990fc;
+}
+
+.btnMadeiras {
+    background-color: #67fede;
+}
+
+.btnMadeiras:hover {
+    background-color: #16f2c4;
+}
+
+.btnPercussao {
+    background-color: #f2eaa1;
+}
+
+.btnPercussao:hover {
+    background-color: #f0e15b;
+}
+
+.btnCoral {
+    background-color: #b1befb;
+}
+
+.btnCoral:hover {
+    background-color: #7990fc;
+}
+
+.pad15 {
     padding-top: 15px;
 }
 

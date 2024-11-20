@@ -114,6 +114,8 @@
                 {
                     @* card laranja *@
                     case "Laranja":
+                        var id = row["IdAgenda"].ToString();
+
                         var modalId = "modalLaranja" + row["IdAgenda"].ToString();
 
                         <div class="row espacamentoCard">
@@ -132,6 +134,8 @@
                                 </a>
                             </div>
                         </div>
+
+                        var modalUpdate = "modalUpdate" + row["IdAgenda"].ToString();
                         
                         @* modal laranja *@
                         <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
@@ -153,17 +157,17 @@
                                     </div>
                                     @* rodapé *@
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalUpdate"
-                                                asp-route-IdAgenda="@row["IdAgenda"]"
-                                                asp-controller="Agenda"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="@("#" + modalUpdate)"
+                                                asp-route-IdAgenda="@row["IdAgenda"]" 
+                                                asp-controller="Agenda" 
                                                 asp-action="AlterarExibir">
                                             <i class="fas fa-edit"></i>
                                         </button>
 
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalUpdate"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalExcluir"
                                                 asp-route-IdAgenda="@row["IdAgenda"]"
                                                 asp-controller="Agenda"
-                                                asp-action="AlterarExibir">
+                                                asp-action="ExcluirExibir">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
@@ -171,8 +175,10 @@
                             </div>
                         </div>
 
+                        var modalVisualizeAtt = "modalVisualize" + row["IdAgenda"].ToString();
+
                         @* modal update *@
-                        <div class="modal fade modalInsert" id="modalUpdate" tabindex="-1" aria-labelledby="modalUpdate" aria-hidden="true">
+                        <div class="modal fade modalInsert" id="@modalUpdate" tabindex="-1" aria-labelledby="@modalUpdate" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo do modal *@
@@ -186,24 +192,21 @@
                                             @{
                                                 Model.IdAgenda = int.Parse(row["IdAgenda"].ToString());
                                             }
-                                            <input type="hidden" asp-for="IdAgenda">
+                                            <input type="hidden" asp-for="IdAgenda" class="idAgendaUp" value="@Model.IdAgenda">
                                         </div>
                                         <div class="modal-body">
                                             <div class="row">
                                                 @* titulo *@
                                                 <div class="offset-2 col-8">
                                                     <label for="tituloUp" class="form-label">Título:</label>
-                                                    <input type="text" class="form-control" id="tituloUp" value="@row["Titulo"]"
-                                                           placeholder="Digite o título..." asp-for="Titulo">
+                                                    <input type="text" class="form-control tituloUp" id="tituloUp@Model.IdAgenda" value="@row["Titulo"]" placeholder="Digite o título..." asp-for="Titulo">
                                                 </div>
                                             </div>
                                             <div class="row espacoFormAdd">
                                                 @* data *@
                                                 <div class="offset-2 col-4">
                                                     <label for="dataUp" class="form-label">Data:</label>
-                                                    <input type="date" class="form-control" id="dataUp" value="@Convert.ToDateTime(row["Data"]).ToString("yyyy-MM-dd")"
-                                                           placeholder="Insira a data..." asp-for="Data">
-
+                                                    <input type="date" class="form-control dataUp" id="dataUp@Model.IdAgenda" value="@Convert.ToDateTime(row["Data"]).ToString("yyyy-MM-dd")" placeholder="Insira a data..." asp-for="Data">
                                                 </div>
 
                                                 @* cor *@
@@ -212,26 +215,65 @@
                                                     @{
                                                         Model.IdCorComunicado = int.Parse(row["IdCor"].ToString());
                                                     }
-                                                    <select class="form-select" id="idCorComunicadoUp" asp-for="IdCorComunicado" asp-items="Model.Cores">
+                                                    <select class="form-select idCorComunicadoUp" id="idCorComunicadoUp@Model.IdAgenda" asp-for="IdCorComunicado" asp-items="Model.Cores">
                                                         <option selected>...</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="row espacoFormAdd">
+                                                @* professor *@
+                                                <div class="offset-2 col-8">
+                                                    <label for="gestor" class="form-label">Gestor:</label>
+                                                    <input type="text" class="form-control" id="gestorUp@Model.IdAgenda" value="@row["Gestor"]" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="row espacoFormAdd">
                                                 @* conteudo *@
                                                 <div class="offset-2 col-8">
+                                                    <label for="comunicado" class="form-label">Comunicado:</label>
                                                     @{
                                                         Model.Comunicado = row["Comunicado"].ToString();
                                                     }
-                                                    <textarea class="form-control" id="comunicadoUp" rows="8" asp-for="Comunicado"
-                                                              placeholder="Digite o conteúdo..."></textarea>
+                                                    <textarea class="form-control comunicadoUp" id="comunicadoUp@Model.IdAgenda" rows="8" asp-for="Comunicado" placeholder="Digite o conteúdo...">@row["Comunicado"]</textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         @* rodape do modal *@
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary btn-preVisu" data-bs-toggle="modal" data-bs-target="#modalVisualize">Pré-visualização</button>
                                             <button type="submit" class="btn btn-dark alterarCom"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        @* modal excluir *@
+                        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    @* titulo do modal *@
+                                    <div class="modal-header bg-danger">
+                                        <h5 class="modal-title fonteEspecial" id="modalUpdate">Excluir comunicado</h5>
+                                        <button type="button" class="btn-close btn-close1" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form asp-controller="Agenda" asp-action="ExcluirProcessar" method="post">
+                                        <div>
+                                            @{
+                                                Model.IdAgenda = int.Parse(row["IdAgenda"].ToString());
+                                            }
+                                            <input type="hidden" asp-for="IdAgenda">
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="offset-2 col-8 text-center">
+                                                    <h4>Deseja realmente excluir o comunicado selecionado?</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="offset-2 col-8 text-center">
+                                                    <button type="submit" class="btn btn-danger">Excluir</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>

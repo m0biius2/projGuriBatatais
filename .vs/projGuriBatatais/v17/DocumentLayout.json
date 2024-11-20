@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\wwwroot\\js\\agenda.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\wwwroot\\js\\agenda.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\agenda\\viewexibiragendaadm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\agenda\\viewexibiragendaadm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\shared\\_layoutindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\shared\\_layoutindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\models\\agendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\models\\agendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\dataaccess\\agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\dataaccess\\agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "agenda.js",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\agenda.js",
-              "RelativeDocumentMoniker": "projGuriBatatais\\wwwroot\\js\\agenda.js",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\js\\agenda.js",
-              "RelativeToolTip": "projGuriBatatais\\wwwroot\\js\\agenda.js",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAgwMsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-01T17:57:58.598Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -53,48 +36,47 @@
               "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\AgendaController.cs",
               "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\AgendaController.cs",
               "RelativeToolTip": "projGuriBatatais\\Controllers\\AgendaController.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAAAwwIYAAAArAAAA",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAkwA0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T15:28:39.907Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T19:33:51.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Agenda.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\DataAccess\\Agenda.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\DataAccess\\Agenda.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\DataAccess\\Agenda.cs",
-              "RelativeToolTip": "projGuriBatatais\\DataAccess\\Agenda.cs",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAhwIcAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T16:16:23.455Z",
+              "DocumentIndex": 1,
+              "Title": "_LayoutIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
+              "RelativeToolTip": "projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADUAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T19:31:55.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AgendaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Models\\AgendaViewModel.cs",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Models\\AgendaViewModel.cs",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Models\\AgendaViewModel.cs",
-              "RelativeToolTip": "projGuriBatatais\\Models\\AgendaViewModel.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBoAAAAwAAAA",
+              "Title": "CursosController.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\CursosController.cs",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Controllers\\CursosController.cs",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Controllers\\CursosController.cs",
+              "RelativeToolTip": "projGuriBatatais\\Controllers\\CursosController.cs",
+              "ViewState": "AQIAAHACAAAAAAAAAAAAAHwCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T16:13:32.252Z",
+              "WhenOpened": "2024-11-17T14:32:15.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ViewExibirAgendaAdm.cshtml",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
-              "RelativeToolTip": "projGuriBatatais\\Views\\Agenda\\ViewExibirAgendaAdm.cshtml",
-              "ViewState": "AQIAANgAAAAAAAAAAAAAAOkAAABcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T13:37:39.123Z",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Program.cs",
+              "RelativeDocumentMoniker": "projGuriBatatais\\Program.cs",
+              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Program.cs",
+              "RelativeToolTip": "projGuriBatatais\\Program.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:41:28.366Z",
               "EditorCaption": ""
             }
           ]

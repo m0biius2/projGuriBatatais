@@ -263,3 +263,4 @@ C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutEntrar.cshtml.rz.scp.css
 C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutIndex.cshtml.rz.scp.css
+C:\Users\jorda\OneDrive\Desktop\tcc\projGuriBatatais\projGuriBatatais\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutAcessoNegado.cshtml.rz.scp.css

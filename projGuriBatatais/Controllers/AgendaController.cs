@@ -127,6 +127,59 @@ namespace projGuriBatatais.Controllers
             return View("ViewExibirAgendaAdm", o_AgendaViewModel);
         }
 
+        // metodo que exibe os dados de uma linha a ser excluida
+        public IActionResult ExcluirExibir(int IdAgenda)
+        {
+            // objetos
+            // objeto da model
+            AgendaViewModel o_AgendaVM = new AgendaViewModel();
+
+            // objeto da class
+            Agenda o_Agenda = new Agenda();
+
+            // tabela de busca
+            DataTable dtBusca;
+
+            o_Agenda.idAgenda = IdAgenda;
+            dtBusca = o_Agenda.SelecionarPorId();
+
+            o_AgendaVM.IdAgenda = int.Parse(dtBusca.Rows[0]["IdAgenda"].ToString());
+            o_AgendaVM.Titulo = dtBusca.Rows[0]["Titulo"].ToString();
+            o_AgendaVM.Data = DateTime.Parse(dtBusca.Rows[0]["Data"].ToString());
+            o_AgendaVM.Comunicado = dtBusca.Rows[0]["Comunicado"].ToString();
+            o_AgendaVM.IdCorComunicado = int.Parse(dtBusca.Rows[0]["IdCorComunicado"].ToString());
+
+            CorComunicado o_CorComunicado = new CorComunicado();
+
+            DataTable tabCorComunicado = o_CorComunicado.SelecionarTodos();
+
+            o_AgendaVM.Cores = (from DataRow dr in tabCorComunicado.Rows
+                                       select new SelectListItem()
+                                       {
+                                           Value = dr["IdCorComunicado"].ToString(),
+                                           Text = dr["NomeCor"].ToString(),
+                                       }).ToList();
+
+            // retorna a view excluirExibir que exibe os dados antes de serem excluidos a partir da model colaborador
+            return View("ViewExibirAgendaAdm", o_AgendaVM);
+        }
+
+        // metodo que processa a exclusao no banco
+        public IActionResult ExcluirProcessar(AgendaViewModel o_AgendaVM)
+        {
+            // objetos
+            Agenda o_Agenda = new Agenda();
+
+            // preenche os atributos do banco com os dados inseridos
+            o_Agenda.idAgenda = o_AgendaVM.IdAgenda;
+
+            // executa o metodo deletar
+            o_Agenda.Deletar();
+
+            // redireciona os dados para o metodo selecionar
+            return RedirectToAction("ExibirAgendaAdm");
+        }
+
         // metodo que processa os dados alterados acima
         public IActionResult AlterarProcessar(AgendaViewModel o_AgendaVM)
         {

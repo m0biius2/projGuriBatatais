@@ -1,7 +1,23 @@
-﻿
+﻿@using System.Data
+
 @{
-    ViewData["Title"] = "ViewAcessoNegado";
+    ViewData["Title"] = "Acesso Negado";
+    Layout = "~/Views/Shared/_LayoutAcessoNegado.cshtml";
 }
 
-<h1>ViewAcessoNegado</h1>
-
+<div class="container-fluid">
+    <div class="row text-center pad100">
+        <h4 class="text-danger">Acesso negado!</h4>
+    </div>
+    <div class="row text-center">
+        <h6>Você não possui permissão para acessar esta página.</h6>
+    </div>
+    <br />
+    <div class="row text-center">
+        <div class="offset-xxl-4 col-xxl-4 col-12">
+            <div class="alert alert-danger" role="alert">
+                <a href="@Url.Action("Cadastrar", "Usuario")" class="acessoNegadoLink">Entre com uma conta válida para acessar</a>
+            </div>
+        </div>
+    </div>
+</div>

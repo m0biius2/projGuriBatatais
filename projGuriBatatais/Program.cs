@@ -10,7 +10,7 @@ builder.Services.AddAuthentication("CookieAuntenticacao").AddCookie("CookieAunte
                                                    options.Cookie.Name = "CookieAuntenticacao";
                                                    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                                                    options.LoginPath = "/Usuario/Cadastrar";
-                                                   options.AccessDeniedPath = "/AcessoNegado/AcessoNegadoUser";
+                                                   options.AccessDeniedPath = "/AcessoNegado/AcessoNegado";
                                                });
 
 // cria politicas de acesso
@@ -20,6 +20,8 @@ builder.Services.AddAuthorization(options =>
                       policy => policy.RequireClaim("Tipo", "Aluno"));
     options.AddPolicy("AcessoAdm",
                       policy => policy.RequireClaim("Tipo", "Professor"));
+    options.AddPolicy("AcessoAdm",
+                      policy => policy.RequireClaim("Tipo", "Coordenacao"));
 });
 
 var app = builder.Build();
@@ -35,10 +37,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-// rotas
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Inicial}/{action=IndexPublico}");
+    pattern: "{controller=Inicial}/{action=Index}");
 
 app.MapControllerRoute(
     name: "default",

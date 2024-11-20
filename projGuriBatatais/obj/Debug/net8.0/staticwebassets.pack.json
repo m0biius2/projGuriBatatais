@@ -77,8 +77,28 @@
       "PackagePath": "staticwebassets\\CAgudas\\0-Yellow.jpeg"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\CAgudas\\Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CAgudas\\claveDoFoto.png",
+      "PackagePath": "staticwebassets\\CAgudas\\claveDoFoto.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\0-Captura de tela 2024-09-10 212021.png",
       "PackagePath": "staticwebassets\\CGraves\\0-Captura de tela 2024-09-10 212021.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\Dó.png",
+      "PackagePath": "staticwebassets\\CGraves\\Dó.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\CGraves\\Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\Menina triste.pdf",
+      "PackagePath": "staticwebassets\\CGraves\\Menina triste.pdf"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\index.css",
@@ -149,8 +169,44 @@
       "PackagePath": "staticwebassets\\img\\bannerAgenda.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCAgudasMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerCAgudasMobile.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCGraves.png",
+      "PackagePath": "staticwebassets\\img\\bannerCGraves.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCGravesMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerCGravesMobile.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCoral.png",
+      "PackagePath": "staticwebassets\\img\\bannerCoral.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCoralMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerCoralMobile.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerJogo.png",
       "PackagePath": "staticwebassets\\img\\bannerJogo.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerMadeiras.png",
+      "PackagePath": "staticwebassets\\img\\bannerMadeiras.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerMadeirasMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerMadeirasMobile.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerMetais.png",
+      "PackagePath": "staticwebassets\\img\\bannerMetais.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerMetaisMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerMetaisMobile.png"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerMobileIndex.png",
@@ -167,6 +223,14 @@
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPaginaInicialMobile1.png",
       "PackagePath": "staticwebassets\\img\\bannerPaginaInicialMobile1.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPercussao.png",
+      "PackagePath": "staticwebassets\\img\\bannerPercussao.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPercussaoMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerPercussaoMobile.png"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerPerfil.png",

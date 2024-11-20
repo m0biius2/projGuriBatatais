@@ -12,10 +12,6 @@ namespace projGuriBatatais.Models
 
         public IFormFile File { get; set; }
 
-        public int IdUsuario { get; set; }
-
-        public DateTime Data { get; set; }
-
         public DataTable tabSelect { get; set; }
     }
 }

@@ -14,8 +14,6 @@ namespace projGuriBatatais.DataAccess
         // atributos das colunas da tabela do banco
         public int idArquivo;
         public string caminho;
-        public int idUsuario;
-        public DateTime data;
 
         // metodos
         // metodo construtor
@@ -51,21 +49,17 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a serem inseridos na tabela
-                string cmdSQL = $"Insert Into Arquivo(Caminho, IdUsuario, Data) " +
-                                $"Values(@Caminho, @IdUsuario, @Data)";
+                string cmdSQL = $"Insert Into Arquivo(Caminho) " +
+                                $"Values(@Caminho)";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
 
                 // cria parametros dos valores das colunas
                 cmd.Parameters.Add("@Caminho", SqlDbType.VarChar);
-                cmd.Parameters.Add("@IdUsuario", SqlDbType.Int);
-                cmd.Parameters.Add("@Data", SqlDbType.DateTime);
 
                 // transforma os parametros em variaveis
                 cmd.Parameters["@Caminho"].Value = caminho;
-                cmd.Parameters["@IdUsuario"].Value = idUsuario;
-                cmd.Parameters["@Data"].Value = data;
 
                 // abre conexao com o banco
                 con.Open();
@@ -90,7 +84,7 @@ namespace projGuriBatatais.DataAccess
             try
             {
                 // dados a seres alterados
-                string cmdSQL = $"Update Arquivo Set Caminho = @Caminho, IdUsuario = @IdUsuario, Data = @Data " +
+                string cmdSQL = $"Update Arquivo Set Caminho = @Caminho " +
                                 $"Where IdArquivo = @IdArquivo";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
@@ -99,14 +93,10 @@ namespace projGuriBatatais.DataAccess
                 // cria parametros dos valores das colunas
                 cmd.Parameters.Add("@IdArquivo", SqlDbType.Int);
                 cmd.Parameters.Add("@Caminho", SqlDbType.VarChar);
-                cmd.Parameters.Add("@IdUsuario", SqlDbType.Int);
-                cmd.Parameters.Add("@Data", SqlDbType.DateTime);
 
                 // transforma os parametros em variaveis
                 cmd.Parameters["@IdArquivo"].Value = idArquivo;
                 cmd.Parameters["@Caminho"].Value = caminho;
-                cmd.Parameters["@IdUsuario"].Value = idUsuario;
-                cmd.Parameters["@Data"].Value = data;
 
                 // abre conexao com o banco
                 con.Open();
