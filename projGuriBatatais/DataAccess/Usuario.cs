@@ -119,18 +119,9 @@ namespace projGuriBatatais.DataAccess
             {
                 string cmdSQL;
 
-                if(curso != null)
-                {
-                    // dados a seres alterados
-                    cmdSQL = $"Update Usuario Set NomeCompleto = @NomeCompleto, NomeUsuario = @NomeUsuario, " +
-                             $"Curso = @Curso " +
-                             $"Where IdUsuario = @IdUsuario";
-                } else
-                {
-                    // dados a seres alterados
-                    cmdSQL = $"Update Usuario Set NomeCompleto = @NomeCompleto, NomeUsuario = @NomeUsuario " +
-                             $"Where IdUsuario = @IdUsuario";
-                }
+                // dados a seres alterados
+                cmdSQL = $"Update Usuario Set NomeCompleto = @NomeCompleto, NomeUsuario = @NomeUsuario " +
+                         $"Where IdUsuario = @IdUsuario";
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
@@ -367,6 +358,43 @@ namespace projGuriBatatais.DataAccess
             {
                 // Trata qualquer exceção que ocorrer
                 throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable ObterNomeCompleto(string nomeUser)
+        {
+            string cmdSQL = "SELECT NomeCompleto FROM Usuario " +
+                            "WHERE NomeUsuario = @NomeUsuario";
+
+            // Cria o adaptador para realizar a busca no banco de dados
+            SqlDataAdapter daPesquisa = new SqlDataAdapter(cmdSQL, con);
+
+            // Adiciona o parâmetro @NomeUsuario
+            daPesquisa.SelectCommand.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
+
+            // Define o valor do parâmetro como o nome do usuário
+            daPesquisa.SelectCommand.Parameters["@NomeUsuario"].Value = nomeUser;
+
+            // Abre a conexão com o banco de dados
+            con.Open();
+
+            // Cria uma tabela para armazenar os dados retornados
+            DataTable dtUser = new DataTable();
+
+            // Preenche a tabela com os dados do banco
+            int qtdLinhasAfetadas = daPesquisa.Fill(dtUser);
+
+            // Fecha a conexão com o banco
+            con.Close();
+
+            // Se encontrou algum resultado, retorna a tabela
+            if (qtdLinhasAfetadas > 0)
+            {
+                return dtUser;
+            }
+            else
+            {
+                return null; // Retorna null se o nome do usuário não existir
             }
         }
     }

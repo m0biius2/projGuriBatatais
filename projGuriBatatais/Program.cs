@@ -15,13 +15,10 @@ builder.Services.AddAuthentication("CookieAuntenticacao").AddCookie("CookieAunte
 
 // cria politicas de acesso
 builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("AcessoAluno",
-                      policy => policy.RequireClaim("Tipo", "Aluno"));
-    options.AddPolicy("AcessoAdm",
-                      policy => policy.RequireClaim("Tipo", "Professor"));
-    options.AddPolicy("AcessoAdm",
-                      policy => policy.RequireClaim("Tipo", "Coordenacao"));
+{       options.AddPolicy("AcessoAluno",
+                  policy => policy.RequireClaim("Tipo", "Aluno"));
+        options.AddPolicy("AcessoAdm",
+                      policy => policy.RequireClaim("Tipo", "Professor", "Coordenacao"));
 });
 
 var app = builder.Build();
@@ -36,6 +33,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Usuario}/{action=ExibirPerfil}");
 
 app.MapControllerRoute(
     name: "default",

@@ -49,6 +49,7 @@ namespace projGuriBatatais.Controllers
             {
                 // Login bem-sucedido
                 int idUsuario = int.Parse(dtPesquisa.Rows[0]["IdUsuario"].ToString());
+                string nomeCompleto = dtPesquisa.Rows[0]["NomeCompleto"].ToString();
                 string nomeUsuario = dtPesquisa.Rows[0]["NomeUsuario"].ToString();
                 string senha = dtPesquisa.Rows[0]["Senha"].ToString();
                 string tipo = dtPesquisa.Rows[0]["Tipo"].ToString();
@@ -58,6 +59,7 @@ namespace projGuriBatatais.Controllers
                 //-------------------------------------------------
                 List<Claim> usuarioDeclaracoes = new List<Claim>{
                             new Claim("IdUsuario", idUsuario.ToString()),
+                            new Claim("NomeCompleto", nomeCompleto),
                             new Claim("NomeUsuario", nomeUsuario),
                             new Claim("Senha", senha),
                             new Claim("Tipo", tipo)
@@ -100,45 +102,35 @@ namespace projGuriBatatais.Controllers
             }
         }
 
-        public IActionResult Alterar (int IdUsuario)
+        public IActionResult Alterar(int IdUsuario)
         {
-            IdUsuario = 8;
-
-            UsuarioViewModel o_UsuarioVM = new UsuarioViewModel ();
-
+            UsuarioViewModel o_UsuarioVM = new UsuarioViewModel();
             Usuario o_Usuario = new Usuario();
-
             DataTable dtBusca;
 
             o_Usuario.idUsuario = IdUsuario;
-
             dtBusca = o_Usuario.SelecionarPorId();
 
             o_UsuarioVM.IdUsuario = int.Parse(dtBusca.Rows[0]["IdUsuario"].ToString());
             o_UsuarioVM.NomeCompleto = dtBusca.Rows[0]["NomeCompleto"].ToString();
             o_UsuarioVM.NomeUsuario = dtBusca.Rows[0]["NomeUsuario"].ToString();
 
-            // Converter a string de cursos armazenada em uma lista
-            string cursosString = dtBusca.Rows[0]["Curso"].ToString();
-
-            o_UsuarioVM.Curso = cursosString.Split(",").Select(c => c.Trim()).ToList();
-
-            return View("ViewAlterar", o_UsuarioVM);
+            return View("ViewExibirPerfil", o_UsuarioVM);
         }
 
-        public IActionResult AlterarProcessar(UsuarioViewModel o_UsuarioVM, string Cursos)
+        public IActionResult AlterarProcessar(UsuarioViewModel o_UsuarioVM)
         {
             Usuario o_Usuario = new Usuario();
 
             o_Usuario.idUsuario = o_UsuarioVM.IdUsuario;
             o_Usuario.nomeCompleto = o_UsuarioVM.NomeCompleto;
             o_Usuario.nomeUsuario = o_UsuarioVM.NomeUsuario;
-            o_Usuario.curso = Cursos;
 
             o_Usuario.Alterar();
 
-            return RedirectToAction("Alterar");
+            return RedirectToAction("Alterar", new { IdUsuario = o_UsuarioVM.IdUsuario });
         }
+
 
         public JsonResult ValidarNomeUsuario(string nomeUsuario)
         {
@@ -163,7 +155,27 @@ namespace projGuriBatatais.Controllers
 
         public IActionResult ExibirPerfil()
         {
+            Usuario o_Usuario = new Usuario();
+
+            var nomeUsuario = User.FindFirst("NomeUsuario")?.Value;
+
+            if (nomeUsuario != null)
+            {
+                var dtNome = o_Usuario.ObterNomeCompleto(nomeUsuario);
+
+                // Verifica se a tabela possui dados
+                if (dtNome != null && dtNome.Rows.Count > 0)
+                {
+                    ViewBag.NomeCompleto = dtNome.Rows[0]["NomeCompleto"].ToString();
+                }
+                else
+                {
+                    ViewBag.NomeCompleto = "Nome não encontrado";
+                }
+            }
+
             return View("ViewExibirPerfil");
         }
+
     }
 }
