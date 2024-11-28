@@ -1,130 +1,208 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        @* titulo do site *@
-        <title>Guri Batatais - @ViewData["Title"]</title>
-        @* bootstrap online *@
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        @* css *@
-        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/projGuriBatatais.styles.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/css/pagInicial.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/css/rodape.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
-        <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
-        <link rel="stylesheet" href="~/css/informacoes.css" asp-append-version="true">
-        @* animate *@
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        @* icons *@
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        @* magnific popup *@
-        <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-    </head>
-    <body>
-        <header>
-            @* navbar pc *@
-            <div class="d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
-                <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
-                    <div class="container-fluid">
-                        @* icone logo *@
-                        <a class="navbar-brand" asp-area="" asp-controller="Inicial" asp-action="Index">
-                            <img src="~/img/logoGuriNav.png" alt="Logo Guri." />
-                        </a>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <partial name="_IndexEstadoPartial" />
-                                </li>
-                                <li class="nav-item active1">
-                                    <partial name="_AgendaEstadoPartial" />
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Informacoes" asp-action="ExibirInformacoes">Informações</a> @* informacoes *@
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Cursos
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @* titulo do site *@
+    <title>Guri Batatais - @ViewData["Title"]</title>
+    @* bootstrap online *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* css *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/projGuriBatatais.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pagInicial.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/rodape.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/informacoes.css" asp-append-version="true">
+    @* animate *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    @* icons *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    @* magnific popup *@
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+</head>
+<body>
+    <header>
+        @* navbar pc *@
+        <div class="d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    @* icone logo *@
+                    <a class="navbar-brand" asp-area="" asp-controller="Inicial" asp-action="Index">
+                        <img src="~/img/logoGuriNav.png" alt="Logo Guri." />
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link infonav text-black" asp-area="" asp-controller="Inicial" asp-action="Index"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li class="nav-item active1">
+                                <partial name="_AgendaEstadoPartial" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link infonav text-black" asp-area="" asp-controller="Informacoes" asp-action="ExibirInformacoes">Informações</a> @* informacoes *@
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle infonav text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cursos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @if (User.Identity.IsAuthenticated && User.FindFirst("Tipo")?.Value == "Professor" || User.FindFirst("Tipo")?.Value == "Coordenacao")
+                                    {
                                         <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCAgudas">Cordas Agudas</a></li>
-                                        <li><a class="dropdown-item" href="#">Cordas Graves</a></li>
-                                        <li><a class="dropdown-item" href="#">Metais</a></li>
-                                        <li><a class="dropdown-item" href="#">Madeiras</a></li>
-                                        <li><a class="dropdown-item" href="#">Percussão</a></li>
-                                        <li><a class="dropdown-item" href="#">Coral</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item active entrar">
-                                    <partial name="_LoginEstadoPartial" />
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor"><i class="fas fa-music"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCGraves">Cordas Graves</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirMetais">Metais</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirMadeiras">Madeiras</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirPercussao">Percussão</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCoral">Coral</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirCAgudas">Cordas Agudas</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirCGraves">Cordas Graves</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirMetais">Metais</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirMadeiras">Madeiras</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirPercussao">Percussão</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirCoral">Coral</a></li>
+                                    }
+                                </ul>
+                            </li>
+                            <li class="nav-item active entrar">
+                                <partial name="_LoginEstadoPartial" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link infonav text-black" asp-controller="Inicial" asp-action="Index"><i class="fas fa-music"></i></a>
+                            </li>
+                        </ul>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
+        </div>
 
-            @* navbar mobile *@
-            <div class="d-block d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block">
-                <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent navMobile">
-                    <div class="container-fluid">
-                        @* icone logo *@
-                        <a class="navbar-brand" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">
-                            <img src="~/img/logoGuriNav.png" alt="Logo Guri." />
-                        </a>
-                        <div class="ms-auto">
-                            <ul class="navbar-nav">
-                            <li class="nav-item menu"><a class="nav-link"><span onclick="openNav()"><i class="fas fa-bars"></i></span></a></li>
-                            </ul>
-                        </div>
+        @* navbar mobile *@
+        <div class="d-block d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent navMobile">
+                <div class="container-fluid">
+                    @* icone logo *@
+                    <a class="navbar-brand" asp-area="" asp-controller="Agenda" asp-action="TesteProfessor">
+                        <img src="~/img/logoGuriNav.png" alt="Logo Guri." />
+                    </a>
+                    <div class="ms-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item menu"><a class="nav-link infonav text-black"><span onclick="openNav()"><i class="fas fa-bars"></i></span></a></li>
+                        </ul>
                     </div>
-                </nav>
+                </div>
+            </nav>
 
-                <div id="mySidenav" class="sidenav">
-                    <div class="row topSidenav">
+            <div id="mySidenav" class="sidenav">
+                <div class="row topSidenav">
+                    <div class="col-12">
+                        <a class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
                         <div class="col-12">
-                            <a class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+                            <h6>Olá, @User.FindFirst("NomeUsuario")?.Value</h6>
                         </div>
+                    }
+                    else
+                    {
                         <div class="col-12">
                             <h6>Entre para registrar uma conta!</h6>
                         </div>
                         <div class="col-12">
-                            <a href="#" style="color: white; font-size: 15px; padding: 0px;"><p>Faça cadastro ou login...</p></a>
+                            <a asp-controller="Usuario" asp-action="Cadastrar" style="color: white; font-size: 15px; padding: 0px;"><p>Faça cadastro ou login...</p></a>
                         </div>
+                    }
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a asp-controller="Inicial" asp-action="Index" style="color: white; font-size: 18px; padding-right: 10px; padding-top: 20px;">Home</a>
                     </div>
-                </div> 
+                    <div class="col-12">
+                        <a asp-controller="Informacoes" asp-action="ExibirInformacoes" style="color: white; font-size: 18px; padding-right: 10px; padding-bottom: 10px;">Informações</a>
+                    </div>
+                    <div class="col-12">
+                        <li class="dropdown list-unstyled">
+                            <a class="dropdown-toggle" href="#" id="dropdownNav" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-size: 18px; padding-right: 10px; padding-bottom: 20px;">
+                                Cursos
+                            </a>
+                            <ul class="dropdown-menu" style="background-color: #000; border-radius: 20px; border-style: solid 1px; border-color: #6d86ff;" aria-labelledby="dropdownNav">
+                                @if (User.Identity.IsAuthenticated && User.FindFirst("Tipo")?.Value == "Professor" || User.FindFirst("Tipo")?.Value == "Coordenacao")
+                                {
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCAgudas">Cordas Agudas</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCGraves">Cordas Graves</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirMetais">Metais</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirMadeiras">Madeiras</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirPercussao">Percussão</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoUploadExibirCoral">Coral</a></li>
+                                }
+                                else
+                                {
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirCAgudas">Cordas Agudas</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirCGraves">Cordas Graves</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirMetais">Metais</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirMadeiras">Madeiras</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirPercussao">Percussão</a></li>
+                                    <li><a class="dropdown-item" style="font-size: 15px; padding: 0px 0px 5px 10px;" asp-area="" asp-controller="Cursos" asp-action="ArquivoExibirCoral">Coral</a></li>
+                                }
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12">
+                        <partial name="_Agenda3EstadoPartial" />
+                    </div>
+                    <div class="col-12">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <button class="btn" style="background-color: #d232ff; margin-bottom: 20px; border-radius: 100px;"><a class="fw-bold" asp-area="" asp-controller="Usuario" asp-action="ExibirPerfil" style="font-size: 18px; padding-right: 55px; padding-left: 55px; padding-top: 10px; padding-bottom: 10px;">Perfil</a></button>
+                        }
+                        else
+                        {
+                            <button class="btn" style="background-color: #d232ff; margin-bottom: 20px; border-radius: 100px;"><a class="fw-bold" asp-area="" asp-controller="Usuario" asp-action="Cadastrar" style="font-size: 18px; padding-right: 55px; padding-left: 55px; padding-top: 10px; padding-bottom: 10px;">Entrar</a> @* agenda *@</button>
+                        }
+                    </div>
+                </div>
             </div>
-        </header>
-        @* conteudo *@
-        <main role="main">
-            @RenderBody()
+        </div>
+    </header>
+    @* conteudo *@
+    <main role="main">
+        @RenderBody()
         <div class="container-fluid">
             <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
             <!-- div rodape XS-->
             <div class="d-block d-sm-none">
-                <div class="row colorRodape spaceRodapeTextXS text-center espacoRodape">
+                <div class="row colorRodape spaceRodapeTextXS text-center" style="margin-top: 30px;">
                     <div class="col-12">
-                        <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
-                        <p><a href="agenda.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Agenda</a></p>
-                        <p><a href="informacoes.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
-                        <p><a href="perfil.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+                        <p><a asp-area="" asp-controller="Inicial" asp-action="Index"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
+                        <partial name="_Agenda2EstadoPartial" />
+                        <p><a asp-area="" asp-controller="Informacoes" asp-action="ExibirInformacoes" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <p><a asp-controller="Usuario" asp-action="ExibirPerfil" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+                        }
+                        else
+                        {
+                            <p><a asp-controller="Usuario" asp-action="Cadastrar" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+                        }
                     </div>
 
                     <div class="col-12 colorRodape text-center">
-                        <a href="index.html"><img src="~/img/logoGuri.png" class="spaceRodapeImageXS tamanhoImageXS img-fluid" alt=""></a>
+                        <a asp-area="" asp-controller="Inicial" asp-action="Index"><img src="~/img/logoGuri.png" class="spaceRodapeImageXS tamanhoImageXS img-fluid" alt=""></a>
                     </div>
 
                     <div class="col-12 colorRodape spaceRodapeBot text-center">
                         <p class="colorTextRodape">Entre em contato conosco</p>
                         <p>
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
+                            <a href="https://www.instagram.com/sou.guri/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
                             <a href="https://wa.me/5516991682555" target="_blank"><i class="fab fa-whatsapp textDecorationNone"></i></a>
                             <a href="https://br.linkedin.com/" target="_blank"><i class="fab fa-linkedin textDecorationNone"></i></a>
                         </p>
@@ -142,20 +220,27 @@
             <!-- RODAPE geral -->
             <div class="d-none d-xxl-block">
                 <!-- rodape -->
-                <div class="row colorRodape espacoRodape">
+                <div class="row colorRodape" style="margin-top: 30px;">
                     <div class="col-4 spaceRodape text-center">
-                        <p><a href="index.html"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
-                        <p><a href="agenda.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Agenda</a></p>
-                        <p><a href="informacoes.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
-                        <p><a href="perfil.html" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+                        <p><a asp-area="" asp-controller="Inicial" asp-action="Index"><i class="fas fa-home colorIconRodape textDecorationNone"></i></a></p>
+                        <partial name="_Agenda2EstadoPartial" />
+                        <p><a asp-area="" asp-controller="Informacoes" asp-action="ExibirInformacoes" class="textDecorationNone" style="color: #fff; text-decoration: none;">Informações</a></p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <p><a asp-controller="Usuario" asp-action="ExibirPerfil" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+                        }
+                        else
+                        {
+                            <p><a asp-controller="Usuario" asp-action="Cadastrar" class="textDecorationNone" style="color: #fff; text-decoration: none;">Perfil</a></p>
+                        }
                     </div>
                     <div class="col-4 text-center">
-                        <a href="index.html"><img src="~/img/logoGuri.png" class="spaceRodapeImage tamanhoImage img-fluid" alt=""></a>
+                        <a asp-area="" asp-controller="Inicial" asp-action="Index"><img src="~/img/logoGuri.png" class="spaceRodapeImage tamanhoImage img-fluid" alt=""></a>
                     </div>
                     <div class="col-4 text-center">
                         <p class="colorTextRodape spaceRodapeText">Entre em contato conosco</p>
                         <p>
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
+                            <a href="https://www.instagram.com/sou.guri/" target="_blank"><i class="fab fa-instagram colorIconRodape"></i></a>
                             <a href="https://wa.me/5516991682555" target="_blank"><i class="fab fa-whatsapp textDecorationNone"></i></a>
                             <a href="https://br.linkedin.com/" target="_blank"><i class="fab fa-linkedin textDecorationNone"></i></a>
                         </p>
@@ -173,29 +258,29 @@
             <!-- RODAPE geral -->
             <!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
         </div>
-        </main>
-        @* jquery padrao *@
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        @* nosso jquery *@
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="~/js/entrar.js" asp-append-version="true"></script>
-        <script src="~/js/magnific-popup.js" asp-append-version="true"></script>
-        <script src="~/js/pdf.js" asp-append-version="true"></script>
-        <script src="~/js/agenda.js" asp-append-version="true"></script>
-        <script src="~/js/perfil.js"></script>
-        <script src="~/js/index.js"></script>
-        @* plugin jquery mask *@
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.4/jquery.mask.min.js"></script>
-        @* plugin sweetalert *@
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        @* plugin magnific popup *@
-        <script src="~/magnific-popup/jquery.magnific-popup.js"></script>
-        <script src="~/js/jquery.magnific-popup.js"></script>
-        <script src="~/js/jquery.magnific-popup2.js"></script>
-        @* plugin pdf *@
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
-        @await RenderSectionAsync("Scripts", required: false)
-    </body>
+    </main>
+    @* jquery padrao *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @* nosso jquery *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/entrar.js" asp-append-version="true"></script>
+    <script src="~/js/magnific-popup.js" asp-append-version="true"></script>
+    <script src="~/js/pdf.js" asp-append-version="true"></script>
+    <script src="~/js/agenda.js" asp-append-version="true"></script>
+    <script src="~/js/perfil.js"></script>
+    <script src="~/js/index.js"></script>
+    @* plugin jquery mask *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.4/jquery.mask.min.js"></script>
+    @* plugin sweetalert *@
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @* plugin magnific popup *@
+    <script src="~/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="~/js/jquery.magnific-popup.js"></script>
+    <script src="~/js/jquery.magnific-popup2.js"></script>
+    @* plugin pdf *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
 </html>

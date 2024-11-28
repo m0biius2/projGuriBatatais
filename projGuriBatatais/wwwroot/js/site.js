@@ -23,10 +23,12 @@ $(document).ready(function () {
         if (scrollTop > lastScrollTop) {
             // rolagem para baixo
             $(".navbar").removeClass("bg-transparent").addClass("bg-black");
+            $(".infonav").removeClass("text-black");
         } else {
             // rolagem para cima
             if (scrollTop <= 0) {
                 $(".navbar").removeClass("bg-black").addClass("bg-transparent");
+                $(".infonav").addClass("text-black");
             }
         }
         lastScrollTop = scrollTop;

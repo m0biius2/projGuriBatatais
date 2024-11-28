@@ -10,16 +10,33 @@ namespace projGuriBatatais.Controllers
 {
     public class UsuarioController : Controller
     {
-        public IActionResult Cadastrar ()
+        private int idUsuario;
+
+        private readonly IHttpContextAccessor o_Contexto;
+
+        // construtor
+        public UsuarioController(IHttpContextAccessor httpContextAccessor)
         {
-            UsuarioViewModel o_UsuarioViewModel = new UsuarioViewModel ();
+            o_Contexto = httpContextAccessor;
+        }
+
+        public IActionResult IniciarSessao()
+        {
+
+
+            return View("ViewExibirPerfil");
+        }
+
+        public IActionResult Cadastrar()
+        {
+            UsuarioViewModel o_UsuarioViewModel = new UsuarioViewModel();
 
             return View("ViewEntrar", o_UsuarioViewModel);
         }
 
-        public IActionResult CadastrarProcessar (UsuarioViewModel o_UsuarioVM, string Cursos)
+        public IActionResult CadastrarProcessar(UsuarioViewModel o_UsuarioVM, string Cursos)
         {
-            Usuario o_Usuario = new Usuario ();
+            Usuario o_Usuario = new Usuario();
 
             o_Usuario.nomeCompleto = o_UsuarioVM.NomeCompleto;
             o_Usuario.nomeUsuario = o_UsuarioVM.NomeUsuario;
@@ -42,6 +59,8 @@ namespace projGuriBatatais.Controllers
             o_Usuario.nomeUsuario = o_UsuarioVM.NomeUsuario;
             o_Usuario.senha = o_UsuarioVM.Senha;
 
+
+
             // Validar login no banco de dados
             dtPesquisa = o_Usuario.ValidarLogin();
 
@@ -53,6 +72,9 @@ namespace projGuriBatatais.Controllers
                 string nomeUsuario = dtPesquisa.Rows[0]["NomeUsuario"].ToString();
                 string senha = dtPesquisa.Rows[0]["Senha"].ToString();
                 string tipo = dtPesquisa.Rows[0]["Tipo"].ToString();
+
+                o_Contexto.HttpContext.Session.SetInt32("IdUsuario", idUsuario);
+
 
                 //-------------------------------------------------
                 //          Declarações ::  Claim
@@ -104,6 +126,16 @@ namespace projGuriBatatais.Controllers
 
         public IActionResult Alterar(int IdUsuario)
         {
+            if (IdUsuario == 0)
+            {
+                IdUsuario = o_Contexto.HttpContext.Session.GetInt32("IdUsuario") ?? 0;
+            }
+
+            if (IdUsuario == 0)
+            {
+                return RedirectToAction("ExibirPerfil"); // Ou outra lógica de fallback
+            }
+
             UsuarioViewModel o_UsuarioVM = new UsuarioViewModel();
             Usuario o_Usuario = new Usuario();
             DataTable dtBusca;
@@ -111,9 +143,14 @@ namespace projGuriBatatais.Controllers
             o_Usuario.idUsuario = IdUsuario;
             dtBusca = o_Usuario.SelecionarPorId();
 
-            o_UsuarioVM.IdUsuario = int.Parse(dtBusca.Rows[0]["IdUsuario"].ToString());
-            o_UsuarioVM.NomeCompleto = dtBusca.Rows[0]["NomeCompleto"].ToString();
-            o_UsuarioVM.NomeUsuario = dtBusca.Rows[0]["NomeUsuario"].ToString();
+            if (dtBusca != null && dtBusca.Rows.Count > 0)
+            {
+                o_UsuarioVM.IdUsuario = int.Parse(dtBusca.Rows[0]["IdUsuario"].ToString());
+                o_UsuarioVM.NomeCompleto = dtBusca.Rows[0]["NomeCompleto"].ToString();
+                o_UsuarioVM.NomeUsuario = dtBusca.Rows[0]["NomeUsuario"].ToString();
+            }
+
+            ViewBag.IdUsuario = IdUsuario;
 
             return View("ViewExibirPerfil", o_UsuarioVM);
         }
@@ -122,7 +159,9 @@ namespace projGuriBatatais.Controllers
         {
             Usuario o_Usuario = new Usuario();
 
-            o_Usuario.idUsuario = o_UsuarioVM.IdUsuario;
+            idUsuario = o_Contexto.HttpContext.Session.GetInt32("IdUsuario").Value;
+
+            o_Usuario.idUsuario = idUsuario;
             o_Usuario.nomeCompleto = o_UsuarioVM.NomeCompleto;
             o_Usuario.nomeUsuario = o_UsuarioVM.NomeUsuario;
 
@@ -130,7 +169,6 @@ namespace projGuriBatatais.Controllers
 
             return RedirectToAction("Alterar", new { IdUsuario = o_UsuarioVM.IdUsuario });
         }
-
 
         public JsonResult ValidarNomeUsuario(string nomeUsuario)
         {
@@ -150,32 +188,25 @@ namespace projGuriBatatais.Controllers
             await HttpContext.SignOutAsync("CookieAuntenticacao");
 
             // Redireciona para a página Index
-            return RedirectToRoute(new { controller = "Inicial", action = "IndexPublico" });
+            return RedirectToRoute(new { controller = "Inicial", action = "Index" });
         }
 
         public IActionResult ExibirPerfil()
         {
-            Usuario o_Usuario = new Usuario();
+            int idUsuario = o_Contexto.HttpContext.Session.GetInt32("IdUsuario") ?? 0;
 
-            var nomeUsuario = User.FindFirst("NomeUsuario")?.Value;
+            UsuarioViewModel o_UsuarioVM = new UsuarioViewModel();
+            Usuario o_Usuario = new Usuario { idUsuario = idUsuario };
 
-            if (nomeUsuario != null)
+            var dt = o_Usuario.SelecionarPorId();
+            if (dt != null && dt.Rows.Count > 0)
             {
-                var dtNome = o_Usuario.ObterNomeCompleto(nomeUsuario);
-
-                // Verifica se a tabela possui dados
-                if (dtNome != null && dtNome.Rows.Count > 0)
-                {
-                    ViewBag.NomeCompleto = dtNome.Rows[0]["NomeCompleto"].ToString();
-                }
-                else
-                {
-                    ViewBag.NomeCompleto = "Nome não encontrado";
-                }
+                o_UsuarioVM.IdUsuario = Convert.ToInt32(dt.Rows[0]["IdUsuario"]);
+                o_UsuarioVM.NomeCompleto = dt.Rows[0]["NomeCompleto"].ToString();
+                o_UsuarioVM.NomeUsuario = dt.Rows[0]["NomeUsuario"].ToString();
             }
 
-            return View("ViewExibirPerfil");
+            return View("ViewExibirPerfil", o_UsuarioVM);
         }
-
     }
 }

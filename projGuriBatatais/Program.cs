@@ -21,6 +21,16 @@ builder.Services.AddAuthorization(options =>
                       policy => policy.RequireClaim("Tipo", "Professor", "Coordenacao"));
 });
 
+builder.Services.AddControllersWithViews();
+
+// Habilita o uso do Contexto - Texto
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+                        {
+                            options.IdleTimeout = TimeSpan.FromMinutes(30);
+                        });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,9 +44,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Usuario}/{action=ExibirPerfil}");
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

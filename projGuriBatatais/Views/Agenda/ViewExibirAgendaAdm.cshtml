@@ -10,7 +10,9 @@
 
 @* conteudo *@
 @* banner *@
-<img src="~/img/bannerAgenda.png" class="img-fluid" alt="">
+<img src="~/img/bannerAgenda.png" class="img-fluid d-none d-sm-block" alt="">
+
+<img src="~/img/bannerAgendaMobile.png" class="img-fluid d-block d-sm-none" alt="">
 
 <div class="container-fluid espacoNavbar">
     <div class="row">
@@ -136,6 +138,7 @@
                         </div>
 
                         var modalUpdate = "modalUpdate" + row["IdAgenda"].ToString();
+                        var modalExcluir = "modalExcluir" + row["IdAgenda"].ToString();
                         
                         @* modal laranja *@
                         <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
@@ -164,7 +167,7 @@
                                             <i class="fas fa-edit"></i>
                                         </button>
 
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalExcluir"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="@("#" + modalExcluir)"
                                                 asp-route-IdAgenda="@row["IdAgenda"]"
                                                 asp-controller="Agenda"
                                                 asp-action="ExcluirExibir">
@@ -248,7 +251,7 @@
                         </div>
 
                         @* modal excluir *@
-                        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
+                        <div class="modal fade" id="@modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo do modal *@
@@ -302,6 +305,7 @@
                         </div>
 
                         modalUpdate = "modalUpdate" + row["IdAgenda"].ToString();
+                        modalExcluir = "modalExcluir" + row["IdAgenda"].ToString();
 
                         @* modal verde *@
                         <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
@@ -330,7 +334,7 @@
                                             <i class="fas fa-edit"></i>
                                         </button>
 
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalExcluir"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="@("#" + modalExcluir)"
                                                 asp-route-IdAgenda="@row["IdAgenda"]"
                                                 asp-controller="Agenda"
                                                 asp-action="ExcluirExibir">
@@ -412,7 +416,7 @@
                         </div>
 
                         @* modal excluir *@
-                        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
+                        <div class="modal fade" id="@modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo do modal *@
@@ -466,6 +470,7 @@
                         </div>
 
                         modalUpdate = "modalUpdate" + row["IdAgenda"].ToString();
+                        modalExcluir = "modalExcluir" + row["IdAgenda"].ToString();
 
                         @* modal azul *@
                         <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
@@ -494,7 +499,7 @@
                                             <i class="fas fa-edit"></i>
                                         </button>
 
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalExcluir"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="@("#" + modalExcluir)"
                                                 asp-route-IdAgenda="@row["IdAgenda"]"
                                                 asp-controller="Agenda"
                                                 asp-action="ExcluirExibir">
@@ -576,7 +581,7 @@
                         </div>
 
                         @* modal excluir *@
-                        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
+                        <div class="modal fade" id="@modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo do modal *@
@@ -630,6 +635,7 @@
                         </div>
 
                         modalUpdate = "modalUpdate" + row["IdAgenda"].ToString();
+                        modalExcluir = "modalExcluir" + row["IdAgenda"].ToString();
 
                         @* modal roxo *@
                         <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
@@ -658,7 +664,7 @@
                                             <i class="fas fa-edit"></i>
                                         </button>
 
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalExcluir"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="@("#" + modalExcluir)"
                                                 asp-route-IdAgenda="@row["IdAgenda"]"
                                                 asp-controller="Agenda"
                                                 asp-action="ExcluirExibir">
@@ -740,7 +746,7 @@
                         </div>
 
                         @* modal excluir *@
-                        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
+                        <div class="modal fade" id="@modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo do modal *@
@@ -794,6 +800,7 @@
                         </div>
 
                         modalUpdate = "modalUpdate" + row["IdAgenda"].ToString();
+                        modalExcluir = "modalExcluir" + row["IdAgenda"].ToString();
 
                         @* modal amarelo *@
                         <div class="modal fade modalCom" id="@modalId" tabindex="-1" aria-labelledby="modalLabel@modalId" aria-hidden="true">
@@ -822,7 +829,7 @@
                                             <i class="fas fa-edit"></i>
                                         </button>
 
-                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="#modalExcluir"
+                                        <button type="button" class="btn btn-secondary btn-update" data-bs-toggle="modal" data-bs-target="@("#" + modalExcluir)"
                                                 asp-route-IdAgenda="@row["IdAgenda"]"
                                                 asp-controller="Agenda"
                                                 asp-action="ExcluirExibir">
@@ -904,7 +911,7 @@
                         </div>
 
                         @* modal excluir *@
-                        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
+                        <div class="modal fade" id="@modalExcluir" tabindex="-1" aria-labelledby="modalExcluir" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     @* titulo do modal *@

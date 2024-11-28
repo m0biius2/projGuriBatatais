@@ -120,28 +120,80 @@ namespace projGuriBatatais.DataAccess
                 string cmdSQL;
 
                 // dados a seres alterados
-                cmdSQL = $"Update Usuario Set NomeCompleto = @NomeCompleto, NomeUsuario = @NomeUsuario " +
-                         $"Where IdUsuario = @IdUsuario";
+                if(nomeCompleto != null && nomeUsuario == null)
+                {
+                    cmdSQL = $"Update Usuario Set NomeCompleto = @NomeCompleto " +
+                             $"Where IdUsuario = @IdUsuario";
+                } else if (nomeCompleto == null && nomeUsuario != null)
+                {
+                    cmdSQL = $"IF NOT EXISTS (SELECT 1 FROM Usuario WHERE NomeUsuario = @NomeUsuario) " +
+                             $"BEGIN " +
+                             $"UPDATE Usuario " +
+                             $"SET NomeUsuario = @NomeUsuario " +
+                             $"WHERE IdUsuario = @IdUsuario; " +
+                             $"END";
+                }
+                else if (nomeCompleto == null && nomeUsuario == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    cmdSQL = $"UPDATE Usuario Set NomeCompleto = @NomeCompleto " +
+                             $"WHERE IdUsuario = @IdUsuario " +
+                             $"IF NOT EXISTS (SELECT 1 FROM Usuario WHERE NomeUsuario = @NomeUsuario) " +
+                             $"BEGIN " +
+                             $"UPDATE Usuario " +
+                             $"SET NomeUsuario = @NomeUsuario " +
+                             $"WHERE IdUsuario = @IdUsuario; " +
+                             $"END";
+                }
 
                 // prepara a conexao com o banco para identificar o comando a ser executado
                 SqlCommand cmd = new SqlCommand(cmdSQL, con);
 
                 // cria parametros dos valores das colunas
-                cmd.Parameters.Add("@IdUsuario", SqlDbType.VarChar);
-                cmd.Parameters.Add("@NomeCompleto", SqlDbType.VarChar);
-                cmd.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
-                if(curso != null)
+                if (nomeCompleto != null && nomeUsuario == null)
                 {
-                    cmd.Parameters.Add("@Curso", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@IdUsuario", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@NomeCompleto", SqlDbType.VarChar);
+                }
+                else if (nomeCompleto == null && nomeUsuario != null)
+                {
+                    cmd.Parameters.Add("@IdUsuario", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
+                }
+                else if (nomeCompleto == null && nomeUsuario == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@IdUsuario", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@NomeCompleto", SqlDbType.VarChar);
+                    cmd.Parameters.Add("@NomeUsuario", SqlDbType.VarChar);
                 }
 
                 // transforma os parametros em variaveis
-                cmd.Parameters["@IdUsuario"].Value = idUsuario;
-                cmd.Parameters["@NomeCompleto"].Value = nomeCompleto;
-                cmd.Parameters["@NomeUsuario"].Value = nomeUsuario;
-                if(curso != null)
+                if (nomeCompleto != null && nomeUsuario == null)
                 {
-                    cmd.Parameters["@Curso"].Value = curso;
+                    cmd.Parameters["@IdUsuario"].Value = idUsuario;
+                    cmd.Parameters["@NomeCompleto"].Value = nomeCompleto;
+                }
+                else if (nomeCompleto == null && nomeUsuario != null)
+                {
+                    cmd.Parameters["@IdUsuario"].Value = idUsuario;
+                    cmd.Parameters["@NomeUsuario"].Value = nomeUsuario;
+                }
+                else if (nomeCompleto == null && nomeUsuario == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    cmd.Parameters["@IdUsuario"].Value = idUsuario;
+                    cmd.Parameters["@NomeCompleto"].Value = nomeCompleto;
+                    cmd.Parameters["@NomeUsuario"].Value = nomeUsuario;
                 }
 
                 // abre conexao com o banco

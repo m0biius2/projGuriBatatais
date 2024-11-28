@@ -198,7 +198,7 @@ namespace projGuriBatatais.Controllers
             o_ArquivoVM.Caminho = dtBusca.Rows[0]["Caminho"].ToString();
 
             // retorna a view excluirExibir que exibe os dados antes de serem excluidos a partir da model colaborador
-            return View("ViewArquivoUploadExibirCGraves", o_ArquivoVM);
+            return View("ViewArquivoUploadExibirGraves", o_ArquivoVM);
         }
 
         public IActionResult ExcluirProcessarCGraves(ArquivoViewModel o_ArquivoVM)

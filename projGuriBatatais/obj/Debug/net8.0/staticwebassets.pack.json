@@ -101,6 +101,50 @@
       "PackagePath": "staticwebassets\\CGraves\\Menina triste.pdf"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\Yellow.jpeg",
+      "PackagePath": "staticwebassets\\CGraves\\Yellow.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Coral\\Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\Coral\\Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Coral\\Yellow.jpeg",
+      "PackagePath": "staticwebassets\\Coral\\Yellow.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Madeiras\\Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\Madeiras\\Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Madeiras\\Yellow.jpeg",
+      "PackagePath": "staticwebassets\\Madeiras\\Yellow.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Metais\\Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\Metais\\Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Metais\\Jurassic Park.jpeg",
+      "PackagePath": "staticwebassets\\Metais\\Jurassic Park.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Metais\\Menina triste.pdf",
+      "PackagePath": "staticwebassets\\Metais\\Menina triste.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Metais\\Yellow.jpeg",
+      "PackagePath": "staticwebassets\\Metais\\Yellow.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Percussao\\Game of Thrones.pdf",
+      "PackagePath": "staticwebassets\\Percussao\\Game of Thrones.pdf"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\Percussao\\Yellow.jpeg",
+      "PackagePath": "staticwebassets\\Percussao\\Yellow.jpeg"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },
@@ -169,6 +213,10 @@
       "PackagePath": "staticwebassets\\img\\bannerAgenda.png"
     },
     {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerAgendaMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerAgendaMobile.png"
+    },
+    {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCAgudasMobile.png",
       "PackagePath": "staticwebassets\\img\\bannerCAgudasMobile.png"
     },
@@ -187,6 +235,10 @@
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerCoralMobile.png",
       "PackagePath": "staticwebassets\\img\\bannerCoralMobile.png"
+    },
+    {
+      "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerInfoMobile.png",
+      "PackagePath": "staticwebassets\\img\\bannerInfoMobile.png"
     },
     {
       "Id": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\img\\bannerJogo.png",
