@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\shared\\_layoutindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\shared\\_layoutindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|c:\\users\\jorda\\onedrive\\desktop\\tcc\\projguribatatais\\projguribatatais\\views\\inicial\\viewindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{046298BE-1F63-476E-8123-75E1311C3786}|projGuriBatatais\\projGuriBatatais.csproj|solutionrelative:projguribatatais\\views\\inicial\\viewindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_LayoutIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
-              "RelativeToolTip": "projGuriBatatais\\Views\\Shared\\_LayoutIndex.cshtml",
-              "ViewState": "AQIAANIAAAAAAAAAAAAAAN4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T02:06:22.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ViewIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Inicial\\ViewIndex.cshtml",
-              "RelativeDocumentMoniker": "projGuriBatatais\\Views\\Inicial\\ViewIndex.cshtml",
-              "ToolTip": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\Views\\Inicial\\ViewIndex.cshtml",
-              "RelativeToolTip": "projGuriBatatais\\Views\\Inicial\\ViewIndex.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T02:04:42.464Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

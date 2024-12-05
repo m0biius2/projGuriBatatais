@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JfpvGM24+LwDrE6di6rS8PBHmJ2tS3GL9etsB8vV9XM=",
+  "Hash": "uVSrfWWnscutMyBvz6IIW/8q5xcfcg71KZqdIUXEeV0=",
   "Source": "projGuriBatatais",
   "BasePath": "_content/projGuriBatatais",
   "Mode": "Default",
@@ -452,6 +452,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CGraves\\0-Captura de tela 2024-09-10 212021.png"
+    },
+    {
+      "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\20240526182002.png",
+      "SourceId": "projGuriBatatais",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\",
+      "BasePath": "_content/projGuriBatatais",
+      "RelativePath": "CGraves/20240526182002.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CGraves\\20240526182002.png"
     },
     {
       "Identity": "C:\\Users\\jorda\\OneDrive\\Desktop\\tcc\\projGuriBatatais\\projGuriBatatais\\wwwroot\\CGraves\\Dó.png",
